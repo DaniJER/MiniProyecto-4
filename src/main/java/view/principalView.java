@@ -26,21 +26,162 @@ public class principalView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel3 = new javax.swing.JPanel();
+        botonAgregar = new javax.swing.JButton();
+        jTextField3 = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        botonAgregar5 = new javax.swing.JButton();
+        botonAgregar8 = new javax.swing.JButton();
+        botonAgregar9 = new javax.swing.JButton();
+        botonAgregar12 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel3.setBackground(new java.awt.Color(195, 195, 195));
+        jPanel3.setMaximumSize(new java.awt.Dimension(950, 600));
+        jPanel3.setMinimumSize(new java.awt.Dimension(950, 600));
+        jPanel3.setLayout(null);
+
+        botonAgregar.setBackground(new java.awt.Color(131, 131, 131));
+        botonAgregar.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        botonAgregar.setText("Eliminar");
+        botonAgregar.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
+        botonAgregar.setMaximumSize(new java.awt.Dimension(170, 75));
+        botonAgregar.setMinimumSize(new java.awt.Dimension(170, 75));
+        botonAgregar.setPreferredSize(new java.awt.Dimension(170, 75));
+        botonAgregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAgregarActionPerformed(evt);
+            }
+        });
+        jPanel3.add(botonAgregar);
+        botonAgregar.setBounds(50, 420, 250, 50);
+
+        jTextField3.setBackground(new java.awt.Color(196, 196, 196));
+        jTextField3.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTextField3.setForeground(new java.awt.Color(0, 0, 0));
+        jTextField3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField3.setText("Developed by jviedman dev - enriquez dev");
+        jTextField3.setBorder(null);
+        jPanel3.add(jTextField3);
+        jTextField3.setBounds(220, 570, 520, 19);
+
+        jLabel6.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel6.setFont(new java.awt.Font("Arial", 1, 40)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("Módulo de gestión de mercado");
+        jLabel6.setMaximumSize(new java.awt.Dimension(0, 0));
+        jLabel6.setMinimumSize(new java.awt.Dimension(0, 0));
+        jLabel6.setPreferredSize(new java.awt.Dimension(435, 90));
+        jPanel3.add(jLabel6);
+        jLabel6.setBounds(170, 90, 610, 50);
+
+        botonAgregar5.setBackground(new java.awt.Color(131, 131, 131));
+        botonAgregar5.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        botonAgregar5.setText("Agregar");
+        botonAgregar5.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
+        botonAgregar5.setMaximumSize(new java.awt.Dimension(170, 75));
+        botonAgregar5.setMinimumSize(new java.awt.Dimension(170, 75));
+        botonAgregar5.setPreferredSize(new java.awt.Dimension(170, 75));
+        botonAgregar5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAgregar5ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(botonAgregar5);
+        botonAgregar5.setBounds(50, 210, 250, 50);
+
+        botonAgregar8.setBackground(new java.awt.Color(131, 131, 131));
+        botonAgregar8.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        botonAgregar8.setText("Editar");
+        botonAgregar8.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
+        botonAgregar8.setMaximumSize(new java.awt.Dimension(170, 75));
+        botonAgregar8.setMinimumSize(new java.awt.Dimension(170, 75));
+        botonAgregar8.setPreferredSize(new java.awt.Dimension(170, 75));
+        botonAgregar8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAgregar8ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(botonAgregar8);
+        botonAgregar8.setBounds(50, 350, 250, 50);
+
+        botonAgregar9.setBackground(new java.awt.Color(131, 131, 131));
+        botonAgregar9.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        botonAgregar9.setText("Buscar");
+        botonAgregar9.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
+        botonAgregar9.setMaximumSize(new java.awt.Dimension(170, 75));
+        botonAgregar9.setMinimumSize(new java.awt.Dimension(170, 75));
+        botonAgregar9.setPreferredSize(new java.awt.Dimension(170, 75));
+        botonAgregar9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAgregar9ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(botonAgregar9);
+        botonAgregar9.setBounds(50, 280, 250, 50);
+
+        botonAgregar12.setBackground(new java.awt.Color(131, 131, 131));
+        botonAgregar12.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        botonAgregar12.setText("Vender");
+        botonAgregar12.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
+        botonAgregar12.setMaximumSize(new java.awt.Dimension(170, 75));
+        botonAgregar12.setMinimumSize(new java.awt.Dimension(170, 75));
+        botonAgregar12.setPreferredSize(new java.awt.Dimension(170, 75));
+        botonAgregar12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAgregar12ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(botonAgregar12);
+        botonAgregar12.setBounds(360, 290, 230, 80);
+
+        jLabel7.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel7.setFont(new java.awt.Font("Arial", 1, 40)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("Universidad del Valle");
+        jLabel7.setMaximumSize(new java.awt.Dimension(0, 0));
+        jLabel7.setMinimumSize(new java.awt.Dimension(0, 0));
+        jLabel7.setPreferredSize(new java.awt.Dimension(435, 90));
+        jPanel3.add(jLabel7);
+        jLabel7.setBounds(270, 0, 435, 90);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonAgregarActionPerformed
+
+    private void botonAgregar5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregar5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonAgregar5ActionPerformed
+
+    private void botonAgregar8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregar8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonAgregar8ActionPerformed
+
+    private void botonAgregar9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregar9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonAgregar9ActionPerformed
+
+    private void botonAgregar12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregar12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonAgregar12ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +219,18 @@ public class principalView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton botonAgregar;
+    public javax.swing.JButton botonAgregar12;
+    public javax.swing.JButton botonAgregar5;
+    public javax.swing.JButton botonAgregar8;
+    public javax.swing.JButton botonAgregar9;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
 }
