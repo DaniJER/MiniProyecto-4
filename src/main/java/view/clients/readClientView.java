@@ -53,7 +53,7 @@ public class readClientView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jTextField1);
-        jTextField1.setBounds(270, 70, 470, 50);
+        jTextField1.setBounds(290, 70, 470, 50);
 
         jTextField17.setBackground(new java.awt.Color(196, 196, 196));
         jTextField17.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N

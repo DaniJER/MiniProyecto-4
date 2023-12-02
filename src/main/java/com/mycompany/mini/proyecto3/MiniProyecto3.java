@@ -4,6 +4,10 @@
 
 package com.mycompany.mini.proyecto3;
 
+import view.*;
+import controller.principalController.PrincipalController;
+
+
 /**
  *
  * @author El Rey
@@ -11,6 +15,14 @@ package com.mycompany.mini.proyecto3;
 public class MiniProyecto3 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
+        PrincipalView principalView = new PrincipalView();
+        AddItemView addItemView = new AddItemView();
+        
+        PrincipalController principalController = new PrincipalController(principalView,addItemView){};
+        principalController.startPrincipalView();
+        
+        
     }
+        
 }
