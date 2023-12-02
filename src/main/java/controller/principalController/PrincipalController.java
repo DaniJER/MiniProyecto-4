@@ -6,7 +6,9 @@ package controller.principalController;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import view.*;
+
 
 /**
  *
@@ -16,37 +18,45 @@ public class PrincipalController implements ActionListener {
 
     private PrincipalView principalView;
     private AddItemView addItemView;
+    private SearchItemView searchItemView;
 
-    public PrincipalController(PrincipalView principalView, AddItemView addItem) {
+    public PrincipalController(PrincipalView principalView, AddItemView addItemView, SearchItemView searchItemView) {
         
-        this.addItemView = addItemView;
         this.principalView = principalView;
+        this.addItemView = addItemView;
+        this.searchItemView = searchItemView;
+        
         principalView.addItemButton.addActionListener(this);
         principalView.searchItemButton.addActionListener(this);
         
     }
     
     public void startPrincipalView(){
+        
         principalView.setTitle("Modulo de mercado Univalle");
         principalView.setLocationRelativeTo(null);
+        principalView.setVisible(true);
+        addItemView.setTitle("Agregar Item");
+        
     }
     
-    @Override
     public void actionPerformed(ActionEvent e) {
         
         if(e.getSource() == principalView.addItemButton){
             
+            principalView.dispose();
+        
             addItemView.setVisible(true);
             addItemView.setLocationRelativeTo(null);
-            addItemView.setSize(principalView.getWidth(), principalView.getHeight());
         }
-        
-        if(e.getSource() == addItemView.backButton){
+        if(e.getSource() == principalView.searchItemButton){
             
-            principalView.setVisible(true);
+            principalView.dispose();
+            
+            searchItemView.setVisible(true);
+            searchItemView.setLocationRelativeTo(null);
+        
         }
-        
-        
+             
     }
-    
 }

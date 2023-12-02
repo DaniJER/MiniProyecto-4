@@ -33,7 +33,6 @@ public class DeleteItemView extends javax.swing.JFrame {
         deleteDealerButton = new javax.swing.JButton();
         deleteProductButton = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
-        backButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -118,17 +117,6 @@ public class DeleteItemView extends javax.swing.JFrame {
         jPanel3.add(jLabel7);
         jLabel7.setBounds(270, 40, 435, 90);
 
-        backButton.setBackground(new java.awt.Color(196, 196, 196));
-        backButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/close.png"))); // NOI18N
-        backButton.setBorder(null);
-        backButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backButtonActionPerformed(evt);
-            }
-        });
-        jPanel3.add(backButton);
-        backButton.setBounds(40, 50, 100, 90);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -154,10 +142,6 @@ public class DeleteItemView extends javax.swing.JFrame {
     private void deleteProductButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteProductButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_deleteProductButtonActionPerformed
-
-    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_backButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -198,7 +182,6 @@ public class DeleteItemView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton backButton;
     public javax.swing.JButton deleteClientButton;
     public javax.swing.JButton deleteDealerButton;
     public javax.swing.JButton deleteProductButton;

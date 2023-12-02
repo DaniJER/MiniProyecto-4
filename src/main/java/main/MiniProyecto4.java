@@ -2,24 +2,25 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.mycompany.mini.proyecto3;
+package main;
 
-import view.*;
 import controller.principalController.PrincipalController;
+import view.*;
 
 
 /**
  *
  * @author El Rey
  */
-public class MiniProyecto3 {
+public class MiniProyecto4 {
 
     public static void main(String[] args) {
         
         PrincipalView principalView = new PrincipalView();
         AddItemView addItemView = new AddItemView();
+        SearchItemView searchItemView = new SearchItemView();
         
-        PrincipalController principalController = new PrincipalController(principalView,addItemView){};
+        PrincipalController principalController = new PrincipalController(principalView,addItemView, searchItemView){};
         principalController.startPrincipalView();
         
         
