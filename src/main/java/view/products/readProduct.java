@@ -100,7 +100,7 @@ public class readProduct extends javax.swing.JFrame {
             }
         });
         jPanel1.add(backButton);
-        backButton.setBounds(40, 50, 100, 90);
+        backButton.setBounds(30, 30, 100, 90);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

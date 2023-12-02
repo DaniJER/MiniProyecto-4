@@ -27,13 +27,13 @@ public class principalView extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel3 = new javax.swing.JPanel();
-        botonAgregar = new javax.swing.JButton();
+        deleteItemProduct = new javax.swing.JButton();
         jTextField3 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        botonAgregar5 = new javax.swing.JButton();
-        botonAgregar8 = new javax.swing.JButton();
-        botonAgregar9 = new javax.swing.JButton();
-        botonAgregar12 = new javax.swing.JButton();
+        addItemButton = new javax.swing.JButton();
+        updateItemProduct = new javax.swing.JButton();
+        searchItemButton = new javax.swing.JButton();
+        sellButton = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -43,20 +43,20 @@ public class principalView extends javax.swing.JFrame {
         jPanel3.setMinimumSize(new java.awt.Dimension(950, 600));
         jPanel3.setLayout(null);
 
-        botonAgregar.setBackground(new java.awt.Color(131, 131, 131));
-        botonAgregar.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
-        botonAgregar.setText("Eliminar");
-        botonAgregar.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
-        botonAgregar.setMaximumSize(new java.awt.Dimension(170, 75));
-        botonAgregar.setMinimumSize(new java.awt.Dimension(170, 75));
-        botonAgregar.setPreferredSize(new java.awt.Dimension(170, 75));
-        botonAgregar.addActionListener(new java.awt.event.ActionListener() {
+        deleteItemProduct.setBackground(new java.awt.Color(131, 131, 131));
+        deleteItemProduct.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        deleteItemProduct.setText("Eliminar");
+        deleteItemProduct.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
+        deleteItemProduct.setMaximumSize(new java.awt.Dimension(170, 75));
+        deleteItemProduct.setMinimumSize(new java.awt.Dimension(170, 75));
+        deleteItemProduct.setPreferredSize(new java.awt.Dimension(170, 75));
+        deleteItemProduct.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAgregarActionPerformed(evt);
+                deleteItemProductActionPerformed(evt);
             }
         });
-        jPanel3.add(botonAgregar);
-        botonAgregar.setBounds(50, 420, 250, 50);
+        jPanel3.add(deleteItemProduct);
+        deleteItemProduct.setBounds(50, 420, 250, 50);
 
         jTextField3.setBackground(new java.awt.Color(196, 196, 196));
         jTextField3.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
@@ -78,65 +78,65 @@ public class principalView extends javax.swing.JFrame {
         jPanel3.add(jLabel6);
         jLabel6.setBounds(170, 90, 610, 50);
 
-        botonAgregar5.setBackground(new java.awt.Color(131, 131, 131));
-        botonAgregar5.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
-        botonAgregar5.setText("Agregar");
-        botonAgregar5.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
-        botonAgregar5.setMaximumSize(new java.awt.Dimension(170, 75));
-        botonAgregar5.setMinimumSize(new java.awt.Dimension(170, 75));
-        botonAgregar5.setPreferredSize(new java.awt.Dimension(170, 75));
-        botonAgregar5.addActionListener(new java.awt.event.ActionListener() {
+        addItemButton.setBackground(new java.awt.Color(131, 131, 131));
+        addItemButton.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        addItemButton.setText("Agregar");
+        addItemButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
+        addItemButton.setMaximumSize(new java.awt.Dimension(170, 75));
+        addItemButton.setMinimumSize(new java.awt.Dimension(170, 75));
+        addItemButton.setPreferredSize(new java.awt.Dimension(170, 75));
+        addItemButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAgregar5ActionPerformed(evt);
+                addItemButtonActionPerformed(evt);
             }
         });
-        jPanel3.add(botonAgregar5);
-        botonAgregar5.setBounds(50, 210, 250, 50);
+        jPanel3.add(addItemButton);
+        addItemButton.setBounds(50, 210, 250, 50);
 
-        botonAgregar8.setBackground(new java.awt.Color(131, 131, 131));
-        botonAgregar8.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
-        botonAgregar8.setText("Editar");
-        botonAgregar8.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
-        botonAgregar8.setMaximumSize(new java.awt.Dimension(170, 75));
-        botonAgregar8.setMinimumSize(new java.awt.Dimension(170, 75));
-        botonAgregar8.setPreferredSize(new java.awt.Dimension(170, 75));
-        botonAgregar8.addActionListener(new java.awt.event.ActionListener() {
+        updateItemProduct.setBackground(new java.awt.Color(131, 131, 131));
+        updateItemProduct.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        updateItemProduct.setText("Editar");
+        updateItemProduct.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
+        updateItemProduct.setMaximumSize(new java.awt.Dimension(170, 75));
+        updateItemProduct.setMinimumSize(new java.awt.Dimension(170, 75));
+        updateItemProduct.setPreferredSize(new java.awt.Dimension(170, 75));
+        updateItemProduct.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAgregar8ActionPerformed(evt);
+                updateItemProductActionPerformed(evt);
             }
         });
-        jPanel3.add(botonAgregar8);
-        botonAgregar8.setBounds(50, 350, 250, 50);
+        jPanel3.add(updateItemProduct);
+        updateItemProduct.setBounds(50, 350, 250, 50);
 
-        botonAgregar9.setBackground(new java.awt.Color(131, 131, 131));
-        botonAgregar9.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
-        botonAgregar9.setText("Buscar");
-        botonAgregar9.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
-        botonAgregar9.setMaximumSize(new java.awt.Dimension(170, 75));
-        botonAgregar9.setMinimumSize(new java.awt.Dimension(170, 75));
-        botonAgregar9.setPreferredSize(new java.awt.Dimension(170, 75));
-        botonAgregar9.addActionListener(new java.awt.event.ActionListener() {
+        searchItemButton.setBackground(new java.awt.Color(131, 131, 131));
+        searchItemButton.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        searchItemButton.setText("Buscar");
+        searchItemButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
+        searchItemButton.setMaximumSize(new java.awt.Dimension(170, 75));
+        searchItemButton.setMinimumSize(new java.awt.Dimension(170, 75));
+        searchItemButton.setPreferredSize(new java.awt.Dimension(170, 75));
+        searchItemButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAgregar9ActionPerformed(evt);
+                searchItemButtonActionPerformed(evt);
             }
         });
-        jPanel3.add(botonAgregar9);
-        botonAgregar9.setBounds(50, 280, 250, 50);
+        jPanel3.add(searchItemButton);
+        searchItemButton.setBounds(50, 280, 250, 50);
 
-        botonAgregar12.setBackground(new java.awt.Color(131, 131, 131));
-        botonAgregar12.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
-        botonAgregar12.setText("Vender");
-        botonAgregar12.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
-        botonAgregar12.setMaximumSize(new java.awt.Dimension(170, 75));
-        botonAgregar12.setMinimumSize(new java.awt.Dimension(170, 75));
-        botonAgregar12.setPreferredSize(new java.awt.Dimension(170, 75));
-        botonAgregar12.addActionListener(new java.awt.event.ActionListener() {
+        sellButton.setBackground(new java.awt.Color(131, 131, 131));
+        sellButton.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        sellButton.setText("Vender");
+        sellButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
+        sellButton.setMaximumSize(new java.awt.Dimension(170, 75));
+        sellButton.setMinimumSize(new java.awt.Dimension(170, 75));
+        sellButton.setPreferredSize(new java.awt.Dimension(170, 75));
+        sellButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAgregar12ActionPerformed(evt);
+                sellButtonActionPerformed(evt);
             }
         });
-        jPanel3.add(botonAgregar12);
-        botonAgregar12.setBounds(360, 290, 230, 80);
+        jPanel3.add(sellButton);
+        sellButton.setBounds(360, 290, 230, 80);
 
         jLabel7.setBackground(new java.awt.Color(0, 0, 0));
         jLabel7.setFont(new java.awt.Font("Arial", 1, 40)); // NOI18N
@@ -163,25 +163,25 @@ public class principalView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarActionPerformed
+    private void deleteItemProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteItemProductActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonAgregarActionPerformed
+    }//GEN-LAST:event_deleteItemProductActionPerformed
 
-    private void botonAgregar5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregar5ActionPerformed
+    private void addItemButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addItemButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonAgregar5ActionPerformed
+    }//GEN-LAST:event_addItemButtonActionPerformed
 
-    private void botonAgregar8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregar8ActionPerformed
+    private void updateItemProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateItemProductActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonAgregar8ActionPerformed
+    }//GEN-LAST:event_updateItemProductActionPerformed
 
-    private void botonAgregar9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregar9ActionPerformed
+    private void searchItemButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchItemButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonAgregar9ActionPerformed
+    }//GEN-LAST:event_searchItemButtonActionPerformed
 
-    private void botonAgregar12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregar12ActionPerformed
+    private void sellButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sellButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonAgregar12ActionPerformed
+    }//GEN-LAST:event_sellButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -219,18 +219,14 @@ public class principalView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton botonAgregar;
-    public javax.swing.JButton botonAgregar12;
-    public javax.swing.JButton botonAgregar5;
-    public javax.swing.JButton botonAgregar8;
-    public javax.swing.JButton botonAgregar9;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    public javax.swing.JButton addItemButton;
+    public javax.swing.JButton deleteItemProduct;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField jTextField3;
+    public javax.swing.JButton searchItemButton;
+    public javax.swing.JButton sellButton;
+    public javax.swing.JButton updateItemProduct;
     // End of variables declaration//GEN-END:variables
 }
