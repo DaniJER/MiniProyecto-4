@@ -19,15 +19,21 @@ public class PrincipalController implements ActionListener {
     private PrincipalView principalView;
     private AddItemView addItemView;
     private SearchItemView searchItemView;
+    private UpdateItemView updateView;
+    private DeleteItemView deleteView;
 
-    public PrincipalController(PrincipalView principalView, AddItemView addItemView, SearchItemView searchItemView) {
+    public PrincipalController(PrincipalView principalView, AddItemView addItemView, SearchItemView searchItemView, UpdateItemView updateView, DeleteItemView deleteView) {
         
         this.principalView = principalView;
         this.addItemView = addItemView;
         this.searchItemView = searchItemView;
+        this.updateView = updateView;
+        this.deleteView = deleteView;
         
         principalView.addItemButton.addActionListener(this);
         principalView.searchItemButton.addActionListener(this);
+        principalView.updateItemProduct.addActionListener(this);
+        principalView.deleteItemProduct.addActionListener(this);
         
     }
     
@@ -56,6 +62,18 @@ public class PrincipalController implements ActionListener {
             searchItemView.setVisible(true);
             searchItemView.setLocationRelativeTo(null);
         
+        }
+        if(e.getSource() == principalView.updateItemProduct){
+            principalView.dispose();
+            
+            updateView.setVisible(true);
+            updateView.setLocationRelativeTo(null);
+        }
+        if(e.getSource() == principalView.deleteItemProduct){
+            principalView.dispose();
+            
+            deleteView.setVisible(true);
+            deleteView.setLocationRelativeTo(null);
         }
              
     }

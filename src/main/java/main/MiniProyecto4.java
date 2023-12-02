@@ -19,8 +19,10 @@ public class MiniProyecto4 {
         PrincipalView principalView = new PrincipalView();
         AddItemView addItemView = new AddItemView();
         SearchItemView searchItemView = new SearchItemView();
+        UpdateItemView updateView = new UpdateItemView();
+        DeleteItemView deleteView = new DeleteItemView();
         
-        PrincipalController principalController = new PrincipalController(principalView,addItemView, searchItemView){};
+        PrincipalController principalController = new PrincipalController(principalView,addItemView, searchItemView, updateView, deleteView){};
         principalController.startPrincipalView();
         
         
