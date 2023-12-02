@@ -16,11 +16,11 @@ import view.*;
  */
 public class PrincipalController implements ActionListener {
 
-    private PrincipalView principalView;
-    private AddItemView addItemView;
-    private SearchItemView searchItemView;
+    private principalView principalView;
+    private addItemView addItemView;
+    private searchItemView searchItemView;
 
-    public PrincipalController(PrincipalView principalView, AddItemView addItemView, SearchItemView searchItemView) {
+    public PrincipalController(principalView principalView, addItemView addItemView, searchItemView searchItemView) {
         
         this.principalView = principalView;
         this.addItemView = addItemView;
@@ -28,6 +28,7 @@ public class PrincipalController implements ActionListener {
         
         principalView.addItemButton.addActionListener(this);
         principalView.searchItemButton.addActionListener(this);
+        addItemView.backButton.addActionListener(this);
         
     }
     
@@ -49,6 +50,7 @@ public class PrincipalController implements ActionListener {
             addItemView.setVisible(true);
             addItemView.setLocationRelativeTo(null);
         }
+        
         if(e.getSource() == principalView.searchItemButton){
             
             principalView.dispose();
@@ -57,6 +59,15 @@ public class PrincipalController implements ActionListener {
             searchItemView.setLocationRelativeTo(null);
         
         }
+        
+        if(e.getSource() == addItemView.backButton){
+            
+            addItemView.dispose();
+            principalView.setVisible(true);
+            
+        
+        }
+        
              
     }
 }
