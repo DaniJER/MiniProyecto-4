@@ -6,8 +6,8 @@ package main;
 
 import controller.principalController.PrincipalController;
 import view.*;
-
-
+import view.clients. *;
+import controller.clientsController. *;
 /**
  *
  * @author El Rey
@@ -18,11 +18,15 @@ public class MiniProyecto4 {
         principalView principalView = new principalView();
         addItemView addItemView = new addItemView();
         searchItemView searchItemView = new searchItemView();
+        updateItemView updateItemView = new updateItemView();
+        deleteItemView deleteItemView = new deleteItemView();
         
-        PrincipalController principalController = new PrincipalController(principalView,addItemView, searchItemView){};
+        updateClientView updateClientView = new updateClientView();
+        
+        PrincipalController principalController = new PrincipalController(principalView,addItemView, searchItemView, updateItemView, deleteItemView){};
         principalController.startPrincipalView();
         
-        
+        UpdateClientController updateClientController = new UpdateClientController(updateItemView, updateClientView);
     }
         
 }
