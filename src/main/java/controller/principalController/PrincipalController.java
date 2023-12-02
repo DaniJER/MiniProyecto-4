@@ -28,7 +28,7 @@ public class PrincipalController implements ActionListener {
         
         principalView.addItemButton.addActionListener(this);
         principalView.searchItemButton.addActionListener(this);
-        addItemView.backButton.addActionListener(this);
+        //addItemView.backButton.addActionListener(this);
         
     }
     
@@ -60,13 +60,13 @@ public class PrincipalController implements ActionListener {
         
         }
         
-        if(e.getSource() == addItemView.backButton){
+        /*if(e.getSource() == addItemView.backButton){
             
             addItemView.dispose();
             principalView.setVisible(true);
             
         
-        }
+        }*/
         
              
     }
