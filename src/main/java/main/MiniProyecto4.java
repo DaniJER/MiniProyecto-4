@@ -15,14 +15,11 @@ import view.*;
 public class MiniProyecto4 {
 
     public static void main(String[] args) {
+        principalView principalView = new principalView();
+        addItemView addItemView = new addItemView();
+        searchItemView searchItemView = new searchItemView();
         
-        PrincipalView principalView = new PrincipalView();
-        AddItemView addItemView = new AddItemView();
-        SearchItemView searchItemView = new SearchItemView();
-        UpdateItemView updateView = new UpdateItemView();
-        DeleteItemView deleteView = new DeleteItemView();
-        
-        PrincipalController principalController = new PrincipalController(principalView,addItemView, searchItemView, updateView, deleteView){};
+        PrincipalController principalController = new PrincipalController(principalView,addItemView, searchItemView){};
         principalController.startPrincipalView();
         
         
