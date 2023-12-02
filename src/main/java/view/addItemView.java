@@ -33,7 +33,6 @@ public class addItemView extends javax.swing.JFrame {
         addDealerButton = new javax.swing.JButton();
         addProductButon = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
-        backButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -117,12 +116,6 @@ public class addItemView extends javax.swing.JFrame {
         jLabel7.setPreferredSize(new java.awt.Dimension(435, 90));
         jPanel3.add(jLabel7);
         jLabel7.setBounds(270, 40, 435, 90);
-
-        backButton.setForeground(new java.awt.Color(60, 63, 65));
-        backButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/close.png"))); // NOI18N
-        backButton.setText("jButton1");
-        jPanel3.add(backButton);
-        backButton.setBounds(40, 30, 100, 90);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -252,7 +245,6 @@ public class addItemView extends javax.swing.JFrame {
     public javax.swing.JButton addClientButton;
     public javax.swing.JButton addDealerButton;
     public javax.swing.JButton addProductButon;
-    public javax.swing.JButton backButton;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel3;
