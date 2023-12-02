@@ -15,20 +15,25 @@ import view.*;
  * @author El Rey
  */
 public class PrincipalController implements ActionListener {
-
     private principalView principalView;
     private addItemView addItemView;
     private searchItemView searchItemView;
 
-    public PrincipalController(principalView principalView, addItemView addItemView, searchItemView searchItemView) {
-        
+    public PrincipalController(principalView principalView, addItemView addItemView, searchItemView searchItemView) {        
         this.principalView = principalView;
         this.addItemView = addItemView;
         this.searchItemView = searchItemView;
         
         principalView.addItemButton.addActionListener(this);
         principalView.searchItemButton.addActionListener(this);
+
         //addItemView.backButton.addActionListener(this);
+
+        principalView.updateItemProduct.addActionListener(this);
+        principalView.deleteItemProduct.addActionListener(this);
+
+        //addItemView.backButton.addActionListener(this);
+
         
     }
     
@@ -65,9 +70,7 @@ public class PrincipalController implements ActionListener {
             addItemView.dispose();
             principalView.setVisible(true);
             
-        
-        }*/
-        
-             
+       
+        }*/      
     }
 }

@@ -4,8 +4,14 @@
 
 package main;
 
+import controller.clientsController.CreateClientController;
+import controller.dealersController.CreateDealersController;
 import controller.principalController.PrincipalController;
+import controller.productsController.CreateProductsController;
 import view.*;
+import view.clients.*;
+import view.dealers.*;
+import view.products.*;
 
 
 /**
@@ -19,11 +25,21 @@ public class MiniProyecto4 {
         principalView principalView = new principalView();
         addItemView addItemView = new addItemView();
         searchItemView searchItemView = new searchItemView();
+        createClientView createClientView = new createClientView();
+        createDealerView createDealerView = new createDealerView();
+        addProductView addProductView = new addProductView();
+        
         
         PrincipalController principalController = new PrincipalController(principalView,addItemView, searchItemView){};
         principalController.startPrincipalView();
         
-        
+        CreateClientController createClientController = new CreateClientController(addItemView,createClientView){};
+    
+        CreateDealersController createDealersController = new CreateDealersController(addItemView,createDealerView){};
+    
+        CreateProductsController createProductsController = new CreateProductsController(addItemView,addProductView){};
+    
+    
     }
         
 }

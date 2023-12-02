@@ -31,7 +31,7 @@ public class addItemView extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         addClientButton = new javax.swing.JButton();
         addDealerButton = new javax.swing.JButton();
-        addProductButon = new javax.swing.JButton();
+        addProductButton = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -91,20 +91,20 @@ public class addItemView extends javax.swing.JFrame {
         jPanel3.add(addDealerButton);
         addDealerButton.setBounds(360, 330, 250, 50);
 
-        addProductButon.setBackground(new java.awt.Color(131, 131, 131));
-        addProductButon.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
-        addProductButon.setText("Producto");
-        addProductButon.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
-        addProductButon.setMaximumSize(new java.awt.Dimension(170, 75));
-        addProductButon.setMinimumSize(new java.awt.Dimension(170, 75));
-        addProductButon.setPreferredSize(new java.awt.Dimension(170, 75));
-        addProductButon.addActionListener(new java.awt.event.ActionListener() {
+        addProductButton.setBackground(new java.awt.Color(131, 131, 131));
+        addProductButton.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        addProductButton.setText("Producto");
+        addProductButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
+        addProductButton.setMaximumSize(new java.awt.Dimension(170, 75));
+        addProductButton.setMinimumSize(new java.awt.Dimension(170, 75));
+        addProductButton.setPreferredSize(new java.awt.Dimension(170, 75));
+        addProductButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addProductButonActionPerformed(evt);
+                addProductButtonActionPerformed(evt);
             }
         });
-        jPanel3.add(addProductButon);
-        addProductButon.setBounds(650, 330, 180, 50);
+        jPanel3.add(addProductButton);
+        addProductButton.setBounds(650, 330, 180, 50);
 
         jLabel7.setBackground(new java.awt.Color(0, 0, 0));
         jLabel7.setFont(new java.awt.Font("Arial", 1, 40)); // NOI18N
@@ -139,9 +139,9 @@ public class addItemView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_addDealerButtonActionPerformed
 
-    private void addProductButonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addProductButonActionPerformed
+    private void addProductButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addProductButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_addProductButonActionPerformed
+    }//GEN-LAST:event_addProductButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -244,7 +244,7 @@ public class addItemView extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton addClientButton;
     public javax.swing.JButton addDealerButton;
-    public javax.swing.JButton addProductButon;
+    public javax.swing.JButton addProductButton;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel3;
