@@ -10,6 +10,7 @@ import controller.dealersController.CreateDealersController;
 import controller.dealersController.ReadDealersController;
 import controller.principalController.PrincipalController;
 import controller.productsController.CreateProductsController;
+import controller.productsController.ReadProductsController;
 import view.*;
 import view.clients.*;
 import view.dealers.*;
@@ -32,6 +33,8 @@ public class MiniProyecto4 {
         addProductView addProductView = new addProductView();
         readClientView readClientView = new readClientView();
         readDealerView readDealerView = new readDealerView();
+        readProductView readProductView = new readProductView();
+        
         
         PrincipalController principalController = new PrincipalController(principalView,addItemView, searchItemView){};
         principalController.startPrincipalView();
@@ -45,6 +48,10 @@ public class MiniProyecto4 {
         ReadClientController readClientController = new ReadClientController(searchItemView, readClientView){};
     
         ReadDealersController readDealerController = new ReadDealersController(searchItemView,readDealerView ){};
+    
+        ReadProductsController readProductController = new ReadProductsController(searchItemView, readProductView);
+    
+    
     }
         
 }
