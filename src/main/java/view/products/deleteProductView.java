@@ -32,7 +32,6 @@ public class deleteProductView extends javax.swing.JFrame {
         deleteProductButton = new javax.swing.JButton();
         idProduct = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        botonVolver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,17 +90,6 @@ public class deleteProductView extends javax.swing.JFrame {
         jPanel1.add(jLabel5);
         jLabel5.setBounds(310, 240, 150, 50);
 
-        botonVolver.setBackground(new java.awt.Color(196, 196, 196));
-        botonVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/close.png"))); // NOI18N
-        botonVolver.setBorder(null);
-        botonVolver.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonVolverActionPerformed(evt);
-            }
-        });
-        jPanel1.add(botonVolver);
-        botonVolver.setBounds(40, 50, 100, 90);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -133,10 +121,6 @@ public class deleteProductView extends javax.swing.JFrame {
     private void deleteProductButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteProductButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_deleteProductButtonActionPerformed
-
-    private void botonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolverActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botonVolverActionPerformed
 
     /**
      * @param args the command line arguments
@@ -175,7 +159,6 @@ public class deleteProductView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton botonVolver;
     public javax.swing.JButton deleteProductButton;
     public javax.swing.JTextField idProduct;
     private javax.swing.JLabel jLabel5;
