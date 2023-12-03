@@ -20,6 +20,7 @@ public class UpdateClientController implements ActionListener{
         this.updateClientView = updateClientView;
         
         updateItemView.updateClientButton.addActionListener(this);
+        updateClientView.backButton.addActionListener(this);
     }
     
     public void actionPerformed(ActionEvent e) {
@@ -27,6 +28,11 @@ public class UpdateClientController implements ActionListener{
             updateItemView.dispose();
             updateClientView.setVisible(true);
             updateClientView.setLocationRelativeTo(null);
+        }
+        if(e.getSource() == updateClientView.backButton){
+            updateClientView.dispose();
+            updateItemView.setVisible(true);
+            updateItemView.setLocationRelativeTo(null);
         }
     }
 }

@@ -92,7 +92,7 @@ public class readClientView extends javax.swing.JFrame {
         jLabel5.setBounds(310, 240, 150, 50);
 
         botonVolver.setBackground(new java.awt.Color(196, 196, 196));
-        botonVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/close.png"))); // NOI18N
+        botonVolver.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\Resources\\close.png")); // NOI18N
         botonVolver.setBorder(null);
         botonVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

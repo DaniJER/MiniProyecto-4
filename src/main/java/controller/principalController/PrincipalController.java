@@ -33,8 +33,10 @@ public class PrincipalController implements ActionListener {
         principalView.updateItemProduct.addActionListener(this);
         principalView.deleteItemProduct.addActionListener(this);
 
-        //addItemView.backButton.addActionListener(this);
-        
+        addItemView.backButton.addActionListener(this);
+        updateItemView.backButton.addActionListener(this);
+        searchItemView.backButton.addActionListener(this);
+        deleteItemView.backButton.addActionListener(this);
     }
     
     public void startPrincipalView(){
@@ -55,13 +57,28 @@ public class PrincipalController implements ActionListener {
             addItemView.setVisible(true);
             addItemView.setLocationRelativeTo(null);
         }
+        if(e.getSource() == addItemView.backButton){
+            
+            addItemView.dispose();
+            
+            principalView.setVisible(true);
+            
         
+        }
         if(e.getSource() == principalView.searchItemButton){
             
             principalView.dispose();
             
             searchItemView.setVisible(true);
             searchItemView.setLocationRelativeTo(null);
+        
+        }
+        if(e.getSource() == searchItemView.backButton){
+            
+            searchItemView.dispose();
+            
+            principalView.setVisible(true);
+            
         
         }
         if(e.getSource() == principalView.updateItemProduct){
@@ -72,6 +89,14 @@ public class PrincipalController implements ActionListener {
             updateItemView.setLocationRelativeTo(null);
         
         }
+        if(e.getSource() == updateItemView.backButton){
+            
+            updateItemView.dispose();
+            
+            principalView.setVisible(true);
+            
+        
+        }
         if(e.getSource() == principalView.deleteItemProduct){
             
             principalView.dispose();
@@ -80,13 +105,13 @@ public class PrincipalController implements ActionListener {
             deleteItemView.setLocationRelativeTo(null);
         
         }
-        /*if(e.getSource() == addItemView.backButton){
+        if(e.getSource() == deleteItemView.backButton){
             
-            addItemView.dispose();
+            deleteItemView.dispose();
+            
             principalView.setVisible(true);
             
         
-        }*/
-             
+        }
     }
 }

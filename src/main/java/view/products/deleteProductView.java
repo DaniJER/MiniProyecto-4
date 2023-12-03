@@ -32,7 +32,7 @@ public class deleteProductView extends javax.swing.JFrame {
         deleteProductButton = new javax.swing.JButton();
         idProduct = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        botonVolver = new javax.swing.JButton();
+        backButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,16 +91,17 @@ public class deleteProductView extends javax.swing.JFrame {
         jPanel1.add(jLabel5);
         jLabel5.setBounds(310, 240, 150, 50);
 
-        botonVolver.setBackground(new java.awt.Color(196, 196, 196));
-        botonVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/close.png"))); // NOI18N
-        botonVolver.setBorder(null);
-        botonVolver.addActionListener(new java.awt.event.ActionListener() {
+        backButton.setBackground(new java.awt.Color(195, 195, 195));
+        backButton.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\Resources\\close.png")); // NOI18N
+        backButton.setBorder(null);
+        backButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonVolverActionPerformed(evt);
+                backButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(botonVolver);
-        botonVolver.setBounds(40, 50, 100, 90);
+        jPanel1.add(backButton);
+        backButton.setBounds(70, 60, 80, 87);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -134,9 +135,9 @@ public class deleteProductView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_deleteProductButtonActionPerformed
 
-    private void botonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolverActionPerformed
+    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonVolverActionPerformed
+    }//GEN-LAST:event_backButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -175,7 +176,7 @@ public class deleteProductView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton botonVolver;
+    public javax.swing.JButton backButton;
     public javax.swing.JButton deleteProductButton;
     public javax.swing.JTextField idProduct;
     private javax.swing.JLabel jLabel5;
