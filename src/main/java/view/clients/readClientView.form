@@ -191,6 +191,7 @@
             </Constraint>
           </Constraints>
         </Component>
+<<<<<<< HEAD
         <Component class="javax.swing.JButton" name="botonVolver">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -215,6 +216,8 @@
             </Constraint>
           </Constraints>
         </Component>
+=======
+>>>>>>> d8c037780703c03d6704da722d3014df98029f05
       </SubComponents>
     </Container>
   </SubComponents>

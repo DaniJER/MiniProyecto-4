@@ -36,7 +36,6 @@ public class createDealerView extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        backButton = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         idClientField1 = new javax.swing.JTextField();
         celDealerField = new javax.swing.JTextField();
@@ -140,17 +139,6 @@ public class createDealerView extends javax.swing.JFrame {
         jPanel1.add(jLabel8);
         jLabel8.setBounds(340, 170, 110, 70);
 
-        backButton.setBackground(new java.awt.Color(196, 196, 196));
-        backButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/close.png"))); // NOI18N
-        backButton.setBorder(null);
-        backButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backButtonActionPerformed(evt);
-            }
-        });
-        jPanel1.add(backButton);
-        backButton.setBounds(40, 50, 100, 90);
-
         jLabel5.setBackground(new java.awt.Color(196, 196, 196));
         jLabel5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
@@ -224,10 +212,6 @@ public class createDealerView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_idClientFieldActionPerformed
 
-    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_backButtonActionPerformed
-
     private void idClientField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idClientField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_idClientField1ActionPerformed
@@ -274,7 +258,6 @@ public class createDealerView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton addDealerButton;
-    public javax.swing.JButton backButton;
     public javax.swing.JTextField celDealerField;
     public javax.swing.JTextField clientNameField;
     public javax.swing.JTextField idClientField;

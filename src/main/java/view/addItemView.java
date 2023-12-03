@@ -31,9 +31,8 @@ public class addItemView extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         addClientButton = new javax.swing.JButton();
         addDealerButton = new javax.swing.JButton();
-        addProductButon = new javax.swing.JButton();
+        addProductButton = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
-        backButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -92,20 +91,20 @@ public class addItemView extends javax.swing.JFrame {
         jPanel3.add(addDealerButton);
         addDealerButton.setBounds(360, 330, 250, 50);
 
-        addProductButon.setBackground(new java.awt.Color(131, 131, 131));
-        addProductButon.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
-        addProductButon.setText("Producto");
-        addProductButon.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
-        addProductButon.setMaximumSize(new java.awt.Dimension(170, 75));
-        addProductButon.setMinimumSize(new java.awt.Dimension(170, 75));
-        addProductButon.setPreferredSize(new java.awt.Dimension(170, 75));
-        addProductButon.addActionListener(new java.awt.event.ActionListener() {
+        addProductButton.setBackground(new java.awt.Color(131, 131, 131));
+        addProductButton.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        addProductButton.setText("Producto");
+        addProductButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
+        addProductButton.setMaximumSize(new java.awt.Dimension(170, 75));
+        addProductButton.setMinimumSize(new java.awt.Dimension(170, 75));
+        addProductButton.setPreferredSize(new java.awt.Dimension(170, 75));
+        addProductButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addProductButonActionPerformed(evt);
+                addProductButtonActionPerformed(evt);
             }
         });
-        jPanel3.add(addProductButon);
-        addProductButon.setBounds(650, 330, 180, 50);
+        jPanel3.add(addProductButton);
+        addProductButton.setBounds(650, 330, 180, 50);
 
         jLabel7.setBackground(new java.awt.Color(0, 0, 0));
         jLabel7.setFont(new java.awt.Font("Arial", 1, 40)); // NOI18N
@@ -118,6 +117,7 @@ public class addItemView extends javax.swing.JFrame {
         jPanel3.add(jLabel7);
         jLabel7.setBounds(270, 40, 435, 90);
 
+<<<<<<< HEAD
         backButton.setBackground(new java.awt.Color(195, 195, 195));
         backButton.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\Resources\\close.png")); // NOI18N
         backButton.setBorder(null);
@@ -130,6 +130,8 @@ public class addItemView extends javax.swing.JFrame {
         jPanel3.add(backButton);
         backButton.setBounds(70, 60, 80, 87);
 
+=======
+>>>>>>> d8c037780703c03d6704da722d3014df98029f05
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -152,9 +154,9 @@ public class addItemView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_addDealerButtonActionPerformed
 
-    private void addProductButonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addProductButonActionPerformed
+    private void addProductButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addProductButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_addProductButonActionPerformed
+    }//GEN-LAST:event_addProductButtonActionPerformed
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         // TODO add your handling code here:
@@ -261,8 +263,7 @@ public class addItemView extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton addClientButton;
     public javax.swing.JButton addDealerButton;
-    public javax.swing.JButton addProductButon;
-    public javax.swing.JButton backButton;
+    public javax.swing.JButton addProductButton;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel3;

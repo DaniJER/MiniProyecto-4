@@ -32,7 +32,6 @@ public class updateProduct extends javax.swing.JFrame {
         readProductButton = new javax.swing.JButton();
         idProduct = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        backButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,6 +90,7 @@ public class updateProduct extends javax.swing.JFrame {
         jPanel1.add(jLabel5);
         jLabel5.setBounds(310, 240, 150, 50);
 
+<<<<<<< HEAD
         backButton.setBackground(new java.awt.Color(195, 195, 195));
         backButton.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\Resources\\close.png")); // NOI18N
         backButton.setBorder(null);
@@ -103,6 +103,8 @@ public class updateProduct extends javax.swing.JFrame {
         jPanel1.add(backButton);
         backButton.setBounds(70, 60, 80, 87);
 
+=======
+>>>>>>> d8c037780703c03d6704da722d3014df98029f05
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -134,10 +136,6 @@ public class updateProduct extends javax.swing.JFrame {
     private void readProductButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_readProductButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_readProductButtonActionPerformed
-
-    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_backButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -175,7 +173,6 @@ public class updateProduct extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton backButton;
     public javax.swing.JTextField idProduct;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
