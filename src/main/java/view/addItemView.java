@@ -29,7 +29,7 @@ public class addItemView extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jTextField3 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        deleteClientButton = new javax.swing.JButton();
+        selectClientButton = new javax.swing.JButton();
         addDealerButton = new javax.swing.JButton();
         addProductButton = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
@@ -62,20 +62,20 @@ public class addItemView extends javax.swing.JFrame {
         jPanel3.add(jLabel6);
         jLabel6.setBounds(170, 120, 610, 50);
 
-        deleteClientButton.setBackground(new java.awt.Color(131, 131, 131));
-        deleteClientButton.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
-        deleteClientButton.setText("Cliente");
-        deleteClientButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
-        deleteClientButton.setMaximumSize(new java.awt.Dimension(170, 75));
-        deleteClientButton.setMinimumSize(new java.awt.Dimension(170, 75));
-        deleteClientButton.setPreferredSize(new java.awt.Dimension(170, 75));
-        deleteClientButton.addActionListener(new java.awt.event.ActionListener() {
+        selectClientButton.setBackground(new java.awt.Color(131, 131, 131));
+        selectClientButton.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        selectClientButton.setText("Cliente");
+        selectClientButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
+        selectClientButton.setMaximumSize(new java.awt.Dimension(170, 75));
+        selectClientButton.setMinimumSize(new java.awt.Dimension(170, 75));
+        selectClientButton.setPreferredSize(new java.awt.Dimension(170, 75));
+        selectClientButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteClientButtonActionPerformed(evt);
+                selectClientButtonActionPerformed(evt);
             }
         });
-        jPanel3.add(deleteClientButton);
-        deleteClientButton.setBounds(140, 330, 170, 50);
+        jPanel3.add(selectClientButton);
+        selectClientButton.setBounds(140, 330, 170, 50);
 
         addDealerButton.setBackground(new java.awt.Color(131, 131, 131));
         addDealerButton.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
@@ -143,9 +143,9 @@ public class addItemView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void deleteClientButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteClientButtonActionPerformed
+    private void selectClientButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectClientButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_deleteClientButtonActionPerformed
+    }//GEN-LAST:event_selectClientButtonActionPerformed
 
     private void addDealerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addDealerButtonActionPerformed
         // TODO add your handling code here:
@@ -198,10 +198,10 @@ public class addItemView extends javax.swing.JFrame {
     public javax.swing.JButton addDealerButton;
     public javax.swing.JButton addProductButton;
     public javax.swing.JButton backButton;
-    public javax.swing.JButton deleteClientButton;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField jTextField3;
+    public javax.swing.JButton selectClientButton;
     // End of variables declaration//GEN-END:variables
 }

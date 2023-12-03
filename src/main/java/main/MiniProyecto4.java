@@ -17,6 +17,9 @@ import controller.productsController.CreateProductsController;
 import controller.productsController.DeleteProductsController;
 import controller.productsController.ReadProductsController;
 import controller.productsController.UpdateProductsController;
+import model.DealersModel.*;
+import model.clientesModel.*;
+import model.productsModel.*;
 import view.*;
 import view.clients.createClientView;
 import view.clients.readClientView;
@@ -55,17 +58,18 @@ public class MiniProyecto4 {
         readDealerView readDealerView = new readDealerView();
         readProductView readProductView = new readProductView();
         
+        
+        
         updateClientView updateClientView = new updateClientView();
-        
         updateDealerView updateDealerView = new updateDealerView();
-        
         updateProductView updateProductView = new updateProductView();
-        
         deleteClientView deleteClientView = new deleteClientView();
-        
         deleteDealerView deleteDealerView = new deleteDealerView();
-        
         deleteProductView deleteProductView = new deleteProductView();
+        CreateClientModel createClientModel = new CreateClientModel();
+        
+        
+        
         
         PrincipalController principalController = new PrincipalController(principalView,addItemView, searchItemView, updateItemView, deleteItemView){};
         principalController.startPrincipalView();
@@ -83,7 +87,7 @@ public class MiniProyecto4 {
         
         DeleteProductsController deleteProductsController = new DeleteProductsController(deleteItemView, deleteProductView);
 
-        CreateClientController createClientController = new CreateClientController(addItemView,createClientView){};
+        CreateClientController createClientController = new CreateClientController(addItemView, createClientView, createClientModel){};
     
         CreateDealersController createDealersController = new CreateDealersController(addItemView,createDealerView){};
     

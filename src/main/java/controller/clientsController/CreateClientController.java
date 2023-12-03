@@ -6,6 +6,8 @@ package controller.clientsController;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import static java.lang.String.valueOf;
+import model.clientesModel.CreateClientModel;
 import view.addItemView;
 import view.clients.createClientView;
 /**
@@ -15,27 +17,43 @@ import view.clients.createClientView;
 public class CreateClientController implements ActionListener{
     
     private addItemView addItemView;
-    private createClientView createClienteView;
-
-    public CreateClientController(addItemView addItemView, createClientView createClienteView) {
+    private createClientView createClientView;
+    private CreateClientModel createClientModel;
+            
+    public CreateClientController(addItemView addItemView, createClientView createClientView, CreateClientModel createClientModel) {
         
         this.addItemView = addItemView;
-        this.createClienteView = createClienteView;
+        this.createClientView = createClientView;
+        this.createClientModel = createClientModel;
         
-        //addItemView.addClientButton.addActionListener(this);
+        addItemView.selectClientButton.addActionListener(this);
+        createClientView.addClientButton.addActionListener(this);
     }
     public void startCreateClientView(){
     
-        createClienteView.setTitle("Crear un nuevo cliente");
-        createClienteView.setLocationRelativeTo(null);
+        createClientView.setTitle("Crear un nuevo cliente");
+        createClientView.setLocationRelativeTo(null);
     }
     
     @Override
     public void actionPerformed(ActionEvent e) {
         
-        addItemView.dispose();
-        createClienteView.setVisible(true);
-        createClienteView.setLocationRelativeTo(null);
+        if(e.getSource() == addItemView.selectClientButton){
+            
+            addItemView.dispose();
+            createClientView.setVisible(true);
+            createClientView.setLocationRelativeTo(null);
+        }
+        if(e.getSource() == createClientView.addClientButton){
+        
+            createClientModel.setName(createClientView.clientNameField.getText());
+            createClientModel.setLastName(createClientView.lastNameClientField.getText());
+            createClientModel.setId(createClientView.idClientField.getText());
+            createClientModel.setCel(createClientView.celClientField.getText());
+            
+            createClientModel.addUsersCollection();
+        }
+       
     }
     
 }
