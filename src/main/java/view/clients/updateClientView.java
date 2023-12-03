@@ -135,6 +135,21 @@ public class updateClientView extends javax.swing.JFrame {
         jPanel1.add(jLabel8);
         jLabel8.setBounds(340, 200, 110, 70);
 
+<<<<<<< HEAD
+=======
+        backButton.setBackground(new java.awt.Color(195, 195, 195));
+        backButton.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\Resources\\close.png")); // NOI18N
+        backButton.setBorder(null);
+        backButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        backButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(backButton);
+        backButton.setBounds(70, 60, 80, 87);
+
+>>>>>>> 36d5f8e1b0d019826744d6d0caa966354d616593
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(

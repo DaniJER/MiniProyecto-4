@@ -90,6 +90,20 @@ public class readClientView extends javax.swing.JFrame {
         jPanel1.add(jLabel5);
         jLabel5.setBounds(310, 240, 150, 50);
 
+<<<<<<< HEAD
+        botonVolver.setBackground(new java.awt.Color(196, 196, 196));
+        botonVolver.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\Resources\\close.png")); // NOI18N
+        botonVolver.setBorder(null);
+        botonVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonVolverActionPerformed(evt);
+            }
+        });
+        jPanel1.add(botonVolver);
+        botonVolver.setBounds(40, 50, 100, 90);
+
+=======
+>>>>>>> d8c037780703c03d6704da722d3014df98029f05
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(

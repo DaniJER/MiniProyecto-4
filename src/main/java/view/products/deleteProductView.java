@@ -32,6 +32,10 @@ public class deleteProductView extends javax.swing.JFrame {
         deleteProductButton = new javax.swing.JButton();
         idProduct = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
+<<<<<<< HEAD
+        backButton = new javax.swing.JButton();
+=======
+>>>>>>> d8c037780703c03d6704da722d3014df98029f05
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -90,6 +94,21 @@ public class deleteProductView extends javax.swing.JFrame {
         jPanel1.add(jLabel5);
         jLabel5.setBounds(310, 240, 150, 50);
 
+<<<<<<< HEAD
+        backButton.setBackground(new java.awt.Color(195, 195, 195));
+        backButton.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\Resources\\close.png")); // NOI18N
+        backButton.setBorder(null);
+        backButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        backButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(backButton);
+        backButton.setBounds(70, 60, 80, 87);
+
+=======
+>>>>>>> d8c037780703c03d6704da722d3014df98029f05
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -122,6 +141,13 @@ public class deleteProductView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_deleteProductButtonActionPerformed
 
+<<<<<<< HEAD
+    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backButtonActionPerformed
+
+=======
+>>>>>>> d8c037780703c03d6704da722d3014df98029f05
     /**
      * @param args the command line arguments
      */
@@ -159,6 +185,10 @@ public class deleteProductView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
+    public javax.swing.JButton backButton;
+=======
+>>>>>>> d8c037780703c03d6704da722d3014df98029f05
     public javax.swing.JButton deleteProductButton;
     public javax.swing.JTextField idProduct;
     private javax.swing.JLabel jLabel5;

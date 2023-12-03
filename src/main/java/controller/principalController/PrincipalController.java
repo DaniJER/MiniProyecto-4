@@ -18,11 +18,15 @@ public class PrincipalController implements ActionListener {
     private principalView principalView;
     private addItemView addItemView;
     private searchItemView searchItemView;
+    private updateItemView updateItemView;
+    private deleteItemView deleteItemView;
 
-    public PrincipalController(principalView principalView, addItemView addItemView, searchItemView searchItemView) {        
+    public PrincipalController(principalView principalView, addItemView addItemView, searchItemView searchItemView, updateItemView updateItemView, deleteItemView deleteItemView) {        
         this.principalView = principalView;
         this.addItemView = addItemView;
         this.searchItemView = searchItemView;
+        this.updateItemView = updateItemView;
+        this.deleteItemView = deleteItemView;
         
         principalView.addItemButton.addActionListener(this);
         principalView.searchItemButton.addActionListener(this);
@@ -32,9 +36,16 @@ public class PrincipalController implements ActionListener {
         principalView.updateItemProduct.addActionListener(this);
         principalView.deleteItemProduct.addActionListener(this);
 
+<<<<<<< HEAD
+        addItemView.backButton.addActionListener(this);
+        updateItemView.backButton.addActionListener(this);
+        searchItemView.backButton.addActionListener(this);
+        deleteItemView.backButton.addActionListener(this);
+=======
         //addItemView.backButton.addActionListener(this);
 
         
+>>>>>>> d8c037780703c03d6704da722d3014df98029f05
     }
     
     public void startPrincipalView(){
@@ -55,7 +66,14 @@ public class PrincipalController implements ActionListener {
             addItemView.setVisible(true);
             addItemView.setLocationRelativeTo(null);
         }
+        if(e.getSource() == addItemView.backButton){
+            
+            addItemView.dispose();
+            
+            principalView.setVisible(true);
+            
         
+        }
         if(e.getSource() == principalView.searchItemButton){
             
             principalView.dispose();
@@ -64,13 +82,55 @@ public class PrincipalController implements ActionListener {
             searchItemView.setLocationRelativeTo(null);
         
         }
-        
-        /*if(e.getSource() == addItemView.backButton){
+<<<<<<< HEAD
+        if(e.getSource() == searchItemView.backButton){
             
-            addItemView.dispose();
+            searchItemView.dispose();
+            
             principalView.setVisible(true);
             
+        
+        }
+        if(e.getSource() == principalView.updateItemProduct){
+            
+            principalView.dispose();
+            
+            updateItemView.setVisible(true);
+            updateItemView.setLocationRelativeTo(null);
+        
+        }
+        if(e.getSource() == updateItemView.backButton){
+            
+            updateItemView.dispose();
+            
+            principalView.setVisible(true);
+            
+        
+        }
+        if(e.getSource() == principalView.deleteItemProduct){
+            
+            principalView.dispose();
+            
+            deleteItemView.setVisible(true);
+            deleteItemView.setLocationRelativeTo(null);
+        
+        }
+        if(e.getSource() == deleteItemView.backButton){
+            
+            deleteItemView.dispose();
+=======
+        
+        /*if(e.getSource() == addItemView.backButton){
+>>>>>>> d8c037780703c03d6704da722d3014df98029f05
+            
+            principalView.setVisible(true);
+            
+<<<<<<< HEAD
+        
+        }
+=======
        
         }*/      
+>>>>>>> d8c037780703c03d6704da722d3014df98029f05
     }
 }
