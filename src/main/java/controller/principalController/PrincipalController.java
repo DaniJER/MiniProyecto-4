@@ -36,16 +36,13 @@ public class PrincipalController implements ActionListener {
         principalView.updateItemProduct.addActionListener(this);
         principalView.deleteItemProduct.addActionListener(this);
 
-<<<<<<< HEAD
-        addItemView.backButton.addActionListener(this);
+        //addItemView.backButton.addActionListener(this);
         updateItemView.backButton.addActionListener(this);
         searchItemView.backButton.addActionListener(this);
         deleteItemView.backButton.addActionListener(this);
-=======
         //addItemView.backButton.addActionListener(this);
 
         
->>>>>>> d8c037780703c03d6704da722d3014df98029f05
     }
     
     public void startPrincipalView(){
@@ -66,14 +63,14 @@ public class PrincipalController implements ActionListener {
             addItemView.setVisible(true);
             addItemView.setLocationRelativeTo(null);
         }
-        if(e.getSource() == addItemView.backButton){
+        /*if(e.getSource() == addItemView.backButton){
             
             addItemView.dispose();
             
             principalView.setVisible(true);
             
         
-        }
+        }*/
         if(e.getSource() == principalView.searchItemButton){
             
             principalView.dispose();
@@ -82,7 +79,7 @@ public class PrincipalController implements ActionListener {
             searchItemView.setLocationRelativeTo(null);
         
         }
-<<<<<<< HEAD
+
         if(e.getSource() == searchItemView.backButton){
             
             searchItemView.dispose();
@@ -118,19 +115,16 @@ public class PrincipalController implements ActionListener {
         if(e.getSource() == deleteItemView.backButton){
             
             deleteItemView.dispose();
-=======
-        
+
         /*if(e.getSource() == addItemView.backButton){
->>>>>>> d8c037780703c03d6704da722d3014df98029f05
             
             principalView.setVisible(true);
             
-<<<<<<< HEAD
+
         
         }
-=======
        
         }*/      
->>>>>>> d8c037780703c03d6704da722d3014df98029f05
     }
+   }
 }
