@@ -22,7 +22,7 @@ public class CreateClientController implements ActionListener{
         this.addItemView = addItemView;
         this.createClienteView = createClienteView;
         
-        addItemView.addClientButton.addActionListener(this);
+        //addItemView.addClientButton.addActionListener(this);
     }
     public void startCreateClientView(){
     

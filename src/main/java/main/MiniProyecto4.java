@@ -59,7 +59,7 @@ public class MiniProyecto4 {
         
         updateDealerView updateDealerView = new updateDealerView();
         
-        updateProduct updateProductView = new updateProduct();
+        updateProductView updateProductView = new updateProductView();
         
         deleteClientView deleteClientView = new deleteClientView();
         

@@ -30,8 +30,8 @@ public class readClientView extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jTextField17 = new javax.swing.JTextField();
         searchClientButton = new javax.swing.JButton();
-        idClient = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
+        idClientField = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -41,7 +41,7 @@ public class readClientView extends javax.swing.JFrame {
         jTextField1.setBackground(new java.awt.Color(196, 196, 196));
         jTextField1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(0, 0, 0));
-        jTextField1.setText("Buscar cliente por ID");
+        jTextField1.setText("Buscar Cliente por ID");
         jTextField1.setBorder(null);
         jTextField1.setMaximumSize(new java.awt.Dimension(0, 0));
         jTextField1.setMinimumSize(new java.awt.Dimension(0, 0));
@@ -52,7 +52,7 @@ public class readClientView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jTextField1);
-        jTextField1.setBounds(290, 70, 470, 50);
+        jTextField1.setBounds(320, 100, 380, 100);
 
         jTextField17.setBackground(new java.awt.Color(196, 196, 196));
         jTextField17.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
@@ -61,11 +61,11 @@ public class readClientView extends javax.swing.JFrame {
         jTextField17.setText("Developed by jviedman dev - enriquez dev");
         jTextField17.setBorder(null);
         jPanel1.add(jTextField17);
-        jTextField17.setBounds(211, 540, 520, 19);
+        jTextField17.setBounds(250, 560, 520, 19);
 
         searchClientButton.setBackground(new java.awt.Color(131, 131, 131));
         searchClientButton.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        searchClientButton.setText("Eliminar cliente");
+        searchClientButton.setText("Buscar cliente");
         searchClientButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
         searchClientButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,68 +73,58 @@ public class readClientView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(searchClientButton);
-        searchClientButton.setBounds(370, 370, 220, 60);
+        searchClientButton.setBounds(420, 460, 210, 60);
 
-        idClient.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel1.add(idClient);
-        idClient.setBounds(440, 250, 180, 40);
-
-        jLabel5.setBackground(new java.awt.Color(196, 196, 196));
-        jLabel5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("<html>Ingrese ID</html>");
-        jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jLabel5.setMaximumSize(new java.awt.Dimension(0, 0));
-        jLabel5.setMinimumSize(new java.awt.Dimension(0, 0));
-        jLabel5.setPreferredSize(new java.awt.Dimension(0, 0));
-        jPanel1.add(jLabel5);
-        jLabel5.setBounds(310, 240, 150, 50);
-
-<<<<<<< HEAD
-        botonVolver.setBackground(new java.awt.Color(196, 196, 196));
-        botonVolver.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\Resources\\close.png")); // NOI18N
-        botonVolver.setBorder(null);
-        botonVolver.addActionListener(new java.awt.event.ActionListener() {
+        idClientField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        idClientField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonVolverActionPerformed(evt);
+                idClientFieldActionPerformed(evt);
             }
         });
-        jPanel1.add(botonVolver);
-        botonVolver.setBounds(40, 50, 100, 90);
+        jPanel1.add(idClientField);
+        idClientField.setBounds(440, 300, 180, 40);
 
-=======
->>>>>>> d8c037780703c03d6704da722d3014df98029f05
+        jLabel4.setBackground(new java.awt.Color(196, 196, 196));
+        jLabel4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("<html>ID</html>");
+        jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jLabel4.setMaximumSize(new java.awt.Dimension(0, 0));
+        jLabel4.setMinimumSize(new java.awt.Dimension(0, 0));
+        jLabel4.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(390, 290, 90, 60);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 950, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1043, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 660, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
     private void searchClientButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchClientButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_searchClientButtonActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void idClientFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idClientFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_idClientFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -172,8 +162,8 @@ public class readClientView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JTextField idClient;
-    private javax.swing.JLabel jLabel5;
+    public javax.swing.JTextField idClientField;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField17;

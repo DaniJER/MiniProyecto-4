@@ -21,14 +21,14 @@ public class DeleteClientController implements ActionListener {
         this.deleteClientView = deleteClientView;
         
         deleteItemView.deleteClientButton.addActionListener(this);
-        deleteClientView.backButton.addActionListener(this);
+       // deleteClientView.backButton.addActionListener(this);
     }
     
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource() == deleteClientView.backButton){
+        /*if(e.getSource() == deleteClientView.backButton){
             deleteClientView.dispose();
             deleteItemView.setVisible(true);
             deleteItemView.setLocationRelativeTo(null);
-        }
+        }*/
     }
 }

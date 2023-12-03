@@ -20,7 +20,7 @@ public class UpdateDealersController implements ActionListener{
         this.updateDealerView = updateDealerView;
         
         updateItemView.updateDealerButton.addActionListener(this);
-        updateDealerView.backButton.addActionListener(this);
+        //updateDealerView.backButton.addActionListener(this);
     }
     
     public void actionPerformed(ActionEvent e) {
@@ -29,10 +29,10 @@ public class UpdateDealersController implements ActionListener{
             updateDealerView.setVisible(true);
             updateDealerView.setLocationRelativeTo(null);
         }
-        if(e.getSource() == updateDealerView.backButton){
+        /*if(e.getSource() == updateDealerView.backButton){
             updateDealerView.dispose();
             updateItemView.setVisible(true);
             updateItemView.setLocationRelativeTo(null);
-        }
+        }*/
     }
 }

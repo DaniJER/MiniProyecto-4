@@ -13,9 +13,9 @@ import view.products. *;
  */
 public class UpdateProductsController implements ActionListener {
     private updateItemView updateItemView;
-    private updateProduct updateProductView;
+    private updateProductView updateProductView;
     
-    public UpdateProductsController(updateItemView updateItemView, updateProduct updateProductView){
+    public UpdateProductsController(updateItemView updateItemView, updateProductView updateProductView){
         this.updateItemView = updateItemView;
         this.updateProductView = updateProductView;
         

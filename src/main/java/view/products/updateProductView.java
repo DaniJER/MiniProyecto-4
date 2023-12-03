@@ -8,12 +8,12 @@ package view.products;
  *
  * @author El Rey
  */
-public class updateProduct extends javax.swing.JFrame {
+public class updateProductView extends javax.swing.JFrame {
 
     /**
-     * Creates new form updateProduct
+     * Creates new form updateProductView
      */
-    public updateProduct() {
+    public updateProductView() {
         initComponents();
     }
 
@@ -29,9 +29,9 @@ public class updateProduct extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
         jTextField17 = new javax.swing.JTextField();
-        readProductButton = new javax.swing.JButton();
-        idProduct = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
+        updateProductButton = new javax.swing.JButton();
+        idClientField = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -41,7 +41,7 @@ public class updateProduct extends javax.swing.JFrame {
         jTextField1.setBackground(new java.awt.Color(196, 196, 196));
         jTextField1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(0, 0, 0));
-        jTextField1.setText("Buscar producto a editar");
+        jTextField1.setText("Actualizar product por ID");
         jTextField1.setBorder(null);
         jTextField1.setMaximumSize(new java.awt.Dimension(0, 0));
         jTextField1.setMinimumSize(new java.awt.Dimension(0, 0));
@@ -52,7 +52,7 @@ public class updateProduct extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jTextField1);
-        jTextField1.setBounds(280, 70, 470, 50);
+        jTextField1.setBounds(320, 100, 470, 100);
 
         jTextField17.setBackground(new java.awt.Color(196, 196, 196));
         jTextField17.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
@@ -61,69 +61,54 @@ public class updateProduct extends javax.swing.JFrame {
         jTextField17.setText("Developed by jviedman dev - enriquez dev");
         jTextField17.setBorder(null);
         jPanel1.add(jTextField17);
-        jTextField17.setBounds(211, 540, 520, 19);
+        jTextField17.setBounds(250, 560, 520, 19);
 
-        readProductButton.setBackground(new java.awt.Color(131, 131, 131));
-        readProductButton.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        readProductButton.setText("Buscar y editar producto");
-        readProductButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
-        readProductButton.addActionListener(new java.awt.event.ActionListener() {
+        updateProductButton.setBackground(new java.awt.Color(131, 131, 131));
+        updateProductButton.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        updateProductButton.setText("Actualizar");
+        updateProductButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
+        updateProductButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                readProductButtonActionPerformed(evt);
+                updateProductButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(readProductButton);
-        readProductButton.setBounds(370, 370, 270, 60);
+        jPanel1.add(updateProductButton);
+        updateProductButton.setBounds(410, 450, 230, 60);
 
-        idProduct.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel1.add(idProduct);
-        idProduct.setBounds(440, 250, 180, 40);
-
-        jLabel5.setBackground(new java.awt.Color(196, 196, 196));
-        jLabel5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("<html>Ingrese ID</html>");
-        jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jLabel5.setMaximumSize(new java.awt.Dimension(0, 0));
-        jLabel5.setMinimumSize(new java.awt.Dimension(0, 0));
-        jLabel5.setPreferredSize(new java.awt.Dimension(0, 0));
-        jPanel1.add(jLabel5);
-        jLabel5.setBounds(310, 240, 150, 50);
-
-<<<<<<< HEAD
-        backButton.setBackground(new java.awt.Color(195, 195, 195));
-        backButton.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\Resources\\close.png")); // NOI18N
-        backButton.setBorder(null);
-        backButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        backButton.addActionListener(new java.awt.event.ActionListener() {
+        idClientField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        idClientField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backButtonActionPerformed(evt);
+                idClientFieldActionPerformed(evt);
             }
         });
-        jPanel1.add(backButton);
-        backButton.setBounds(70, 60, 80, 87);
+        jPanel1.add(idClientField);
+        idClientField.setBounds(440, 300, 180, 40);
 
-=======
->>>>>>> d8c037780703c03d6704da722d3014df98029f05
+        jLabel4.setBackground(new java.awt.Color(196, 196, 196));
+        jLabel4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("<html>ID</html>");
+        jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jLabel4.setMaximumSize(new java.awt.Dimension(0, 0));
+        jLabel4.setMinimumSize(new java.awt.Dimension(0, 0));
+        jLabel4.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(390, 290, 90, 60);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 950, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1043, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 660, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -133,9 +118,13 @@ public class updateProduct extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void readProductButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_readProductButtonActionPerformed
+    private void updateProductButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateProductButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_readProductButtonActionPerformed
+    }//GEN-LAST:event_updateProductButtonActionPerformed
+
+    private void idClientFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idClientFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_idClientFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -154,30 +143,30 @@ public class updateProduct extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(updateProduct.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(updateProductView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(updateProduct.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(updateProductView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(updateProduct.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(updateProductView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(updateProduct.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(updateProductView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new updateProduct().setVisible(true);
+                new updateProductView().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JTextField idProduct;
-    private javax.swing.JLabel jLabel5;
+    public javax.swing.JTextField idClientField;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField17;
-    public javax.swing.JButton readProductButton;
+    public javax.swing.JButton updateProductButton;
     // End of variables declaration//GEN-END:variables
 }
