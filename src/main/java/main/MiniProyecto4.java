@@ -5,7 +5,9 @@
 package main;
 
 import controller.clientsController.CreateClientController;
+import controller.clientsController.ReadClientController;
 import controller.dealersController.CreateDealersController;
+import controller.dealersController.ReadDealersController;
 import controller.principalController.PrincipalController;
 import controller.productsController.CreateProductsController;
 import view.*;
@@ -28,7 +30,8 @@ public class MiniProyecto4 {
         createClientView createClientView = new createClientView();
         createDealerView createDealerView = new createDealerView();
         addProductView addProductView = new addProductView();
-        
+        readClientView readClientView = new readClientView();
+        readDealerView readDealerView = new readDealerView();
         
         PrincipalController principalController = new PrincipalController(principalView,addItemView, searchItemView){};
         principalController.startPrincipalView();
@@ -39,7 +42,9 @@ public class MiniProyecto4 {
     
         CreateProductsController createProductsController = new CreateProductsController(addItemView,addProductView){};
     
+        ReadClientController readClientController = new ReadClientController(searchItemView, readClientView){};
     
+        ReadDealersController readDealerController = new ReadDealersController(searchItemView,readDealerView ){};
     }
         
 }

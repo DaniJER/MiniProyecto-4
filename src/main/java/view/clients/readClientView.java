@@ -32,7 +32,6 @@ public class readClientView extends javax.swing.JFrame {
         searchClientButton = new javax.swing.JButton();
         idClient = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        botonVolver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,17 +90,6 @@ public class readClientView extends javax.swing.JFrame {
         jPanel1.add(jLabel5);
         jLabel5.setBounds(310, 240, 150, 50);
 
-        botonVolver.setBackground(new java.awt.Color(196, 196, 196));
-        botonVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/close.png"))); // NOI18N
-        botonVolver.setBorder(null);
-        botonVolver.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonVolverActionPerformed(evt);
-            }
-        });
-        jPanel1.add(botonVolver);
-        botonVolver.setBounds(40, 50, 100, 90);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -129,10 +117,6 @@ public class readClientView extends javax.swing.JFrame {
     private void searchClientButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchClientButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_searchClientButtonActionPerformed
-
-    private void botonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolverActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botonVolverActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
@@ -174,7 +158,6 @@ public class readClientView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton botonVolver;
     public javax.swing.JTextField idClient;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
