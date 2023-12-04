@@ -15,7 +15,6 @@ import view.clients.createClientView;
  * @author El Rey
  */
 public class CreateClientController implements ActionListener{
-    
     private addItemView addItemView;
     private createClientView createClientView;
     private CreateClientModel createClientModel;
@@ -46,12 +45,14 @@ public class CreateClientController implements ActionListener{
         }
         if(e.getSource() == createClientView.addClientButton){
         
-            createClientModel.setName(createClientView.clientNameField.getText());
-            createClientModel.setLastName(createClientView.lastNameClientField.getText());
-            createClientModel.setId(createClientView.idClientField.getText());
-            createClientModel.setCel(createClientView.celClientField.getText());
+            createClientModel.setName("Nombre: " + createClientView.clientNameField.getText());
+            createClientModel.setLastName("Apellido: " +createClientView.lastNameClientField.getText());
+            createClientModel.setId("Identificación: " +createClientView.idClientField.getText());
+            createClientModel.setCel("Celular: " +createClientView.celClientField.getText());
             
-            createClientModel.addUsersCollection();
+            createClientModel.validateClients((createClientView.idClientField.getText()));
+            //createClientModel.addClientsCollection();
+            createClientModel.createTextFile();
         }
        
     }
