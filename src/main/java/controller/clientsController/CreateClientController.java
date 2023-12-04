@@ -32,6 +32,7 @@ public class CreateClientController implements ActionListener{
     
         createClientView.setTitle("Crear un nuevo cliente");
         createClientView.setLocationRelativeTo(null);
+        
     }
     
     @Override
@@ -50,9 +51,11 @@ public class CreateClientController implements ActionListener{
             createClientModel.setId("Identificación: " +createClientView.idClientField.getText());
             createClientModel.setCel("Celular: " +createClientView.celClientField.getText());
             
-            createClientModel.validateClients((createClientView.idClientField.getText()));
+            //createClientModel.validateClients((createClientView.idClientField.getText()));
             //createClientModel.addClientsCollection();
             createClientModel.createTextFile();
+            createClientModel.validateClient();
+            //createClientModel.comprobarColeccion();
         }
        
     }

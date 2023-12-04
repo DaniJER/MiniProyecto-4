@@ -23,6 +23,8 @@ public class CreateClientModel {
     File clientsFile;
     File dealersFile;
     File productsFile;
+    
+    
     String fileRuteClients = "src/main/java/textFiles/clientsData";
     String fileRuteDealers = "src/main/java/textFiles/dealersData";
     String fileRuteProducts = "src/main/java/textFiles/productsData";
@@ -156,7 +158,7 @@ public class CreateClientModel {
     }
     //--------------------------------------------------------------------------------------------------------------
     
-    public boolean validateClients(String id){
+    /*public boolean validateClients(String id){
         
         for (ArrayList<String> clientData : principalClientArray){
         
@@ -172,7 +174,47 @@ public class CreateClientModel {
         
         addClientsCollection();
         return true;
+    }*/
+    
+    public void validateClient(){
+    
+        try{
+            
+            String linea;
+            FileReader archivoReader = new FileReader(fileRuteClients);
+            
+            BufferedReader bufferedReader = new BufferedReader(archivoReader);
+            
+            while((linea = bufferedReader.readLine()) != null){
+            
+                //System.out.println(linea);
+            }
+            
+            bufferedReader.close();
+            archivoReader.close();
+            
+            ArrayList<String> datos = new ArrayList<>();
+            datos.add(linea);
+            principalClientArray.add(datos);
+            System.out.println(principalClientArray);
+            
+        }catch(IOException e){
+        
+            e.printStackTrace();
+        }
+ 
     }
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
