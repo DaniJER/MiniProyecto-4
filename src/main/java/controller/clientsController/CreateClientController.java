@@ -51,13 +51,8 @@ public class CreateClientController implements ActionListener{
             createClientModel.setId("Identificación: " +createClientView.idClientField.getText());
             createClientModel.setCel("Celular: " +createClientView.celClientField.getText());
             
-            //createClientModel.validateClients((createClientView.idClientField.getText()));
-            //createClientModel.addClientsCollection();
             createClientModel.createTextFile();
-            createClientModel.validateClient();
-            //createClientModel.comprobarColeccion();
+            createClientModel.validateClient(createClientView.clientNameField.getText(),createClientView.lastNameClientField.getText(),createClientView.idClientField.getText(),createClientView.celClientField.getText());
         }
-       
     }
-    
 }

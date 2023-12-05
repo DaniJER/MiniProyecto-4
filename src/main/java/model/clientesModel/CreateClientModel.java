@@ -176,47 +176,43 @@ public class CreateClientModel {
         return true;
     }*/
     
-    public void validateClient(){
-    
-        try{
+    public boolean validateClient(String id){
+        
+        //ALMACENAR EL CONTENIDO DEL ARCHIVO DE TEXTO EN UNA COLECCION
+        ArrayList<String> lineasArchivo = new ArrayList<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(fileRuteClients))) {
             
             String linea;
-            FileReader archivoReader = new FileReader(fileRuteClients);
-            
-            BufferedReader bufferedReader = new BufferedReader(archivoReader);
-            
-            while((linea = bufferedReader.readLine()) != null){
-            
-                //System.out.println(linea);
+            while ((linea = br.readLine()) != null) {
+                lineasArchivo.add(linea);
             }
-            
-            bufferedReader.close();
-            archivoReader.close();
-            
-            ArrayList<String> datos = new ArrayList<>();
-            datos.add(linea);
-            principalClientArray.add(datos);
-            System.out.println(principalClientArray);
-            
-        }catch(IOException e){
-        
-            e.printStackTrace();
+        } catch (IOException e) {
+            System.err.println("Error al leer el archivo: " + e.getMessage());
         }
- 
+
+        //'lineasArchivo' contiene todas las líneas del archivo de texto en un ArrayList
+        
+        for (String linea : lineasArchivo) {
+            
+            System.out.println("Datos contenidos en el archivo de texto :" + linea);
+        }
+        
+        //VALIDAR LAS CEDULAS REPETIDAS
+        for (ArrayList<String> clientData : principalClientArray){
+        
+            String clientId = clientData.get(2);
+            
+            if(clientId.equals(id)){
+                
+                JOptionPane.showMessageDialog(null,"La Cedula digitada ya esta en uso, intenta con otra");
+                return true;
+            }
+        }
+        
+        addClientsCollection();
+        return false; 
     }
-   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     //Metodo para agregar los datos de los clientes a una coleccion y al archivo de texto
     public void addClientsCollection(){
@@ -226,7 +222,7 @@ public class CreateClientModel {
         dataClientArray.add(this.id);
         dataClientArray.add(this.cel);
         principalClientArray.add(dataClientArray);
-        System.out.println("Array de datos: " + principalClientArray);
+        System.out.println("Los siguientes datos fueron guardados " + principalClientArray);
         
         try{
         
@@ -240,8 +236,5 @@ public class CreateClientModel {
         
             System.err.println("Error al añadir texto al archivo: " + e.getMessage());
         }
-    
     }
-    
-  
 }
