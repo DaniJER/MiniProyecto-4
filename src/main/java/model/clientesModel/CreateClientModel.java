@@ -181,6 +181,7 @@ public class CreateClientModel {
         try{
             
             String linea;
+            
             FileReader archivoReader = new FileReader(fileRuteClients);
             
             BufferedReader bufferedReader = new BufferedReader(archivoReader);
@@ -204,19 +205,6 @@ public class CreateClientModel {
         }
  
     }
-   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     //Metodo para agregar los datos de los clientes a una coleccion y al archivo de texto
     public void addClientsCollection(){
