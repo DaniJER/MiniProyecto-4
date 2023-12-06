@@ -29,9 +29,7 @@ public class CreateClientModel {
     String fileRuteDealers = "src/main/java/textFiles/dealersData";
     String fileRuteProducts = "src/main/java/textFiles/productsData";
     
-    ArrayList<ArrayList<String>> principalClientArray = new ArrayList<>();
-    ArrayList<String> dataClientArray = new ArrayList<>();
-
+   
     public String getName() {
         return name;
     }
@@ -84,15 +82,6 @@ public class CreateClientModel {
                 
                 clientsFile.createNewFile();
                 System.out.println("archivo creado, la ruta es: " + clientsFile.getAbsolutePath());
-                FileWriter fileWriter = new FileWriter(clientsFile);
-                BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-                bufferedWriter.newLine();
-                bufferedWriter.close();
-                
-                System.out.println("Texto escrito en el archivo de clientescon exito");
-            }
-            else{
-                //System.out.println("Ya se cuenta con un archivo de texto para clientes!");
             }
         }
         
@@ -102,125 +91,27 @@ public class CreateClientModel {
             
         }
     
-       /* try{
-            
-            dealersFile = new File(fileRuteDealers);
-            
-            if(!dealersFile.exists()){
-                
-                dealersFile.createNewFile();
-                System.out.println("archivo creado, la ruta es: " + dealersFile.getAbsolutePath());
-                FileWriter fileWriter = new FileWriter(dealersFile);
-                BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-                bufferedWriter.write("Contenido de prueba");
-                bufferedWriter.newLine();
-                bufferedWriter.close();
-                
-                System.out.println("Texto escrito en el archivo de distribuidores con exito");
-            }
-            else{
-                System.out.println("Ya se cuenta con un archivo de texto para distribuidores!");
-            }
-        }
-        
-        catch(IOException e){
-            
-            System.err.println("Error al crear o escribir archivo " + e.getMessage());
-            
-        }
-        
-        try{
-            
-            productsFile = new File(fileRuteProducts);
-            
-            if(!productsFile.exists()){
-                
-                productsFile.createNewFile();
-                System.out.println("archivo creado, la ruta es: " + productsFile.getAbsolutePath());
-                FileWriter fileWriter = new FileWriter(productsFile);
-                BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-                bufferedWriter.write("Contenido de prueba");
-                bufferedWriter.newLine();
-                bufferedWriter.close();
-                
-                System.out.println("Texto escrito en el archivo de productos con exito");
-            }
-            else{
-                System.out.println("ya se cuenta con un archivo de texto para productos!");
-            }
-        }
-        
-        catch(IOException e){
-            
-            System.err.println("Error al crear o escribir archivo " + e.getMessage());
-            
-        }*/
-    }
-    //--------------------------------------------------------------------------------------------------------------
-    
-    /*public boolean validateClients(String id){
-        
-        for (ArrayList<String> clientData : principalClientArray){
-        
-            String clientId = clientData.get(2);
-            
-            if(clientId.equals(id)){
-                
-                System.out.println("La Cedula digitada ya esta en uso, intenta con otra");
-                return false;
-                
-            }
-        }
-        
-        addClientsCollection();
-        return true;
-    }*/
-    
-    public void validateClient(){
-    
-        try{
-            
-            String linea;
-            
-            FileReader archivoReader = new FileReader(fileRuteClients);
-            
-            BufferedReader bufferedReader = new BufferedReader(archivoReader);
-            
-            while((linea = bufferedReader.readLine()) != null){
-            
-                //System.out.println(linea);
-            }
-            
-            bufferedReader.close();
-            archivoReader.close();
-            
-            ArrayList<String> datos = new ArrayList<>();
-            datos.add(linea);
-            principalClientArray.add(datos);
-            System.out.println(principalClientArray);
-            
-        }catch(IOException e){
-        
-            e.printStackTrace();
-        }
- 
     }
     
     //Metodo para agregar los datos de los clientes a una coleccion y al archivo de texto
     public void addClientsCollection(){
-    
+        
+        ArrayList<ArrayList<String>> principalClientArray = new ArrayList<>();
+        ArrayList<String> dataClientArray = new ArrayList<>();
+        
         dataClientArray.add(this.name);
         dataClientArray.add(this.lastName);
         dataClientArray.add(this.id);
         dataClientArray.add(this.cel);
+        
         principalClientArray.add(dataClientArray);
-        System.out.println("Array de datos: " + principalClientArray);
+        System.out.println("Los siguientes datos fueron guardados " + principalClientArray);
         
         try{
         
             FileWriter fileWriter = new FileWriter(fileRuteClients,true);
             BufferedWriter bufferedWriter = new BufferedWriter (fileWriter);
-            bufferedWriter.write(String.valueOf(principalClientArray));
+            bufferedWriter.write(String.valueOf(dataClientArray));
             bufferedWriter.close();
             System.out.println("Datos almacenados en el archivo de texto");
             
@@ -228,8 +119,5 @@ public class CreateClientModel {
         
             System.err.println("Error al añadir texto al archivo: " + e.getMessage());
         }
-    
     }
-    
-  
 }

@@ -43,6 +43,7 @@ public class CreateClientController implements ActionListener{
             addItemView.dispose();
             createClientView.setVisible(true);
             createClientView.setLocationRelativeTo(null);
+            
         }
         if(e.getSource() == createClientView.addClientButton){
         
@@ -51,13 +52,9 @@ public class CreateClientController implements ActionListener{
             createClientModel.setId("Identificación: " +createClientView.idClientField.getText());
             createClientModel.setCel("Celular: " +createClientView.celClientField.getText());
             
-            //createClientModel.validateClients((createClientView.idClientField.getText()));
-            //createClientModel.addClientsCollection();
             createClientModel.createTextFile();
-            createClientModel.validateClient();
-            //createClientModel.comprobarColeccion();
+            createClientModel.addClientsCollection();
+            
         }
-       
     }
-    
 }
