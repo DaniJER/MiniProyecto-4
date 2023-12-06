@@ -7,6 +7,7 @@ package model.clientesModel;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import java.io.*;
+import java.util.Scanner;
 
 /**
  *
@@ -94,30 +95,57 @@ public class CreateClientModel {
     }
     
     //Metodo para agregar los datos de los clientes a una coleccion y al archivo de texto
-    public void addClientsCollection(){
-        
+   public void addClientsCollection() {
+
         ArrayList<ArrayList<String>> principalClientArray = new ArrayList<>();
         ArrayList<String> dataClientArray = new ArrayList<>();
-        
+
         dataClientArray.add(this.name);
         dataClientArray.add(this.lastName);
         dataClientArray.add(this.id);
         dataClientArray.add(this.cel);
-        
-        principalClientArray.add(dataClientArray);
-        System.out.println("Los siguientes datos fueron guardados " + principalClientArray);
-        
-        try{
-        
-            FileWriter fileWriter = new FileWriter(fileRuteClients,true);
-            BufferedWriter bufferedWriter = new BufferedWriter (fileWriter);
-            bufferedWriter.write(String.valueOf(dataClientArray));
-            bufferedWriter.close();
-            System.out.println("Datos almacenados en el archivo de texto");
-            
-        }catch(IOException e){
-        
-            System.err.println("Error al añadir texto al archivo: " + e.getMessage());
+
+        // Verificar si la cédula ya existe en el archivo
+        if (isCedulaUnique(this.id)) {
+            principalClientArray.add(dataClientArray);
+            System.out.println("Los siguientes datos fueron guardados " + principalClientArray);
+
+            // Escribir en el archivo solo si la cédula es única
+            try {
+                FileWriter fileWriter = new FileWriter(fileRuteClients, true);
+                BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+                bufferedWriter.write(String.valueOf(dataClientArray));
+                bufferedWriter.newLine();  // Agregar una nueva línea para cada usuario
+                bufferedWriter.close();
+                JOptionPane.showMessageDialog(null,"Datos almacenados en el archivo de texto");
+
+            } catch (IOException e) {
+                System.err.println("Error al añadir texto al archivo: " + e.getMessage());
+            }
+        } else {
+            JOptionPane.showMessageDialog(null,"La cédula ya existe. No se puede agregar el usuario.");
         }
     }
+
+    // Método para verificar si la cédula ya existe en el archivo
+    private boolean isCedulaUnique(String cedula) {
+        
+        try (Scanner scanner = new Scanner(new File(fileRuteClients))) {
+            
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                
+                String[] userData = line.substring(1, line.length() - 1).split(",");
+                String existingCedula = userData[2].trim(); // Obtener la cédula
+                if (existingCedula.equals(cedula)) {
+                    return false; // Cédula duplicada
+                }
+            }
+        } catch (FileNotFoundException e) {
+            // Manejar la excepción si el archivo no existe (puede ser la primera vez que se ejecuta)
+            System.err.println("El archivo no existe, se creará uno nuevo.");
+        }
+        return true; // Cédula única
+    }
 }
+
