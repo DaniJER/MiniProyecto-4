@@ -96,7 +96,7 @@ public class MiniProyecto4 {
     
         CreateProductsController createProductsController = new CreateProductsController(addItemView,addProductView){};
     
-        ReadClientController readClientController = new ReadClientController(searchItemView, readClientView, readClientModel, showClientsView){};
+        ReadClientController readClientController = new ReadClientController(searchItemView, readClientView, readClientModel, showClientsView, principalView){};
     
         ReadDealersController readDealerController = new ReadDealersController(searchItemView,readDealerView ){};
     

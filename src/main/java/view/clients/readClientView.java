@@ -81,6 +81,11 @@ public class readClientView extends javax.swing.JFrame {
                 idClientFieldActionPerformed(evt);
             }
         });
+        idClientField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                idClientFieldKeyTyped(evt);
+            }
+        });
         jPanel1.add(idClientField);
         idClientField.setBounds(440, 300, 180, 40);
 
@@ -125,6 +130,21 @@ public class readClientView extends javax.swing.JFrame {
     private void idClientFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idClientFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_idClientFieldActionPerformed
+
+    private void idClientFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_idClientFieldKeyTyped
+        int key = evt.getKeyChar();
+
+        boolean numeros = key >= 48 && key <= 57;
+        
+        if (!numeros){
+            
+            evt.consume();
+        }
+
+        if (idClientField.getText().trim().length() == 10) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_idClientFieldKeyTyped
 
     /**
      * @param args the command line arguments
