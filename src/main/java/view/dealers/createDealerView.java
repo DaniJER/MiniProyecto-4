@@ -30,14 +30,14 @@ public class createDealerView extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jTextField17 = new javax.swing.JTextField();
         addDealerButton = new javax.swing.JButton();
-        lastNameClientField = new javax.swing.JTextField();
-        clientNameField = new javax.swing.JTextField();
-        idClientField = new javax.swing.JTextField();
+        lastNameDealerField = new javax.swing.JTextField();
+        dealerNamerField = new javax.swing.JTextField();
+        idDealerField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        idClientField1 = new javax.swing.JTextField();
+        dealerProductField = new javax.swing.JTextField();
         celDealerField = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
 
@@ -78,33 +78,33 @@ public class createDealerView extends javax.swing.JFrame {
         jPanel1.add(addDealerButton);
         addDealerButton.setBounds(410, 510, 230, 60);
 
-        lastNameClientField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        lastNameClientField.addActionListener(new java.awt.event.ActionListener() {
+        lastNameDealerField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        lastNameDealerField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lastNameClientFieldActionPerformed(evt);
+                lastNameDealerFieldActionPerformed(evt);
             }
         });
-        jPanel1.add(lastNameClientField);
-        lastNameClientField.setBounds(460, 250, 180, 40);
+        jPanel1.add(lastNameDealerField);
+        lastNameDealerField.setBounds(460, 250, 180, 40);
 
-        clientNameField.setForeground(new java.awt.Color(204, 204, 204));
-        clientNameField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        clientNameField.addActionListener(new java.awt.event.ActionListener() {
+        dealerNamerField.setForeground(new java.awt.Color(204, 204, 204));
+        dealerNamerField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        dealerNamerField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clientNameFieldActionPerformed(evt);
+                dealerNamerFieldActionPerformed(evt);
             }
         });
-        jPanel1.add(clientNameField);
-        clientNameField.setBounds(460, 190, 180, 40);
+        jPanel1.add(dealerNamerField);
+        dealerNamerField.setBounds(460, 190, 180, 40);
 
-        idClientField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        idClientField.addActionListener(new java.awt.event.ActionListener() {
+        idDealerField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        idDealerField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                idClientFieldActionPerformed(evt);
+                idDealerFieldActionPerformed(evt);
             }
         });
-        jPanel1.add(idClientField);
-        idClientField.setBounds(460, 310, 180, 40);
+        jPanel1.add(idDealerField);
+        idDealerField.setBounds(460, 310, 180, 40);
 
         jLabel4.setBackground(new java.awt.Color(196, 196, 196));
         jLabel4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -142,22 +142,22 @@ public class createDealerView extends javax.swing.JFrame {
         jLabel5.setBackground(new java.awt.Color(196, 196, 196));
         jLabel5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("<html>Marca</html>");
+        jLabel5.setText("<html>Producto</html>");
         jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jLabel5.setMaximumSize(new java.awt.Dimension(0, 0));
         jLabel5.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel5.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(340, 360, 90, 60);
+        jLabel5.setBounds(340, 360, 110, 60);
 
-        idClientField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        idClientField1.addActionListener(new java.awt.event.ActionListener() {
+        dealerProductField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        dealerProductField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                idClientField1ActionPerformed(evt);
+                dealerProductFieldActionPerformed(evt);
             }
         });
-        jPanel1.add(idClientField1);
-        idClientField1.setBounds(460, 370, 180, 40);
+        jPanel1.add(dealerProductField);
+        dealerProductField.setBounds(460, 370, 180, 40);
 
         celDealerField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         celDealerField.addActionListener(new java.awt.event.ActionListener() {
@@ -200,21 +200,21 @@ public class createDealerView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_addDealerButtonActionPerformed
 
-    private void lastNameClientFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lastNameClientFieldActionPerformed
+    private void lastNameDealerFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lastNameDealerFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_lastNameClientFieldActionPerformed
+    }//GEN-LAST:event_lastNameDealerFieldActionPerformed
 
-    private void clientNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clientNameFieldActionPerformed
+    private void dealerNamerFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dealerNamerFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_clientNameFieldActionPerformed
+    }//GEN-LAST:event_dealerNamerFieldActionPerformed
 
-    private void idClientFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idClientFieldActionPerformed
+    private void idDealerFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idDealerFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_idClientFieldActionPerformed
+    }//GEN-LAST:event_idDealerFieldActionPerformed
 
-    private void idClientField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idClientField1ActionPerformed
+    private void dealerProductFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dealerProductFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_idClientField1ActionPerformed
+    }//GEN-LAST:event_dealerProductFieldActionPerformed
 
     private void celDealerFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_celDealerFieldActionPerformed
         // TODO add your handling code here:
@@ -259,9 +259,9 @@ public class createDealerView extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton addDealerButton;
     public javax.swing.JTextField celDealerField;
-    public javax.swing.JTextField clientNameField;
-    public javax.swing.JTextField idClientField;
-    public javax.swing.JTextField idClientField1;
+    public javax.swing.JTextField dealerNamerField;
+    public javax.swing.JTextField dealerProductField;
+    public javax.swing.JTextField idDealerField;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -270,6 +270,6 @@ public class createDealerView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField17;
-    public javax.swing.JTextField lastNameClientField;
+    public javax.swing.JTextField lastNameDealerField;
     // End of variables declaration//GEN-END:variables
 }
