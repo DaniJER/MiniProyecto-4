@@ -58,6 +58,7 @@ public class MiniProyecto4 {
         readClientView readClientView = new readClientView();
         readDealerView readDealerView = new readDealerView();
         readProductView readProductView = new readProductView();
+        showClientsView showClientsView = new showClientsView();
         
         
         
@@ -68,6 +69,7 @@ public class MiniProyecto4 {
         deleteDealerView deleteDealerView = new deleteDealerView();
         deleteProductView deleteProductView = new deleteProductView();
         CreateClientModel createClientModel = new CreateClientModel();
+        ReadClientModel readClientModel = new ReadClientModel();
         
         
         
@@ -94,7 +96,7 @@ public class MiniProyecto4 {
     
         CreateProductsController createProductsController = new CreateProductsController(addItemView,addProductView){};
     
-        ReadClientController readClientController = new ReadClientController(searchItemView, readClientView){};
+        ReadClientController readClientController = new ReadClientController(searchItemView, readClientView, readClientModel, showClientsView){};
     
         ReadDealersController readDealerController = new ReadDealersController(searchItemView,readDealerView ){};
     

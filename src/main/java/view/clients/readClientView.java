@@ -61,7 +61,7 @@ public class readClientView extends javax.swing.JFrame {
         jTextField17.setText("Developed by jviedman dev - enriquez dev");
         jTextField17.setBorder(null);
         jPanel1.add(jTextField17);
-        jTextField17.setBounds(250, 560, 520, 19);
+        jTextField17.setBounds(270, 560, 520, 19);
 
         searchClientButton.setBackground(new java.awt.Color(131, 131, 131));
         searchClientButton.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N

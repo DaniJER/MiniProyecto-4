@@ -117,7 +117,7 @@ public class CreateClientModel {
                 bufferedWriter.write(String.valueOf(dataClientArray));
                 bufferedWriter.newLine();  // Agregar una nueva línea para cada usuario
                 bufferedWriter.close();
-                JOptionPane.showMessageDialog(null,"Datos almacenados en el archivo de texto");
+                JOptionPane.showMessageDialog(null,"Datos almacenados del cliente almacenados");
 
             } catch (IOException e) {
                 System.err.println("Error al añadir texto al archivo: " + e.getMessage());
