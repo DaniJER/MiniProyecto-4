@@ -30,7 +30,7 @@ public class readDealerView extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jTextField17 = new javax.swing.JTextField();
         searchDealerButton = new javax.swing.JButton();
-        idClient = new javax.swing.JTextField();
+        idDealer = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -75,9 +75,14 @@ public class readDealerView extends javax.swing.JFrame {
         jPanel1.add(searchDealerButton);
         searchDealerButton.setBounds(350, 390, 220, 60);
 
-        idClient.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel1.add(idClient);
-        idClient.setBounds(420, 230, 180, 40);
+        idDealer.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        idDealer.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                idDealerKeyTyped(evt);
+            }
+        });
+        jPanel1.add(idDealer);
+        idDealer.setBounds(420, 230, 180, 40);
 
         jLabel5.setBackground(new java.awt.Color(196, 196, 196));
         jLabel5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -117,6 +122,21 @@ public class readDealerView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_searchDealerButtonActionPerformed
 
+    private void idDealerKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_idDealerKeyTyped
+        int key = evt.getKeyChar();
+
+        boolean numeros = key >= 48 && key <= 57;
+        
+        if (!numeros){
+            
+            evt.consume();
+        }
+
+        if (idDealer.getText().trim().length() == 10) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_idDealerKeyTyped
+
     /**
      * @param args the command line arguments
      */
@@ -153,7 +173,7 @@ public class readDealerView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JTextField idClient;
+    public javax.swing.JTextField idDealer;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;

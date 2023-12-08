@@ -30,7 +30,7 @@ public class searchItemView extends javax.swing.JFrame {
         jTextField3 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         selectClientButton = new javax.swing.JButton();
-        searchDealerButton = new javax.swing.JButton();
+        selectDealerItem = new javax.swing.JButton();
         searchProductButton = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         backButton = new javax.swing.JButton();
@@ -77,20 +77,20 @@ public class searchItemView extends javax.swing.JFrame {
         jPanel3.add(selectClientButton);
         selectClientButton.setBounds(140, 330, 170, 50);
 
-        searchDealerButton.setBackground(new java.awt.Color(131, 131, 131));
-        searchDealerButton.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
-        searchDealerButton.setText("Distribuidor");
-        searchDealerButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
-        searchDealerButton.setMaximumSize(new java.awt.Dimension(170, 75));
-        searchDealerButton.setMinimumSize(new java.awt.Dimension(170, 75));
-        searchDealerButton.setPreferredSize(new java.awt.Dimension(170, 75));
-        searchDealerButton.addActionListener(new java.awt.event.ActionListener() {
+        selectDealerItem.setBackground(new java.awt.Color(131, 131, 131));
+        selectDealerItem.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        selectDealerItem.setText("Distribuidor");
+        selectDealerItem.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
+        selectDealerItem.setMaximumSize(new java.awt.Dimension(170, 75));
+        selectDealerItem.setMinimumSize(new java.awt.Dimension(170, 75));
+        selectDealerItem.setPreferredSize(new java.awt.Dimension(170, 75));
+        selectDealerItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                searchDealerButtonActionPerformed(evt);
+                selectDealerItemActionPerformed(evt);
             }
         });
-        jPanel3.add(searchDealerButton);
-        searchDealerButton.setBounds(360, 330, 250, 50);
+        jPanel3.add(selectDealerItem);
+        selectDealerItem.setBounds(360, 330, 250, 50);
 
         searchProductButton.setBackground(new java.awt.Color(131, 131, 131));
         searchProductButton.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
@@ -147,9 +147,9 @@ public class searchItemView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_selectClientButtonActionPerformed
 
-    private void searchDealerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchDealerButtonActionPerformed
+    private void selectDealerItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectDealerItemActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_searchDealerButtonActionPerformed
+    }//GEN-LAST:event_selectDealerItemActionPerformed
 
     private void searchProductButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchProductButtonActionPerformed
         // TODO add your handling code here:
@@ -207,8 +207,8 @@ public class searchItemView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField jTextField3;
-    public javax.swing.JButton searchDealerButton;
     public javax.swing.JButton searchProductButton;
     public javax.swing.JButton selectClientButton;
+    public javax.swing.JButton selectDealerItem;
     // End of variables declaration//GEN-END:variables
 }

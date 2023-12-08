@@ -109,7 +109,7 @@ public class ReadClientModel {
                 }
             }
 
-            System.out.println("Cliente no encontrado.");
+            JOptionPane.showMessageDialog(null,"Cliente no encontrado.");
             return false; // Indica que no se encontró la cédula
 
         } catch (IOException e) {

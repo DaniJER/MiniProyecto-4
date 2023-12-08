@@ -6,7 +6,11 @@ package controller.dealersController;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
+import model.DealersModel.ReadDealerModel;
 import view.dealers.readDealerView;
+import view.dealers.showDealersView;
+import view.principalView;
 import view.searchItemView;
 
 /**
@@ -17,12 +21,23 @@ public class ReadDealersController implements ActionListener {
 
     private searchItemView searchItemView;
     private readDealerView readDealerView;
+    private showDealersView showDealersView;
+    private ReadDealerModel readDealerModel;
+    private principalView principalView;
 
-    public ReadDealersController(searchItemView searchItemView, readDealerView readDealerView) {
+    public ReadDealersController(searchItemView searchItemView, readDealerView readDealerView, showDealersView showDealersView, ReadDealerModel readDealerModel, principalView principalView) {
+        
         this.searchItemView = searchItemView;
         this.readDealerView = readDealerView;
+        this.showDealersView = showDealersView;
+        this.readDealerModel = readDealerModel;
+        this.principalView = principalView;
         
-        searchItemView.searchDealerButton.addActionListener(this);
+        searchItemView.selectDealerItem.addActionListener(this);
+        readDealerView.searchDealerButton.addActionListener(this);
+        showDealersView.principalMenuDealersButton.addActionListener(this);
+        showDealersView.dealersBackButton.addActionListener(this);
+    
     }
     
     @Override
@@ -32,6 +47,39 @@ public class ReadDealersController implements ActionListener {
         readDealerView.setVisible(true);
         readDealerView.setLocationRelativeTo(null);
         
+         if(e.getSource() == readDealerView.searchDealerButton){
+            
+            String id = readDealerView.idDealer.getText();
+            
+            if(id.isEmpty()){
+                
+                JOptionPane.showMessageDialog(null,"Por favor ingrese una cedula");    
+            }else{
+                
+                readDealerModel.setDealerId(readDealerView.idDealer.getText());
+                readDealerModel.readDealer(readDealerView.idDealer.getText());
+           
+                readDealerView.dispose();
+                showDealersView.setVisible(true); 
+                showDealersView.setLocationRelativeTo(null);
+
+                showDealersView.nameDealer.setText("Nombre: " + readDealerModel.getDealerName());
+                showDealersView.lastNameDealer.setText("Apellido: " +readDealerModel.getDealerLastName());
+                showDealersView.idDealer.setText("Identificacion: " +readDealerModel.getDealerId());
+                showDealersView.productDealer.setText("Producto: " +readDealerModel.getDealerProductName());
+                showDealersView.celDealer.setText("Celular: " +readDealerModel.getDealerCel());
+            }
+        }   if(e.getSource() == showDealersView.dealersBackButton){
+            
+                showDealersView.dispose();
+                readDealerView.setVisible(true);
+            }
+            if(e.getSource() == showDealersView.principalMenuDealersButton){
+            
+                showDealersView.dispose();
+                readDealerView.dispose();
+                principalView.setVisible(true);
+            }
     }
     
 }
