@@ -62,7 +62,7 @@ public class MiniProyecto4 {
         ReadDealerModel readDealerModel = new ReadDealerModel();
         showClientsView showClientsView = new showClientsView();
         showDealersView showDealerView = new showDealersView();
-        
+        showClientsRemoved showClientsRemoved = new showClientsRemoved();
         
         updateClientView updateClientView = new updateClientView();
         updateDealerView updateDealerView = new updateDealerView();
@@ -90,7 +90,7 @@ public class MiniProyecto4 {
         
         UpdateProductsController updateProductsController = new UpdateProductsController(updateItemView, updateProductView);
         
-        DeleteClientController deleteClientController = new DeleteClientController(deleteItemView, deleteClientView, deleteClientModel);
+        DeleteClientController deleteClientController = new DeleteClientController(deleteItemView, deleteClientView, deleteClientModel, showClientsRemoved, principalView );
         
         DeleteDealersController deleteDealersController = new DeleteDealersController(deleteItemView, deleteDealerView);
         

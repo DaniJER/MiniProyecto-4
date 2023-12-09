@@ -29,7 +29,7 @@ public class updateClientView extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jTextField2 = new javax.swing.JTextField();
         jTextField17 = new javax.swing.JTextField();
-        updateClientButton = new javax.swing.JButton();
+        updateClientButton1 = new javax.swing.JButton();
         idClientField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
 
@@ -63,17 +63,17 @@ public class updateClientView extends javax.swing.JFrame {
         jPanel2.add(jTextField17);
         jTextField17.setBounds(250, 560, 520, 19);
 
-        updateClientButton.setBackground(new java.awt.Color(131, 131, 131));
-        updateClientButton.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        updateClientButton.setText("Actualizar");
-        updateClientButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
-        updateClientButton.addActionListener(new java.awt.event.ActionListener() {
+        updateClientButton1.setBackground(new java.awt.Color(131, 131, 131));
+        updateClientButton1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        updateClientButton1.setText("Actualizar");
+        updateClientButton1.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
+        updateClientButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                updateClientButtonActionPerformed(evt);
+                updateClientButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(updateClientButton);
-        updateClientButton.setBounds(420, 460, 210, 60);
+        jPanel2.add(updateClientButton1);
+        updateClientButton1.setBounds(420, 460, 210, 60);
 
         idClientField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         idClientField.addActionListener(new java.awt.event.ActionListener() {
@@ -118,9 +118,9 @@ public class updateClientView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
 
-    private void updateClientButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateClientButtonActionPerformed
+    private void updateClientButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateClientButton1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_updateClientButtonActionPerformed
+    }//GEN-LAST:event_updateClientButton1ActionPerformed
 
     private void idClientFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idClientFieldActionPerformed
         // TODO add your handling code here:
@@ -167,6 +167,6 @@ public class updateClientView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField jTextField17;
     private javax.swing.JTextField jTextField2;
-    public javax.swing.JButton updateClientButton;
+    public javax.swing.JButton updateClientButton1;
     // End of variables declaration//GEN-END:variables
 }

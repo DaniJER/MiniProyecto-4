@@ -18,7 +18,7 @@ public class UpdateClientController implements ActionListener{
         this.updateInfoClientView = updateInfoClientView;
         
         updateItemView.updateClientButton.addActionListener(this);
-        updateClientView.updateClientButton.addActionListener(this);
+        updateClientView.updateClientButton1.addActionListener(this);
         //updateClientView.backButton.addActionListener(this);
     }
     
@@ -29,17 +29,17 @@ public class UpdateClientController implements ActionListener{
             updateClientView.setVisible(true);
             updateClientView.setLocationRelativeTo(null);
         }
-        if(e.getSource() == updateClientView.updateClientButton){
-            String id = updateClientView.idClientField.getText();
-            Boolean verification = updateClientModel.isCedulaUnique(id);
-            if(verification){
-                updateClientView.dispose();
-                
-                updateInfoClientView.setVisible(true);
-                updateInfoClientView.setLocationRelativeTo(null);
-            }
+        if(e.getSource() == updateClientView.updateClientButton1){
+            
+           updateInfoClientView.setVisible(true);
+           updateClientModel.updateClient(updateClientView.idClientField.getText());
+           
         }
         if(e.getSource() == updateInfoClientView.updateClientButton){
+            
+            updateClientModel.setNameUpdate(updateInfoClientView.clientNameField.getText());
+            updateClientModel.setLastNameUpdate(updateInfoClientView.lastNameClientField.getText());
+            updateClientModel.setCelUpdate(updateInfoClientView.celClientField.getText());
             
         }
     }

@@ -1,110 +1,135 @@
 package model.clientesModel;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 
 public class UpdateClientModel {
-    private String name;
-    private String lastName;
-    private String brand;
-    private String id;
-    private String cel;
+    
+    private String nameUpdate;
+    private String lastNameUpdate;
+    private String brandUpdate;
+    private String idUpdate;
+    private String celUpdate;
         
     String fileRuteClients = "src/main/java/textFiles/clientsData";
+
+    public String getNameUpdate() {
+        return nameUpdate;
+    }
+
+    public void setNameUpdate(String nameUpdate) {
+        this.nameUpdate = nameUpdate;
+    }
+
+    public String getLastNameUpdate() {
+        return lastNameUpdate;
+    }
+
+    public void setLastNameUpdate(String lastNameUpdate) {
+        this.lastNameUpdate = lastNameUpdate;
+    }
+
+    public String getBrandUpdate() {
+        return brandUpdate;
+    }
+
+    public void setBrandUpdate(String brandUpdate) {
+        this.brandUpdate = brandUpdate;
+    }
+
+    public String getIdUpdate() {
+        return idUpdate;
+    }
+
+    public void setIdUpdate(String idUpdate) {
+        this.idUpdate = idUpdate;
+    }
+
+    public String getCelUpdate() {
+        return celUpdate;
+    }
+
+    public void setCelUpdate(String celUpdate) {
+        this.celUpdate = celUpdate;
+    }
+
+    public String getFileRuteClients() {
+        return fileRuteClients;
+    }
+
+    public void setFileRuteClients(String fileRuteClients) {
+        this.fileRuteClients = fileRuteClients;
+    }
     
    
-    public String getName() {
-        return name;
-    }
+   public boolean updateClient(String id) {
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/textFiles/clientsData"))) {
 
-    public String getLastName() {
-        return lastName;
-    }
+        String line;
+        ArrayList<String> clientList = new ArrayList<>();
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+        // Lee el archivo y almacena cada línea en el ArrayList
+        while ((line = br.readLine()) != null) {
+            clientList.add(line);
+        }
 
-    public String getBrand() {
-        return brand;
-    }
+        // Busca la cédula en el ArrayList
+        for (int i = 0; i < clientList.size(); i++) {
+            String clientData = clientList.get(i);
+            String[] dataArray = clientData
+                    .replaceAll("[\\[\\]]", "") // Elimina corchetes "[" y "]"
+                    .split(", "); // Suponiendo que los datos están separados por ", "
 
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
+            for (String data : dataArray) {
+                String[] keyValue = data.split(": ");
 
-    public String getId() {
-        return id;
-    }
+                if (keyValue[0].trim().equals("Identificación") && keyValue[1].trim().equals(id)) {
 
-    public void setId(String id) {
-        this.id = id;
-    }
+                    // Actualiza los datos del cliente en el ArrayList
+                    dataArray[0] = "Nombre: " + nameUpdate;
+                    dataArray[1] = "Apellido: " + lastNameUpdate;
+                    dataArray[3] = "Celular: " + idUpdate;
 
-    public String getCel() {
-        return cel;
-    }
+                    // Escribe el ArrayList actualizado en el archivo de texto
+                    try (BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/java/textFiles/clientsData"))) {
 
-    public void setCel(String cel) {
-        this.cel = cel;
-    }
+                        for (String updatedClient : clientList) {
+                            writer.write(updatedClient);
+                            writer.newLine();
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
 
-    public void UpdateClient() {
+                    System.out.println("Cliente actualizado:");
+                    for (String entry : dataArray) {
+                        System.out.println("Datos del cliente: " + entry);
+                    }
 
-    /*  ArrayList<ArrayList<String>> principalClientArray = new ArrayList<>();
-        ArrayList<String> dataClientArray = new ArrayList<>();
-
-        dataClientArray.add(this.name);
-        dataClientArray.add(this.lastName);
-        dataClientArray.add(this.id);
-        dataClientArray.add(this.cel);
-
-        // Verificar si la cédula ya existe en el archivo
-        if (isCedulaUnique(this.id)) {
-            principalClientArray.add(dataClientArray);
-            System.out.println("Los siguientes datos fueron guardados " + principalClientArray);
-
-            // Escribir en el archivo solo si la cédula es única
-            try {
-                FileWriter fileWriter = new FileWriter(fileRuteClients, true);
-                BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-                bufferedWriter.write(String.valueOf(dataClientArray));
-                bufferedWriter.newLine();  // Agregar una nueva línea para cada usuario
-                bufferedWriter.close();
-                JOptionPane.showMessageDialog(null, "Datos almacenados del cliente almacenados");
-
-            } catch (IOException e) {
-                System.err.println("Error al añadir texto al archivo: " + e.getMessage());
-            }
-        } else {
-            JOptionPane.showMessageDialog(null, "La cédula ya existe. No se puede agregar el usuario.");
-        }*/
-    }
-    
-    public boolean isCedulaUnique(String cedula) {
-        
-        try (Scanner scanner = new Scanner(new File(fileRuteClients))) {
-            
-            while (scanner.hasNextLine()) {
-                String line = scanner.nextLine();
-                
-                String[] userData = line.substring(1, line.length() - 1).split(",");
-                String existingCedula = userData[2].trim(); // Obtener la cédula
-                if (existingCedula.equals(cedula)) {
-                    return false; 
+                    return true; // Indica que se encontró la cédula y se actualizó el cliente
                 }
             }
-        } catch (FileNotFoundException e) {
-            // Manejar la excepción si el archivo no existe (puede ser la primera vez que se ejecuta)
-            System.err.println("El archivo no existe, se creará uno nuevo.");
         }
-        return true;
+
+        JOptionPane.showMessageDialog(null, "Cliente no encontrado.");
+        return false; // Indica que no se encontró la cédula
+
+    } catch (IOException e) {
+        e.printStackTrace();
+        return false; // Manejo de excepciones
     }
 }
+        
+       
+   }
+

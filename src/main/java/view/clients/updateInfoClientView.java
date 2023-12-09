@@ -142,7 +142,7 @@ public class updateInfoClientView extends javax.swing.JFrame {
         jLabel5.setBounds(340, 340, 90, 60);
 
         getContentPane().add(jPanel5);
-        jPanel5.setBounds(0, 0, 900, 600);
+        jPanel5.setBounds(0, 0, 940, 600);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
