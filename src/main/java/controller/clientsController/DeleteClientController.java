@@ -7,7 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import view.clients. *;
 import view. *;
-
+import model.clientesModel. *;
 /**
  *
  * @author El Rey
@@ -15,16 +15,31 @@ import view. *;
 public class DeleteClientController implements ActionListener {
     private deleteItemView deleteItemView;
     private deleteClientView deleteClientView;
+    private DeleteClientModel deleteClientModel;
     
-    public DeleteClientController(deleteItemView deleteItemView, deleteClientView deleteClientView){
+    public DeleteClientController(deleteItemView deleteItemView, deleteClientView deleteClientView, DeleteClientModel deleteClientModel){
         this.deleteItemView = deleteItemView;
         this.deleteClientView = deleteClientView;
+        this.deleteClientModel = deleteClientModel;
         
         deleteItemView.deleteClientButton.addActionListener(this);
+        deleteClientView.deleteClientButton.addActionListener(this);
        // deleteClientView.backButton.addActionListener(this);
     }
     
     public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == deleteItemView.deleteClientButton){
+            deleteItemView.dispose();
+            deleteClientView.setVisible(true);
+            deleteClientView.setLocationRelativeTo(null);
+        }
+        if(e.getSource() == deleteClientView.deleteClientButton){
+            String id = deleteClientView.idClientField.getText();
+            Boolean verification = deleteClientModel.isCedulaUnique(id);
+            if(verification){
+                
+            }
+        }
         /*if(e.getSource() == deleteClientView.backButton){
             deleteClientView.dispose();
             deleteItemView.setVisible(true);

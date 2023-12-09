@@ -5,6 +5,7 @@
 package main;
 
 import java.io.*;
+import controller.clientsController.*;
 import controller.clientsController.CreateClientController;
 import controller.clientsController.DeleteClientController;
 import controller.clientsController.ReadClientController;
@@ -72,6 +73,9 @@ public class MiniProyecto4 {
         CreateClientModel createClientModel = new CreateClientModel();
         ReadClientModel readClientModel = new ReadClientModel();
         CreateDealerModel createDealerModel = new CreateDealerModel();
+        UpdateClientModel updateClientModel = new UpdateClientModel();
+        updateInfoClientView updateInfoClientView = new updateInfoClientView();
+        DeleteClientModel deleteClientModel = new DeleteClientModel();
         
         
         
@@ -80,13 +84,13 @@ public class MiniProyecto4 {
         principalController.startPrincipalView();
         
 
-        UpdateClientController updateClientController = new UpdateClientController(updateItemView, updateClientView);
+        UpdateClientController updateClientController = new UpdateClientController(updateItemView, updateClientView, updateClientModel, updateInfoClientView);
         
         UpdateDealersController updateDealersController = new UpdateDealersController(updateItemView, updateDealerView);
         
         UpdateProductsController updateProductsController = new UpdateProductsController(updateItemView, updateProductView);
         
-        DeleteClientController deleteClientController = new DeleteClientController(deleteItemView, deleteClientView);
+        DeleteClientController deleteClientController = new DeleteClientController(deleteItemView, deleteClientView, deleteClientModel);
         
         DeleteDealersController deleteDealersController = new DeleteDealersController(deleteItemView, deleteDealerView);
         
