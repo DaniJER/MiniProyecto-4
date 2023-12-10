@@ -38,6 +38,8 @@ public class createClientView extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         celClientField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
+        principalMenuAddClient = new javax.swing.JButton();
+        backButtonAddClient = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,7 +55,7 @@ public class createClientView extends javax.swing.JFrame {
         jTextField1.setMinimumSize(new java.awt.Dimension(0, 0));
         jTextField1.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(jTextField1);
-        jTextField1.setBounds(230, 50, 560, 100);
+        jTextField1.setBounds(260, 60, 560, 100);
 
         jTextField17.setBackground(new java.awt.Color(196, 196, 196));
         jTextField17.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
@@ -74,7 +76,7 @@ public class createClientView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(addClientButton);
-        addClientButton.setBounds(400, 470, 210, 60);
+        addClientButton.setBounds(420, 470, 210, 60);
 
         lastNameClientField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         lastNameClientField.addActionListener(new java.awt.event.ActionListener() {
@@ -157,6 +159,30 @@ public class createClientView extends javax.swing.JFrame {
         jPanel1.add(jLabel5);
         jLabel5.setBounds(340, 380, 90, 60);
 
+        principalMenuAddClient.setBackground(new java.awt.Color(131, 131, 131));
+        principalMenuAddClient.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        principalMenuAddClient.setText("Menu principal");
+        principalMenuAddClient.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
+        principalMenuAddClient.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                principalMenuAddClientActionPerformed(evt);
+            }
+        });
+        jPanel1.add(principalMenuAddClient);
+        principalMenuAddClient.setBounds(640, 470, 210, 60);
+
+        backButtonAddClient.setBackground(new java.awt.Color(131, 131, 131));
+        backButtonAddClient.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        backButtonAddClient.setText("Volver");
+        backButtonAddClient.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
+        backButtonAddClient.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonAddClientActionPerformed(evt);
+            }
+        });
+        jPanel1.add(backButtonAddClient);
+        backButtonAddClient.setBounds(270, 470, 140, 60);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -193,6 +219,14 @@ public class createClientView extends javax.swing.JFrame {
     private void celClientFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_celClientFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_celClientFieldActionPerformed
+
+    private void principalMenuAddClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_principalMenuAddClientActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_principalMenuAddClientActionPerformed
+
+    private void backButtonAddClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonAddClientActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backButtonAddClientActionPerformed
 
     /**
      * @param args the command line arguments
@@ -231,6 +265,7 @@ public class createClientView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton addClientButton;
+    public javax.swing.JButton backButtonAddClient;
     public javax.swing.JTextField celClientField;
     public javax.swing.JTextField clientNameField;
     public javax.swing.JTextField idClientField;
@@ -242,5 +277,6 @@ public class createClientView extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField17;
     public javax.swing.JTextField lastNameClientField;
+    public javax.swing.JButton principalMenuAddClient;
     // End of variables declaration//GEN-END:variables
 }

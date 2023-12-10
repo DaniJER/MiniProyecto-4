@@ -31,9 +31,10 @@ public class addItemView extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         selectClientButton = new javax.swing.JButton();
         addDealerButton = new javax.swing.JButton();
-        addProductButton = new javax.swing.JButton();
+        selectProductButton = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         backButton = new javax.swing.JButton();
+        backButtonaddItem = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -75,7 +76,7 @@ public class addItemView extends javax.swing.JFrame {
             }
         });
         jPanel3.add(selectClientButton);
-        selectClientButton.setBounds(140, 330, 170, 50);
+        selectClientButton.setBounds(150, 330, 170, 50);
 
         addDealerButton.setBackground(new java.awt.Color(131, 131, 131));
         addDealerButton.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
@@ -92,20 +93,20 @@ public class addItemView extends javax.swing.JFrame {
         jPanel3.add(addDealerButton);
         addDealerButton.setBounds(360, 330, 250, 50);
 
-        addProductButton.setBackground(new java.awt.Color(131, 131, 131));
-        addProductButton.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
-        addProductButton.setText("Producto");
-        addProductButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
-        addProductButton.setMaximumSize(new java.awt.Dimension(170, 75));
-        addProductButton.setMinimumSize(new java.awt.Dimension(170, 75));
-        addProductButton.setPreferredSize(new java.awt.Dimension(170, 75));
-        addProductButton.addActionListener(new java.awt.event.ActionListener() {
+        selectProductButton.setBackground(new java.awt.Color(131, 131, 131));
+        selectProductButton.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        selectProductButton.setText("Producto");
+        selectProductButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
+        selectProductButton.setMaximumSize(new java.awt.Dimension(170, 75));
+        selectProductButton.setMinimumSize(new java.awt.Dimension(170, 75));
+        selectProductButton.setPreferredSize(new java.awt.Dimension(170, 75));
+        selectProductButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addProductButtonActionPerformed(evt);
+                selectProductButtonActionPerformed(evt);
             }
         });
-        jPanel3.add(addProductButton);
-        addProductButton.setBounds(650, 330, 180, 50);
+        jPanel3.add(selectProductButton);
+        selectProductButton.setBounds(650, 330, 180, 50);
 
         jLabel7.setBackground(new java.awt.Color(0, 0, 0));
         jLabel7.setFont(new java.awt.Font("Arial", 1, 40)); // NOI18N
@@ -129,6 +130,21 @@ public class addItemView extends javax.swing.JFrame {
         jPanel3.add(backButton);
         backButton.setBounds(70, 60, 80, 87);
 
+        backButtonaddItem.setBackground(new java.awt.Color(131, 131, 131));
+        backButtonaddItem.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        backButtonaddItem.setText("Volver");
+        backButtonaddItem.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
+        backButtonaddItem.setMaximumSize(new java.awt.Dimension(170, 75));
+        backButtonaddItem.setMinimumSize(new java.awt.Dimension(170, 75));
+        backButtonaddItem.setPreferredSize(new java.awt.Dimension(170, 75));
+        backButtonaddItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonaddItemActionPerformed(evt);
+            }
+        });
+        jPanel3.add(backButtonaddItem);
+        backButtonaddItem.setBounds(760, 520, 160, 50);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -151,13 +167,17 @@ public class addItemView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_addDealerButtonActionPerformed
 
-    private void addProductButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addProductButtonActionPerformed
+    private void selectProductButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectProductButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_addProductButtonActionPerformed
+    }//GEN-LAST:event_selectProductButtonActionPerformed
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_backButtonActionPerformed
+
+    private void backButtonaddItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonaddItemActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backButtonaddItemActionPerformed
 
     /**
      * @param args the command line arguments
@@ -196,12 +216,13 @@ public class addItemView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton addDealerButton;
-    public javax.swing.JButton addProductButton;
     public javax.swing.JButton backButton;
+    public javax.swing.JButton backButtonaddItem;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField jTextField3;
     public javax.swing.JButton selectClientButton;
+    public javax.swing.JButton selectProductButton;
     // End of variables declaration//GEN-END:variables
 }

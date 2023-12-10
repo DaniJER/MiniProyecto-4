@@ -1,4 +1,8 @@
 /*
+    UNIVERSIDAD DEL VALLE
+    AUTORES:
+    DANIEL JOSÉ ENRIQUEZ, COD: 2240920 - JUAN SEBASTIAN VIEDMAN, COD: 2242562
+
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -31,16 +35,13 @@ public class PrincipalController implements ActionListener {
         principalView.addItemButton.addActionListener(this);
         principalView.searchItemButton.addActionListener(this);
 
-        //addItemView.backButton.addActionListener(this);
-
         principalView.updateItemProduct.addActionListener(this);
         principalView.deleteItemProduct.addActionListener(this);
 
         //addItemView.backButton.addActionListener(this);
-        updateItemView.backButton.addActionListener(this);
+        updateItemView.backButtonUpdateItem.addActionListener(this);
         searchItemView.backButton.addActionListener(this);
         deleteItemView.backButton.addActionListener(this);
-        //addItemView.backButton.addActionListener(this);
 
         
     }
@@ -63,14 +64,7 @@ public class PrincipalController implements ActionListener {
             addItemView.setVisible(true);
             addItemView.setLocationRelativeTo(null);
         }
-        /*if(e.getSource() == addItemView.backButton){
-            
-            addItemView.dispose();
-            
-            principalView.setVisible(true);
-            
         
-        }*/
         if(e.getSource() == principalView.searchItemButton){
             
             principalView.dispose();
@@ -88,6 +82,8 @@ public class PrincipalController implements ActionListener {
             
         
         }
+        
+        // En las siguientes líneas se define los eventos de los botones para la funcionalidad de Update
         if(e.getSource() == principalView.updateItemProduct){
             
             principalView.dispose();
@@ -96,14 +92,16 @@ public class PrincipalController implements ActionListener {
             updateItemView.setLocationRelativeTo(null);
         
         }
-        if(e.getSource() == updateItemView.backButton){
+        
+        if(e.getSource() == updateItemView.backButtonUpdateItem){
             
             updateItemView.dispose();
             
             principalView.setVisible(true);
-            
+            principalView.setLocationRelativeTo(null);
         
         }
+        
         if(e.getSource() == principalView.deleteItemProduct){
             
             principalView.dispose();
@@ -116,15 +114,7 @@ public class PrincipalController implements ActionListener {
             
             deleteItemView.dispose();
 
-        /*if(e.getSource() == addItemView.backButton){
-            
-            principalView.setVisible(true);
-            
-
         
-        }
-       
-        }*/      
     }
    }
 }

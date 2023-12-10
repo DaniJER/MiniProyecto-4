@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package view.dealers;
+package view.sell;
 
 /**
  *
  * @author El Rey
  */
-public class readDealerView extends javax.swing.JFrame {
+public class searchClientToBuy extends javax.swing.JFrame {
 
     /**
-     * Creates new form readDealerView
+     * Creates new form searchClientToBuy
      */
-    public readDealerView() {
+    public searchClientToBuy() {
         initComponents();
     }
 
@@ -29,11 +29,10 @@ public class readDealerView extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
         jTextField17 = new javax.swing.JTextField();
-        searchDealerButton = new javax.swing.JButton();
-        idDealer = new javax.swing.JTextField();
+        searchClientToBuy = new javax.swing.JButton();
+        idClienteField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        BackButtonDealers = new javax.swing.JButton();
-        menuPrincipalDealersButton = new javax.swing.JButton();
+        BackButtonClients = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -43,7 +42,7 @@ public class readDealerView extends javax.swing.JFrame {
         jTextField1.setBackground(new java.awt.Color(196, 196, 196));
         jTextField1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(0, 0, 0));
-        jTextField1.setText("Buscar distribuidor por ID");
+        jTextField1.setText("Buscar cliente en la base de datos");
         jTextField1.setBorder(null);
         jTextField1.setMaximumSize(new java.awt.Dimension(0, 0));
         jTextField1.setMinimumSize(new java.awt.Dimension(0, 0));
@@ -54,7 +53,7 @@ public class readDealerView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jTextField1);
-        jTextField1.setBounds(230, 80, 470, 50);
+        jTextField1.setBounds(160, 80, 600, 50);
 
         jTextField17.setBackground(new java.awt.Color(196, 196, 196));
         jTextField17.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
@@ -65,70 +64,55 @@ public class readDealerView extends javax.swing.JFrame {
         jPanel1.add(jTextField17);
         jTextField17.setBounds(211, 540, 520, 19);
 
-        searchDealerButton.setBackground(new java.awt.Color(131, 131, 131));
-        searchDealerButton.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        searchDealerButton.setText("Buscar distribuidor");
-        searchDealerButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
-        searchDealerButton.addActionListener(new java.awt.event.ActionListener() {
+        searchClientToBuy.setBackground(new java.awt.Color(131, 131, 131));
+        searchClientToBuy.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        searchClientToBuy.setText("Buscar cliente");
+        searchClientToBuy.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
+        searchClientToBuy.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                searchDealerButtonActionPerformed(evt);
+                searchClientToBuyActionPerformed(evt);
             }
         });
-        jPanel1.add(searchDealerButton);
-        searchDealerButton.setBounds(350, 410, 220, 60);
+        jPanel1.add(searchClientToBuy);
+        searchClientToBuy.setBounds(420, 410, 220, 60);
 
-        idDealer.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        idDealer.addKeyListener(new java.awt.event.KeyAdapter() {
+        idClienteField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        idClienteField.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                idDealerKeyTyped(evt);
+                idClienteFieldKeyTyped(evt);
             }
         });
-        jPanel1.add(idDealer);
-        idDealer.setBounds(420, 230, 180, 40);
+        jPanel1.add(idClienteField);
+        idClienteField.setBounds(450, 260, 180, 40);
 
         jLabel5.setBackground(new java.awt.Color(196, 196, 196));
         jLabel5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("<html>Ingrese ID</html>");
+        jLabel5.setText("<html>Ingrese el id del cliente</html>");
         jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jLabel5.setMaximumSize(new java.awt.Dimension(0, 0));
         jLabel5.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel5.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(290, 220, 150, 50);
+        jLabel5.setBounds(290, 230, 150, 100);
 
-        BackButtonDealers.setBackground(new java.awt.Color(131, 131, 131));
-        BackButtonDealers.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        BackButtonDealers.setText("Volver");
-        BackButtonDealers.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
-        BackButtonDealers.addActionListener(new java.awt.event.ActionListener() {
+        BackButtonClients.setBackground(new java.awt.Color(131, 131, 131));
+        BackButtonClients.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        BackButtonClients.setText("Volver");
+        BackButtonClients.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
+        BackButtonClients.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BackButtonDealersActionPerformed(evt);
+                BackButtonClientsActionPerformed(evt);
             }
         });
-        jPanel1.add(BackButtonDealers);
-        BackButtonDealers.setBounds(220, 410, 120, 60);
-
-        menuPrincipalDealersButton.setBackground(new java.awt.Color(131, 131, 131));
-        menuPrincipalDealersButton.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        menuPrincipalDealersButton.setText("Menu principal");
-        menuPrincipalDealersButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
-        menuPrincipalDealersButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuPrincipalDealersButtonActionPerformed(evt);
-            }
-        });
-        jPanel1.add(menuPrincipalDealersButton);
-        menuPrincipalDealersButton.setBounds(580, 410, 220, 60);
+        jPanel1.add(BackButtonClients);
+        BackButtonClients.setBounds(290, 410, 120, 60);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 962, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -144,32 +128,28 @@ public class readDealerView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void searchDealerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchDealerButtonActionPerformed
+    private void searchClientToBuyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchClientToBuyActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_searchDealerButtonActionPerformed
+    }//GEN-LAST:event_searchClientToBuyActionPerformed
 
-    private void idDealerKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_idDealerKeyTyped
+    private void idClienteFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_idClienteFieldKeyTyped
         int key = evt.getKeyChar();
 
         boolean numeros = key >= 48 && key <= 57;
-        
+
         if (!numeros){
-            
+
             evt.consume();
         }
 
-        if (idDealer.getText().trim().length() == 10) {
+        if (idClienteField.getText().trim().length() == 10) {
             evt.consume();
         }
-    }//GEN-LAST:event_idDealerKeyTyped
+    }//GEN-LAST:event_idClienteFieldKeyTyped
 
-    private void BackButtonDealersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonDealersActionPerformed
+    private void BackButtonClientsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonClientsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BackButtonDealersActionPerformed
-
-    private void menuPrincipalDealersButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPrincipalDealersButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_menuPrincipalDealersButtonActionPerformed
+    }//GEN-LAST:event_BackButtonClientsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -188,32 +168,31 @@ public class readDealerView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(readDealerView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(searchClientToBuy.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(readDealerView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(searchClientToBuy.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(readDealerView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(searchClientToBuy.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(readDealerView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(searchClientToBuy.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new readDealerView().setVisible(true);
+                new searchClientToBuy().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton BackButtonDealers;
-    public javax.swing.JTextField idDealer;
+    public javax.swing.JButton BackButtonClients;
+    public javax.swing.JTextField idClienteField;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField17;
-    public javax.swing.JButton menuPrincipalDealersButton;
-    public javax.swing.JButton searchDealerButton;
+    public javax.swing.JButton searchClientToBuy;
     // End of variables declaration//GEN-END:variables
 }

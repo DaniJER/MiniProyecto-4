@@ -35,6 +35,7 @@ public class principalView extends javax.swing.JFrame {
         searchItemButton = new javax.swing.JButton();
         sellButton = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
+        buyProducts = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -136,7 +137,7 @@ public class principalView extends javax.swing.JFrame {
             }
         });
         jPanel3.add(sellButton);
-        sellButton.setBounds(360, 290, 230, 80);
+        sellButton.setBounds(360, 300, 170, 80);
 
         jLabel7.setBackground(new java.awt.Color(0, 0, 0));
         jLabel7.setFont(new java.awt.Font("Arial", 1, 40)); // NOI18N
@@ -149,11 +150,26 @@ public class principalView extends javax.swing.JFrame {
         jPanel3.add(jLabel7);
         jLabel7.setBounds(270, 0, 435, 90);
 
+        buyProducts.setBackground(new java.awt.Color(131, 131, 131));
+        buyProducts.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        buyProducts.setText("Comprar");
+        buyProducts.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
+        buyProducts.setMaximumSize(new java.awt.Dimension(170, 75));
+        buyProducts.setMinimumSize(new java.awt.Dimension(170, 75));
+        buyProducts.setPreferredSize(new java.awt.Dimension(170, 75));
+        buyProducts.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buyProductsActionPerformed(evt);
+            }
+        });
+        jPanel3.add(buyProducts);
+        buyProducts.setBounds(540, 300, 170, 80);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 962, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -182,6 +198,10 @@ public class principalView extends javax.swing.JFrame {
     private void sellButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sellButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_sellButtonActionPerformed
+
+    private void buyProductsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buyProductsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buyProductsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -223,6 +243,7 @@ public class principalView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton addItemButton;
+    public javax.swing.JButton buyProducts;
     public javax.swing.JButton deleteItemProduct;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;

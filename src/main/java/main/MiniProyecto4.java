@@ -1,11 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package main;
-
-import java.io.*;
-import controller.clientsController.*;
 import controller.clientsController.CreateClientController;
 import controller.clientsController.DeleteClientController;
 import controller.clientsController.ReadClientController;
@@ -29,13 +22,14 @@ import view.dealers.createDealerView;
 import view.dealers.readDealerView;
 import view.products.addProductView;
 import view.products.readProductView;
-import controller.clientsController. *;
-import controller.dealersController. *;
-import controller.productsController. *;
+import controller.sellController.SellController;
+import model.sellModel.SellModel;
 
 import view.clients.*;
 import view.dealers.*;
 import view.products.*;
+import view.sell.searchAndBuyProductView;
+import view.sell.searchClientToBuy;
 
 
 
@@ -63,6 +57,7 @@ public class MiniProyecto4 {
         showClientsView showClientsView = new showClientsView();
         showDealersView showDealerView = new showDealersView();
         showClientsRemoved showClientsRemoved = new showClientsRemoved();
+        CreateProductsModel createProductsModel = new CreateProductsModel();
         
         updateClientView updateClientView = new updateClientView();
         updateDealerView updateDealerView = new updateDealerView();
@@ -77,6 +72,11 @@ public class MiniProyecto4 {
         DeleteClientModel deleteClientModel = new DeleteClientModel();
         
         DeleteDealerModel deleteDealerModel = new DeleteDealerModel();
+        ReadProductsModel readProductsModel = new ReadProductsModel();
+        showProductsView showProductsView = new showProductsView();
+        searchAndBuyProductView searchProductView = new searchAndBuyProductView();
+        SellModel sellModel = new SellModel();
+        searchClientToBuy searchAndBuyClient = new searchClientToBuy();
         
         
         PrincipalController principalController = new PrincipalController(principalView,addItemView, searchItemView, updateItemView, deleteItemView){};
@@ -95,18 +95,19 @@ public class MiniProyecto4 {
         
         DeleteProductsController deleteProductsController = new DeleteProductsController(deleteItemView, deleteProductView);
 
-        CreateClientController createClientController = new CreateClientController(addItemView, createClientView, createClientModel){};
+        CreateClientController createClientController = new CreateClientController(addItemView, createClientView, createClientModel, principalView){};
     
-        CreateDealersController createDealersController = new CreateDealersController(addItemView,createDealerView, createDealerModel){};
+        CreateDealersController createDealersController = new CreateDealersController(addItemView,createDealerView, createDealerModel, principalView){};
     
-        CreateProductsController createProductsController = new CreateProductsController(addItemView,addProductView){};
+        CreateProductsController createProductsController = new CreateProductsController(addItemView,addProductView, createProductsModel, principalView){};
     
-        ReadClientController readClientController = new ReadClientController(searchItemView, readClientView, readClientModel, showClientsView, principalView){};
+        ReadClientController readClientController = new ReadClientController(searchItemView, readClientView, readClientModel, showClientsView, principalView, createClientModel){};
     
         ReadDealersController readDealerController = new ReadDealersController(searchItemView, readDealerView, showDealerView, readDealerModel, principalView){};
     
-        ReadProductsController readProductController = new ReadProductsController(searchItemView, readProductView);
+        ReadProductsController readProductController = new ReadProductsController(searchItemView, readProductView, readProductsModel, showProductsView, principalView);
     
+        SellController sellController = new SellController(searchProductView, sellModel, principalView, searchAndBuyClient);
   
     }
         

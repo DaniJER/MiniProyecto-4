@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
  *
  * @author El Rey
  */
-public class ReadClientModel {
+public class ReadClientModel{
     
     private String idClient;
     
@@ -113,7 +113,7 @@ public class ReadClientModel {
             return false; // Indica que no se encontró la cédula
 
         } catch (IOException e) {
-            e.printStackTrace();
+                e.printStackTrace();
             return false; // Manejo de excepciones
         }
     }

@@ -32,6 +32,8 @@ public class readClientView extends javax.swing.JFrame {
         searchClientButton = new javax.swing.JButton();
         idClientField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
+        backButtonReadClients = new javax.swing.JButton();
+        menuPrincipalButtonClients = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -73,7 +75,7 @@ public class readClientView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(searchClientButton);
-        searchClientButton.setBounds(420, 460, 210, 60);
+        searchClientButton.setBounds(390, 470, 210, 60);
 
         idClientField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         idClientField.addActionListener(new java.awt.event.ActionListener() {
@@ -99,6 +101,30 @@ public class readClientView extends javax.swing.JFrame {
         jLabel4.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(jLabel4);
         jLabel4.setBounds(390, 290, 90, 60);
+
+        backButtonReadClients.setBackground(new java.awt.Color(131, 131, 131));
+        backButtonReadClients.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        backButtonReadClients.setText("Volver");
+        backButtonReadClients.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
+        backButtonReadClients.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonReadClientsActionPerformed(evt);
+            }
+        });
+        jPanel1.add(backButtonReadClients);
+        backButtonReadClients.setBounds(270, 470, 110, 60);
+
+        menuPrincipalButtonClients.setBackground(new java.awt.Color(131, 131, 131));
+        menuPrincipalButtonClients.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        menuPrincipalButtonClients.setText("Menu principal");
+        menuPrincipalButtonClients.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
+        menuPrincipalButtonClients.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuPrincipalButtonClientsActionPerformed(evt);
+            }
+        });
+        jPanel1.add(menuPrincipalButtonClients);
+        menuPrincipalButtonClients.setBounds(610, 470, 190, 60);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -146,6 +172,14 @@ public class readClientView extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_idClientFieldKeyTyped
 
+    private void backButtonReadClientsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonReadClientsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backButtonReadClientsActionPerformed
+
+    private void menuPrincipalButtonClientsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPrincipalButtonClientsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_menuPrincipalButtonClientsActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -182,11 +216,13 @@ public class readClientView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton backButtonReadClients;
     public javax.swing.JTextField idClientField;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField17;
+    public javax.swing.JButton menuPrincipalButtonClients;
     public javax.swing.JButton searchClientButton;
     // End of variables declaration//GEN-END:variables
 }

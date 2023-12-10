@@ -1,3 +1,9 @@
+/*
+    UNIVERSIDAD DEL VALLE
+    AUTORES:
+    DANIEL JOSÉ ENRIQUEZ, COD: 2240920 - JUAN SEBASTIAN VIEDMAN, COD: 2242562
+
+*/
 package controller.clientsController;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,7 +23,7 @@ public class UpdateClientController implements ActionListener{
         
         updateItemView.updateClientButton.addActionListener(this);
         updateClientView.updateClientButton1.addActionListener(this);
-        //updateClientView.backButton.addActionListener(this);
+        updateClientView.backButtonUpdateClient.addActionListener(this);
     }
     
     public void actionPerformed(ActionEvent e) {
@@ -26,6 +32,11 @@ public class UpdateClientController implements ActionListener{
             updateItemView.dispose();
             updateClientView.setVisible(true);
             updateClientView.setLocationRelativeTo(null);
+        }
+        if(e.getSource() == updateClientView.backButtonUpdateClient){
+            updateClientView.dispose();
+            updateItemView.setVisible(true);
+            updateItemView.setLocationRelativeTo(null);
         }
         if(e.getSource() == updateClientView.updateClientButton1){
            updateClientModel.setNameUpdate(updateClientView.clientNameField.getText());

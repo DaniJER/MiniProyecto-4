@@ -33,7 +33,7 @@ public class updateItemView extends javax.swing.JFrame {
         updateDealerButton = new javax.swing.JButton();
         updateProductButton = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
-        backButton = new javax.swing.JButton();
+        backButtonUpdateItem = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -118,17 +118,20 @@ public class updateItemView extends javax.swing.JFrame {
         jPanel3.add(jLabel7);
         jLabel7.setBounds(270, 40, 435, 90);
 
-        backButton.setBackground(new java.awt.Color(195, 195, 195));
-        backButton.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\Resources\\close.png")); // NOI18N
-        backButton.setBorder(null);
-        backButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        backButton.addActionListener(new java.awt.event.ActionListener() {
+        backButtonUpdateItem.setBackground(new java.awt.Color(131, 131, 131));
+        backButtonUpdateItem.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        backButtonUpdateItem.setText("Volver");
+        backButtonUpdateItem.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
+        backButtonUpdateItem.setMaximumSize(new java.awt.Dimension(170, 75));
+        backButtonUpdateItem.setMinimumSize(new java.awt.Dimension(170, 75));
+        backButtonUpdateItem.setPreferredSize(new java.awt.Dimension(170, 75));
+        backButtonUpdateItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backButtonActionPerformed(evt);
+                backButtonUpdateItemActionPerformed(evt);
             }
         });
-        jPanel3.add(backButton);
-        backButton.setBounds(70, 60, 80, 87);
+        jPanel3.add(backButtonUpdateItem);
+        backButtonUpdateItem.setBounds(760, 520, 160, 50);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -156,9 +159,9 @@ public class updateItemView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_updateProductButtonActionPerformed
 
-    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
+    private void backButtonUpdateItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonUpdateItemActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_backButtonActionPerformed
+    }//GEN-LAST:event_backButtonUpdateItemActionPerformed
 
     /**
      * @param args the command line arguments
@@ -203,7 +206,7 @@ public class updateItemView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton backButton;
+    public javax.swing.JButton backButtonUpdateItem;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel3;

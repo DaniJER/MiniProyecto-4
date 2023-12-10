@@ -39,10 +39,15 @@ public class updateClientView extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         celClientField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
+        backButtonUpdateClient = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
         jPanel2.setBackground(new java.awt.Color(196, 196, 196));
+        jPanel2.setMaximumSize(new java.awt.Dimension(900, 600));
+        jPanel2.setMinimumSize(new java.awt.Dimension(900, 600));
+        jPanel2.setPreferredSize(new java.awt.Dimension(900, 600));
         jPanel2.setLayout(null);
 
         jTextField2.setBackground(new java.awt.Color(196, 196, 196));
@@ -59,7 +64,7 @@ public class updateClientView extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jTextField2);
-        jTextField2.setBounds(310, 40, 420, 70);
+        jTextField2.setBounds(270, 40, 420, 70);
 
         jTextField17.setBackground(new java.awt.Color(196, 196, 196));
         jTextField17.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
@@ -80,7 +85,7 @@ public class updateClientView extends javax.swing.JFrame {
             }
         });
         jPanel2.add(updateClientButton1);
-        updateClientButton1.setBounds(420, 460, 210, 60);
+        updateClientButton1.setBounds(380, 460, 210, 60);
 
         idClientField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         idClientField.addActionListener(new java.awt.event.ActionListener() {
@@ -100,7 +105,7 @@ public class updateClientView extends javax.swing.JFrame {
         jLabel4.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel4.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel2.add(jLabel4);
-        jLabel4.setBounds(340, 130, 90, 60);
+        jLabel4.setBounds(320, 130, 90, 60);
 
         jTextField5.setBackground(new java.awt.Color(196, 196, 196));
         jTextField5.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
@@ -116,7 +121,7 @@ public class updateClientView extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jTextField5);
-        jTextField5.setBounds(200, 190, 660, 50);
+        jTextField5.setBounds(180, 190, 660, 50);
 
         lastNameClientField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         lastNameClientField.addActionListener(new java.awt.event.ActionListener() {
@@ -146,7 +151,7 @@ public class updateClientView extends javax.swing.JFrame {
         jLabel7.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel7.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel2.add(jLabel7);
-        jLabel7.setBounds(310, 300, 100, 70);
+        jLabel7.setBounds(300, 300, 100, 70);
 
         jLabel8.setBackground(new java.awt.Color(196, 196, 196));
         jLabel8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -157,7 +162,7 @@ public class updateClientView extends javax.swing.JFrame {
         jLabel8.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel8.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel2.add(jLabel8);
-        jLabel8.setBounds(310, 240, 110, 70);
+        jLabel8.setBounds(300, 240, 110, 70);
 
         celClientField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         celClientField.addActionListener(new java.awt.event.ActionListener() {
@@ -177,22 +182,25 @@ public class updateClientView extends javax.swing.JFrame {
         jLabel5.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel5.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel2.add(jLabel5);
-        jLabel5.setBounds(320, 360, 90, 60);
+        jLabel5.setBounds(300, 360, 90, 60);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 12, Short.MAX_VALUE)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1043, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 660, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        backButtonUpdateClient.setBackground(new java.awt.Color(131, 131, 131));
+        backButtonUpdateClient.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        backButtonUpdateClient.setText("Volver");
+        backButtonUpdateClient.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
+        backButtonUpdateClient.setMaximumSize(new java.awt.Dimension(170, 75));
+        backButtonUpdateClient.setMinimumSize(new java.awt.Dimension(170, 75));
+        backButtonUpdateClient.setPreferredSize(new java.awt.Dimension(170, 75));
+        backButtonUpdateClient.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonUpdateClientActionPerformed(evt);
+            }
+        });
+        jPanel2.add(backButtonUpdateClient);
+        backButtonUpdateClient.setBounds(40, 50, 160, 50);
+
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(0, 0, 900, 600);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -224,6 +232,10 @@ public class updateClientView extends javax.swing.JFrame {
     private void celClientFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_celClientFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_celClientFieldActionPerformed
+
+    private void backButtonUpdateClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonUpdateClientActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backButtonUpdateClientActionPerformed
 
     /**
      * @param args the command line arguments
@@ -261,6 +273,7 @@ public class updateClientView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton backButtonUpdateClient;
     public javax.swing.JTextField celClientField;
     public javax.swing.JTextField clientNameField;
     public javax.swing.JTextField idClientField;
