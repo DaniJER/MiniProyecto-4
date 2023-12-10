@@ -27,10 +27,7 @@ public class CreateClientModel {
     
     
     String fileRuteClients = "src/main/java/textFiles/clientsData";
-    String fileRuteDealers = "src/main/java/textFiles/dealersData";
-    String fileRuteProducts = "src/main/java/textFiles/productsData";
     
-   
     public String getName() {
         return name;
     }
