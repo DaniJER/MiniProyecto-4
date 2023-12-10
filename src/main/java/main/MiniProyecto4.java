@@ -74,17 +74,16 @@ public class MiniProyecto4 {
         ReadClientModel readClientModel = new ReadClientModel();
         CreateDealerModel createDealerModel = new CreateDealerModel();
         UpdateClientModel updateClientModel = new UpdateClientModel();
-        updateInfoClientView updateInfoClientView = new updateInfoClientView();
         DeleteClientModel deleteClientModel = new DeleteClientModel();
         
-        
+        DeleteDealerModel deleteDealerModel = new DeleteDealerModel();
         
         
         PrincipalController principalController = new PrincipalController(principalView,addItemView, searchItemView, updateItemView, deleteItemView){};
         principalController.startPrincipalView();
         
 
-        UpdateClientController updateClientController = new UpdateClientController(updateItemView, updateClientView, updateClientModel, updateInfoClientView);
+        UpdateClientController updateClientController = new UpdateClientController(updateItemView, updateClientView, updateClientModel);
         
         UpdateDealersController updateDealersController = new UpdateDealersController(updateItemView, updateDealerView);
         
@@ -92,7 +91,7 @@ public class MiniProyecto4 {
         
         DeleteClientController deleteClientController = new DeleteClientController(deleteItemView, deleteClientView, deleteClientModel, showClientsRemoved, principalView );
         
-        DeleteDealersController deleteDealersController = new DeleteDealersController(deleteItemView, deleteDealerView);
+        DeleteDealersController deleteDealersController = new DeleteDealersController(deleteItemView, deleteDealerView, deleteDealerModel);
         
         DeleteProductsController deleteProductsController = new DeleteProductsController(deleteItemView, deleteProductView);
 

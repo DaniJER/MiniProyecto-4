@@ -9,13 +9,11 @@ public class UpdateClientController implements ActionListener{
     private updateItemView updateItemView;
     private updateClientView updateClientView;
     private UpdateClientModel updateClientModel;
-    private updateInfoClientView updateInfoClientView;
     
-    public UpdateClientController(updateItemView updateItemView, updateClientView updateClientView, UpdateClientModel updateClientModel, updateInfoClientView updateInfoClientView){
+    public UpdateClientController(updateItemView updateItemView, updateClientView updateClientView, UpdateClientModel updateClientModel){
         this.updateItemView = updateItemView;
         this.updateClientView = updateClientView;
         this.updateClientModel = updateClientModel;
-        this.updateInfoClientView = updateInfoClientView;
         
         updateItemView.updateClientButton.addActionListener(this);
         updateClientView.updateClientButton1.addActionListener(this);
@@ -36,13 +34,6 @@ public class UpdateClientController implements ActionListener{
            updateClientModel.updateClient(updateClientView.idClientField.getText());
            
         }
-        /*if(e.getSource() == updateInfoClientView.updateClientButton){
-            
-            updateClientModel.setNameUpdate(updateInfoClientView.clientNameField.getText());
-            updateClientModel.setLastNameUpdate(updateInfoClientView.lastNameClientField.getText());
-            updateClientModel.setCelUpdate(updateInfoClientView.celClientField.getText());
-            
-        }*/
     }
 }
 

@@ -8,7 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import view. *;
 import view.dealers. *;
-
+import model.DealersModel. *;
 /**
  *
  * @author El Rey
@@ -16,12 +16,15 @@ import view.dealers. *;
 public class DeleteDealersController implements ActionListener{
     private deleteItemView deleteItemView;
     private deleteDealerView deleteDealerView;
+    private DeleteDealerModel deleteDealerModel;
     
-    public DeleteDealersController(deleteItemView deleteItemView, deleteDealerView deleteDealerView){
+    public DeleteDealersController(deleteItemView deleteItemView, deleteDealerView deleteDealerView, DeleteDealerModel deleteDealerModel){
         this.deleteItemView = deleteItemView;
         this.deleteDealerView = deleteDealerView;
+        this.deleteDealerModel = deleteDealerModel;
         
         deleteItemView.deleteDealerButton.addActionListener(this);
+        deleteDealerView.deleteClientButton.addActionListener(this);
         //deleteDealerView.backButton.addActionListener(this);
     }
     
@@ -30,6 +33,9 @@ public class DeleteDealersController implements ActionListener{
             deleteItemView.dispose();
             deleteDealerView.setVisible(true);
             deleteDealerView.setLocationRelativeTo(null);
+        }
+        if(e.getSource() == deleteDealerView.deleteClientButton){
+            deleteDealerModel.deleteDealer(deleteDealerView.idClientField.getText());
         }
         /*if (e.getSource() == deleteDealerView.backButton){
             deleteDealerView.dispose();

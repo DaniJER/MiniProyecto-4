@@ -70,66 +70,7 @@ public class UpdateClientModel {
         this.fileRuteClients = fileRuteClients;
     }
     
-   
-/*   public boolean updateClient(String id) {
-
-    try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/textFiles/clientsData"))) {
-
-        String line;
-        ArrayList<String> clientList = new ArrayList<>();
-
-        // Lee el archivo y almacena cada línea en el ArrayList
-        while ((line = br.readLine()) != null) {
-            clientList.add(line);
-        }
-
-        // Busca la cédula en el ArrayList
-        for (int i = 0; i < clientList.size(); i++) {
-            String clientData = clientList.get(i);
-            String[] dataArray = clientData
-                    .replaceAll("[\\[\\]]", "") // Elimina corchetes "[" y "]"
-                    .split(", "); // Suponiendo que los datos están separados por ", "
-
-            for (String data : dataArray) {
-                String[] keyValue = data.split(": ");
-
-                if (keyValue[0].trim().equals("Identificación") && keyValue[1].trim().equals(id)) {
-
-                    // Actualiza los datos del cliente en el ArrayList
-                    dataArray[0] = "Nombre: " + nameUpdate;
-                    dataArray[1] = "Apellido: " + lastNameUpdate;
-                    dataArray[3] = "Celular: " + idUpdate;
-
-                    // Escribe el ArrayList actualizado en el archivo de texto
-                    try (BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/java/textFiles/clientsData"))) {
-
-                        for (String updatedClient : clientList) {
-                            writer.write(updatedClient);
-                            writer.newLine();
-                        }
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-
-                    System.out.println("Cliente actualizado:");
-                    for (String entry : dataArray) {
-                        System.out.println("Datos del cliente: " + entry);
-                    }
-
-                    return true; // Indica que se encontró la cédula y se actualizó el cliente
-                }
-            }
-        }
-
-        JOptionPane.showMessageDialog(null, "Cliente no encontrado.");
-        return false; // Indica que no se encontró la cédula
-
-    } catch (IOException e) {
-        e.printStackTrace();
-        return false; // Manejo de excepciones
-    }
-}
-   }*/
+    
 
     public boolean updateClient(String id) {
         try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/textFiles/clientsData"))) {
@@ -149,7 +90,7 @@ public class UpdateClientModel {
                     if (keyValue[0].trim().equals("Identificación") && keyValue[1].trim().equals(id)) {
                         dataArray[0] = "Nombre: " + nameUpdate;
                         dataArray[1] = "Apellido: " + lastNameUpdate;
-                        dataArray[3] = "Celular: " + idUpdate;
+                        dataArray[3] = "Celular: " + celUpdate;
                         clientFound = true;
                     }
                 }
