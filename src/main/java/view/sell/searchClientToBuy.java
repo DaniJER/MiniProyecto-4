@@ -32,7 +32,7 @@ public class searchClientToBuy extends javax.swing.JFrame {
         searchClientToBuy = new javax.swing.JButton();
         idClienteField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        BackButtonClients = new javax.swing.JButton();
+        BackButtonClient = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -96,17 +96,17 @@ public class searchClientToBuy extends javax.swing.JFrame {
         jPanel1.add(jLabel5);
         jLabel5.setBounds(290, 230, 150, 100);
 
-        BackButtonClients.setBackground(new java.awt.Color(131, 131, 131));
-        BackButtonClients.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        BackButtonClients.setText("Volver");
-        BackButtonClients.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
-        BackButtonClients.addActionListener(new java.awt.event.ActionListener() {
+        BackButtonClient.setBackground(new java.awt.Color(131, 131, 131));
+        BackButtonClient.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        BackButtonClient.setText("Volver");
+        BackButtonClient.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
+        BackButtonClient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BackButtonClientsActionPerformed(evt);
+                BackButtonClientActionPerformed(evt);
             }
         });
-        jPanel1.add(BackButtonClients);
-        BackButtonClients.setBounds(290, 410, 120, 60);
+        jPanel1.add(BackButtonClient);
+        BackButtonClient.setBounds(290, 410, 120, 60);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -147,9 +147,9 @@ public class searchClientToBuy extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_idClienteFieldKeyTyped
 
-    private void BackButtonClientsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonClientsActionPerformed
+    private void BackButtonClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonClientActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BackButtonClientsActionPerformed
+    }//GEN-LAST:event_BackButtonClientActionPerformed
 
     /**
      * @param args the command line arguments
@@ -187,7 +187,7 @@ public class searchClientToBuy extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton BackButtonClients;
+    public javax.swing.JButton BackButtonClient;
     public javax.swing.JTextField idClienteField;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
