@@ -71,7 +71,7 @@ public class UpdateClientModel {
     }
     
    
-   public boolean updateClient(String id) {
+/*   public boolean updateClient(String id) {
 
     try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/textFiles/clientsData"))) {
 
@@ -129,7 +129,62 @@ public class UpdateClientModel {
         return false; // Manejo de excepciones
     }
 }
-        
-       
-   }
+   }*/
+
+    public boolean updateClient(String id) {
+        try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/textFiles/clientsData"))) {
+
+            String line;
+            ArrayList<String> updatedClientList = new ArrayList<>();
+            boolean clientFound = false;
+
+            while ((line = br.readLine()) != null) {
+                String[] dataArray = line
+                        .replaceAll("[\\[\\]]", "")
+                        .split(", ");
+
+                for (String data : dataArray) {
+                    String[] keyValue = data.split(": ");
+
+                    if (keyValue[0].trim().equals("Identificación") && keyValue[1].trim().equals(id)) {
+                        dataArray[0] = "Nombre: " + nameUpdate;
+                        dataArray[1] = "Apellido: " + lastNameUpdate;
+                        dataArray[3] = "Celular: " + idUpdate;
+                        clientFound = true;
+                    }
+                }
+
+                updatedClientList.add(String.join(", ", dataArray));
+            }
+
+            if (clientFound) {
+                // Escribe la lista actualizada en el archivo de texto
+                try (BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/java/textFiles/clientsData"))) {
+                    for (String updatedClient : updatedClientList) {
+                        writer.write(updatedClient);
+                        writer.newLine();
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    return false; // Manejo de excepciones al escribir en el archivo
+                }
+
+                System.out.println("Cliente actualizado:");
+                for (String entry : updatedClientList) {
+                    System.out.println("Datos del cliente: " + entry);
+                }
+
+                return true; // Indica que se encontró la cédula y se actualizó el cliente
+            } else {
+                System.out.println("Cliente no encontrado.");
+                return false; // Indica que no se encontró la cédula
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false; // Manejo de excepciones al leer el archivo
+        }
+    }
+} 
+
 

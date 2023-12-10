@@ -30,18 +30,19 @@ public class UpdateClientController implements ActionListener{
             updateClientView.setLocationRelativeTo(null);
         }
         if(e.getSource() == updateClientView.updateClientButton1){
-            
-           updateInfoClientView.setVisible(true);
+           updateClientModel.setNameUpdate(updateClientView.clientNameField.getText());
+           updateClientModel.setLastNameUpdate(updateClientView.lastNameClientField.getText());
+           updateClientModel.setCelUpdate(updateClientView.celClientField.getText());
            updateClientModel.updateClient(updateClientView.idClientField.getText());
            
         }
-        if(e.getSource() == updateInfoClientView.updateClientButton){
+        /*if(e.getSource() == updateInfoClientView.updateClientButton){
             
             updateClientModel.setNameUpdate(updateInfoClientView.clientNameField.getText());
             updateClientModel.setLastNameUpdate(updateInfoClientView.lastNameClientField.getText());
             updateClientModel.setCelUpdate(updateInfoClientView.celClientField.getText());
             
-        }
+        }*/
     }
 }
 
