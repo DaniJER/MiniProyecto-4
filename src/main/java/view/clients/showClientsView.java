@@ -35,6 +35,7 @@ public class showClientsView extends javax.swing.JFrame {
         lastName = new javax.swing.JLabel();
         cel = new javax.swing.JLabel();
         id = new javax.swing.JLabel();
+        clientProducts = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -99,7 +100,7 @@ public class showClientsView extends javax.swing.JFrame {
         name.setMinimumSize(new java.awt.Dimension(0, 0));
         name.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(name);
-        name.setBounds(370, 180, 500, 60);
+        name.setBounds(290, 130, 500, 60);
 
         lastName.setBackground(new java.awt.Color(196, 196, 196));
         lastName.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -110,7 +111,7 @@ public class showClientsView extends javax.swing.JFrame {
         lastName.setMinimumSize(new java.awt.Dimension(0, 0));
         lastName.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(lastName);
-        lastName.setBounds(370, 230, 440, 70);
+        lastName.setBounds(290, 180, 440, 70);
 
         cel.setBackground(new java.awt.Color(196, 196, 196));
         cel.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -121,7 +122,7 @@ public class showClientsView extends javax.swing.JFrame {
         cel.setMinimumSize(new java.awt.Dimension(0, 0));
         cel.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(cel);
-        cel.setBounds(370, 290, 440, 60);
+        cel.setBounds(290, 240, 440, 60);
 
         id.setBackground(new java.awt.Color(196, 196, 196));
         id.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -132,7 +133,18 @@ public class showClientsView extends javax.swing.JFrame {
         id.setMinimumSize(new java.awt.Dimension(0, 0));
         id.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(id);
-        id.setBounds(370, 350, 410, 70);
+        id.setBounds(290, 300, 410, 70);
+
+        clientProducts.setBackground(new java.awt.Color(196, 196, 196));
+        clientProducts.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        clientProducts.setForeground(new java.awt.Color(0, 0, 0));
+        clientProducts.setText("<html>Productos:</html>");
+        clientProducts.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        clientProducts.setMaximumSize(new java.awt.Dimension(0, 0));
+        clientProducts.setMinimumSize(new java.awt.Dimension(0, 0));
+        clientProducts.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(clientProducts);
+        clientProducts.setBounds(290, 360, 710, 70);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -204,6 +216,7 @@ public class showClientsView extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton backButtonClients;
     public javax.swing.JLabel cel;
+    public javax.swing.JLabel clientProducts;
     public javax.swing.JLabel id;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField17;

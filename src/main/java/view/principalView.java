@@ -137,7 +137,7 @@ public class principalView extends javax.swing.JFrame {
             }
         });
         jPanel3.add(sellButton);
-        sellButton.setBounds(370, 290, 170, 80);
+        sellButton.setBounds(360, 300, 170, 80);
 
         jLabel7.setBackground(new java.awt.Color(0, 0, 0));
         jLabel7.setFont(new java.awt.Font("Arial", 1, 40)); // NOI18N
@@ -152,7 +152,7 @@ public class principalView extends javax.swing.JFrame {
 
         buyProducts.setBackground(new java.awt.Color(131, 131, 131));
         buyProducts.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
-        buyProducts.setText("Vender");
+        buyProducts.setText("Comprar");
         buyProducts.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
         buyProducts.setMaximumSize(new java.awt.Dimension(170, 75));
         buyProducts.setMinimumSize(new java.awt.Dimension(170, 75));
@@ -163,13 +163,13 @@ public class principalView extends javax.swing.JFrame {
             }
         });
         jPanel3.add(buyProducts);
-        buyProducts.setBounds(560, 290, 170, 80);
+        buyProducts.setBounds(540, 300, 170, 80);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 962, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

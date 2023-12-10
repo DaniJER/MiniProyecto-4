@@ -32,10 +32,14 @@ import view.products.readProductView;
 import controller.clientsController. *;
 import controller.dealersController. *;
 import controller.productsController. *;
+import controller.sellController.SellController;
+import model.sellModel.SellModel;
 
 import view.clients.*;
 import view.dealers.*;
 import view.products.*;
+import view.sell.searchAndBuyProductView;
+import view.sell.searchClientToBuy;
 
 
 
@@ -79,7 +83,9 @@ public class MiniProyecto4 {
         DeleteClientModel deleteClientModel = new DeleteClientModel();
         ReadProductsModel readProductsModel = new ReadProductsModel();
         showProductsView showProductsView = new showProductsView();
-        
+        searchAndBuyProductView searchProductView = new searchAndBuyProductView();
+        SellModel sellModel = new SellModel();
+        searchClientToBuy searchAndBuyClient = new searchClientToBuy();
         
         
         
@@ -105,12 +111,13 @@ public class MiniProyecto4 {
     
         CreateProductsController createProductsController = new CreateProductsController(addItemView,addProductView, createProductsModel, principalView){};
     
-        ReadClientController readClientController = new ReadClientController(searchItemView, readClientView, readClientModel, showClientsView, principalView){};
+        ReadClientController readClientController = new ReadClientController(searchItemView, readClientView, readClientModel, showClientsView, principalView, createClientModel){};
     
         ReadDealersController readDealerController = new ReadDealersController(searchItemView, readDealerView, showDealerView, readDealerModel, principalView){};
     
         ReadProductsController readProductController = new ReadProductsController(searchItemView, readProductView, readProductsModel, showProductsView, principalView);
     
+        SellController sellController = new SellController(searchProductView, sellModel, principalView, searchAndBuyClient);
   
     }
         

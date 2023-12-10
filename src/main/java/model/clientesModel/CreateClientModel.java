@@ -4,6 +4,7 @@
  */
 package model.clientesModel;
 
+import java.util.List;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import java.io.*;
@@ -20,13 +21,13 @@ public class CreateClientModel {
     private String brand;
     private String id;
     private String cel;
-    
+    private List<String> products = new ArrayList<>();
     File clientsFile;
-    File dealersFile;
-    File productsFile;
-    
-    
+
+       
     String fileRuteClients = "src/main/java/textFiles/clientsData";
+    
+    
     
     public String getName() {
         return name;
@@ -67,6 +68,15 @@ public class CreateClientModel {
     public void setCel(String cel) {
         this.cel = cel;
     }
+
+    public List<String> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<String> products) {
+        this.products = products;
+    }
+    
     
      //Metodo para crear un archivo y establecerlo en una ruta especificada
     //------------------------------------------------------------------------------------------------
@@ -96,11 +106,13 @@ public class CreateClientModel {
 
         ArrayList<ArrayList<String>> principalClientArray = new ArrayList<>();
         ArrayList<String> dataClientArray = new ArrayList<>();
+        
 
         dataClientArray.add(this.name);
         dataClientArray.add(this.lastName);
         dataClientArray.add(this.id);
         dataClientArray.add(this.cel);
+        dataClientArray.add("Productos: " +String.valueOf(products));
 
         // Verificar si la cédula ya existe en el archivo
         if (isCedulaUnique(this.id)) {
@@ -114,7 +126,7 @@ public class CreateClientModel {
                 bufferedWriter.write(String.valueOf(dataClientArray));
                 bufferedWriter.newLine();  // Agregar una nueva línea para cada usuario
                 bufferedWriter.close();
-                JOptionPane.showMessageDialog(null,"Datos almacenados del cliente almacenados");
+                JOptionPane.showMessageDialog(null,"Datos del cliente almacenados");
 
             } catch (IOException e) {
                 System.err.println("Error al añadir texto al archivo: " + e.getMessage());

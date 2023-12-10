@@ -11,6 +11,7 @@ package controller.clientsController;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import model.clientesModel.CreateClientModel;
 import model.clientesModel.ReadClientModel;
 import view.clients.readClientView;
 import view.clients.showClientsView;
@@ -28,13 +29,15 @@ public class ReadClientController implements ActionListener {
     private ReadClientModel readClientModel;
     private showClientsView showClientsView;
     private principalView principalView;
-    public ReadClientController(searchItemView searchItemView, readClientView readClientView, ReadClientModel readClientModel, showClientsView showClientsView, principalView principalView ) {
+    private CreateClientModel createClientModel;
+    public ReadClientController(searchItemView searchItemView, readClientView readClientView, ReadClientModel readClientModel, showClientsView showClientsView, principalView principalView, CreateClientModel createClientModel ) {
         
         this.searchItemView = searchItemView;
         this.readClientView = readClientView;
         this.readClientModel = readClientModel;
         this.showClientsView = showClientsView;
         this.principalView = principalView;
+        this.createClientModel = createClientModel;
         
         searchItemView.selectClientButton.addActionListener(this);
         readClientView.searchClientButton.addActionListener(this);
@@ -75,6 +78,7 @@ public class ReadClientController implements ActionListener {
                     showClientsView.lastName.setText(readClientModel.getLastName());
                     showClientsView.cel.setText(readClientModel.getCel());
                     showClientsView.id.setText(readClientModel.getId());
+                    showClientsView.clientProducts.setText("Productos " +String.valueOf(createClientModel.getProducts()));
                 }
             }
         }
