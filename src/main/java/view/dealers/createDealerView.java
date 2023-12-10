@@ -40,6 +40,8 @@ public class createDealerView extends javax.swing.JFrame {
         dealerProductField = new javax.swing.JTextField();
         celDealerField = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
+        backButtonDealer = new javax.swing.JButton();
+        principalMenuButtonDealer = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -76,7 +78,7 @@ public class createDealerView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(addDealerButton);
-        addDealerButton.setBounds(410, 510, 230, 60);
+        addDealerButton.setBounds(400, 510, 230, 60);
 
         lastNameDealerField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         lastNameDealerField.addActionListener(new java.awt.event.ActionListener() {
@@ -179,6 +181,30 @@ public class createDealerView extends javax.swing.JFrame {
         jPanel1.add(jLabel6);
         jLabel6.setBounds(340, 410, 90, 60);
 
+        backButtonDealer.setBackground(new java.awt.Color(131, 131, 131));
+        backButtonDealer.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        backButtonDealer.setText("Volver");
+        backButtonDealer.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
+        backButtonDealer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonDealerActionPerformed(evt);
+            }
+        });
+        jPanel1.add(backButtonDealer);
+        backButtonDealer.setBounds(260, 510, 130, 60);
+
+        principalMenuButtonDealer.setBackground(new java.awt.Color(131, 131, 131));
+        principalMenuButtonDealer.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        principalMenuButtonDealer.setText("Menu principal");
+        principalMenuButtonDealer.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
+        principalMenuButtonDealer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                principalMenuButtonDealerActionPerformed(evt);
+            }
+        });
+        jPanel1.add(principalMenuButtonDealer);
+        principalMenuButtonDealer.setBounds(640, 510, 230, 60);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -220,6 +246,14 @@ public class createDealerView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_celDealerFieldActionPerformed
 
+    private void backButtonDealerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonDealerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backButtonDealerActionPerformed
+
+    private void principalMenuButtonDealerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_principalMenuButtonDealerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_principalMenuButtonDealerActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -258,6 +292,7 @@ public class createDealerView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton addDealerButton;
+    public javax.swing.JButton backButtonDealer;
     public javax.swing.JTextField celDealerField;
     public javax.swing.JTextField dealerNamerField;
     public javax.swing.JTextField dealerProductField;
@@ -271,5 +306,6 @@ public class createDealerView extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField17;
     public javax.swing.JTextField lastNameDealerField;
+    public javax.swing.JButton principalMenuButtonDealer;
     // End of variables declaration//GEN-END:variables
 }

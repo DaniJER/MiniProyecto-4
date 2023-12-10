@@ -1,4 +1,8 @@
 /*
+    UNIVERSIDAD DEL VALLE
+    AUTORES:
+    DANIEL JOSÉ ENRIQUEZ, COD: 2240920 - JUAN SEBASTIAN VIEDMAN, COD: 2242562    
+
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -37,6 +41,8 @@ public class ReadDealersController implements ActionListener {
         readDealerView.searchDealerButton.addActionListener(this);
         showDealersView.principalMenuDealersButton.addActionListener(this);
         showDealersView.dealersBackButton.addActionListener(this);
+        readDealerView.BackButtonDealers.addActionListener(this);
+        readDealerView.menuPrincipalDealersButton.addActionListener(this);
     
     }
     
@@ -78,6 +84,17 @@ public class ReadDealersController implements ActionListener {
             
                 showDealersView.dispose();
                 readDealerView.dispose();
+                principalView.setVisible(true);
+            }
+            if(e.getSource() == readDealerView.BackButtonDealers){
+            
+                readDealerView.dispose();
+                searchItemView.setVisible(true);
+            }
+            if(e.getSource() == readDealerView.menuPrincipalDealersButton){
+            
+                readDealerView.dispose();
+                showDealersView.dispose();
                 principalView.setVisible(true);
             }
     }

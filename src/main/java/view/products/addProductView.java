@@ -29,7 +29,7 @@ public class addProductView extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
         jTextField17 = new javax.swing.JTextField();
-        addProductButton1 = new javax.swing.JButton();
+        backButtonProducts = new javax.swing.JButton();
         productBrandField = new javax.swing.JTextField();
         productNameField = new javax.swing.JTextField();
         productPriceField = new javax.swing.JTextField();
@@ -40,6 +40,8 @@ public class addProductView extends javax.swing.JFrame {
         productQuantityField = new javax.swing.JTextField();
         productIdDField = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
+        principalMenuButtonProducts = new javax.swing.JButton();
+        addProductButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,17 +68,17 @@ public class addProductView extends javax.swing.JFrame {
         jPanel1.add(jTextField17);
         jTextField17.setBounds(230, 560, 520, 19);
 
-        addProductButton1.setBackground(new java.awt.Color(131, 131, 131));
-        addProductButton1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        addProductButton1.setText("Guardar producto");
-        addProductButton1.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
-        addProductButton1.addActionListener(new java.awt.event.ActionListener() {
+        backButtonProducts.setBackground(new java.awt.Color(131, 131, 131));
+        backButtonProducts.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        backButtonProducts.setText("Volver");
+        backButtonProducts.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
+        backButtonProducts.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addProductButton1ActionPerformed(evt);
+                backButtonProductsActionPerformed(evt);
             }
         });
-        jPanel1.add(addProductButton1);
-        addProductButton1.setBounds(390, 480, 210, 60);
+        jPanel1.add(backButtonProducts);
+        backButtonProducts.setBounds(250, 470, 120, 60);
 
         productBrandField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         productBrandField.addActionListener(new java.awt.event.ActionListener() {
@@ -179,6 +181,30 @@ public class addProductView extends javax.swing.JFrame {
         jPanel1.add(jLabel10);
         jLabel10.setBounds(320, 330, 110, 70);
 
+        principalMenuButtonProducts.setBackground(new java.awt.Color(131, 131, 131));
+        principalMenuButtonProducts.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        principalMenuButtonProducts.setText("Menu principal");
+        principalMenuButtonProducts.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
+        principalMenuButtonProducts.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                principalMenuButtonProductsActionPerformed(evt);
+            }
+        });
+        jPanel1.add(principalMenuButtonProducts);
+        principalMenuButtonProducts.setBounds(600, 470, 210, 60);
+
+        addProductButton1.setBackground(new java.awt.Color(131, 131, 131));
+        addProductButton1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        addProductButton1.setText("Guardar producto");
+        addProductButton1.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
+        addProductButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addProductButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(addProductButton1);
+        addProductButton1.setBounds(380, 470, 210, 60);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -195,9 +221,9 @@ public class addProductView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void addProductButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addProductButton1ActionPerformed
+    private void backButtonProductsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonProductsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_addProductButton1ActionPerformed
+    }//GEN-LAST:event_backButtonProductsActionPerformed
 
     private void productBrandFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productBrandFieldActionPerformed
         // TODO add your handling code here:
@@ -218,6 +244,14 @@ public class addProductView extends javax.swing.JFrame {
     private void productIdDFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productIdDFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_productIdDFieldActionPerformed
+
+    private void principalMenuButtonProductsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_principalMenuButtonProductsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_principalMenuButtonProductsActionPerformed
+
+    private void addProductButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addProductButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addProductButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -257,6 +291,7 @@ public class addProductView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton addProductButton1;
+    public javax.swing.JButton backButtonProducts;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel7;
@@ -265,6 +300,7 @@ public class addProductView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField17;
+    public javax.swing.JButton principalMenuButtonProducts;
     public javax.swing.JTextField productBrandField;
     public javax.swing.JTextField productIdDField;
     public javax.swing.JTextField productNameField;

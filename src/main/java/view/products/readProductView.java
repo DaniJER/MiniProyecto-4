@@ -32,6 +32,8 @@ public class readProductView extends javax.swing.JFrame {
         readProductButton = new javax.swing.JButton();
         idProduct = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
+        principalMenuButtonProducts = new javax.swing.JButton();
+        backButtonReadProducts = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -73,7 +75,7 @@ public class readProductView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(readProductButton);
-        readProductButton.setBounds(370, 370, 220, 60);
+        readProductButton.setBounds(350, 390, 200, 60);
 
         idProduct.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jPanel1.add(idProduct);
@@ -89,6 +91,30 @@ public class readProductView extends javax.swing.JFrame {
         jLabel5.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(jLabel5);
         jLabel5.setBounds(310, 240, 150, 50);
+
+        principalMenuButtonProducts.setBackground(new java.awt.Color(131, 131, 131));
+        principalMenuButtonProducts.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        principalMenuButtonProducts.setText("Menu principal");
+        principalMenuButtonProducts.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
+        principalMenuButtonProducts.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                principalMenuButtonProductsActionPerformed(evt);
+            }
+        });
+        jPanel1.add(principalMenuButtonProducts);
+        principalMenuButtonProducts.setBounds(570, 390, 170, 60);
+
+        backButtonReadProducts.setBackground(new java.awt.Color(131, 131, 131));
+        backButtonReadProducts.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        backButtonReadProducts.setText("Volver");
+        backButtonReadProducts.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
+        backButtonReadProducts.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonReadProductsActionPerformed(evt);
+            }
+        });
+        jPanel1.add(backButtonReadProducts);
+        backButtonReadProducts.setBounds(220, 390, 110, 60);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -121,6 +147,14 @@ public class readProductView extends javax.swing.JFrame {
     private void readProductButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_readProductButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_readProductButtonActionPerformed
+
+    private void principalMenuButtonProductsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_principalMenuButtonProductsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_principalMenuButtonProductsActionPerformed
+
+    private void backButtonReadProductsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonReadProductsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backButtonReadProductsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -159,11 +193,13 @@ public class readProductView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton backButtonReadProducts;
     public javax.swing.JTextField idProduct;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField17;
+    public javax.swing.JButton principalMenuButtonProducts;
     public javax.swing.JButton readProductButton;
     // End of variables declaration//GEN-END:variables
 }

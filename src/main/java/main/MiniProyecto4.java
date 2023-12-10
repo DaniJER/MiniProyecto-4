@@ -77,6 +77,8 @@ public class MiniProyecto4 {
         UpdateClientModel updateClientModel = new UpdateClientModel();
         updateInfoClientView updateInfoClientView = new updateInfoClientView();
         DeleteClientModel deleteClientModel = new DeleteClientModel();
+        ReadProductsModel readProductsModel = new ReadProductsModel();
+        showProductsView showProductsView = new showProductsView();
         
         
         
@@ -97,17 +99,17 @@ public class MiniProyecto4 {
         
         DeleteProductsController deleteProductsController = new DeleteProductsController(deleteItemView, deleteProductView);
 
-        CreateClientController createClientController = new CreateClientController(addItemView, createClientView, createClientModel){};
+        CreateClientController createClientController = new CreateClientController(addItemView, createClientView, createClientModel, principalView){};
     
-        CreateDealersController createDealersController = new CreateDealersController(addItemView,createDealerView, createDealerModel){};
+        CreateDealersController createDealersController = new CreateDealersController(addItemView,createDealerView, createDealerModel, principalView){};
     
-        CreateProductsController createProductsController = new CreateProductsController(addItemView,addProductView, createProductsModel){};
+        CreateProductsController createProductsController = new CreateProductsController(addItemView,addProductView, createProductsModel, principalView){};
     
         ReadClientController readClientController = new ReadClientController(searchItemView, readClientView, readClientModel, showClientsView, principalView){};
     
         ReadDealersController readDealerController = new ReadDealersController(searchItemView, readDealerView, showDealerView, readDealerModel, principalView){};
     
-        ReadProductsController readProductController = new ReadProductsController(searchItemView, readProductView);
+        ReadProductsController readProductController = new ReadProductsController(searchItemView, readProductView, readProductsModel, showProductsView, principalView);
     
   
     }

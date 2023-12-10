@@ -1,3 +1,9 @@
+/*
+    UNIVERSIDAD DEL VALLE
+    AUTORES:
+    DANIEL JOSÉ ENRIQUEZ, COD: 2240920 - JUAN SEBASTIAN VIEDMAN, COD: 2242562
+
+*/
 package controller.clientsController;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

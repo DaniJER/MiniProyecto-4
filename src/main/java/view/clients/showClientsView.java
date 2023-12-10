@@ -30,11 +30,11 @@ public class showClientsView extends javax.swing.JFrame {
         jTextField17 = new javax.swing.JTextField();
         backButtonClients = new javax.swing.JButton();
         jTextField2 = new javax.swing.JTextField();
+        principalMenuButton = new javax.swing.JButton();
         name = new javax.swing.JLabel();
+        lastName = new javax.swing.JLabel();
         cel = new javax.swing.JLabel();
         id = new javax.swing.JLabel();
-        lastName = new javax.swing.JLabel();
-        principalMenuButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -78,29 +78,6 @@ public class showClientsView extends javax.swing.JFrame {
         jPanel1.add(jTextField2);
         jTextField2.setBounds(380, 10, 300, 100);
 
-        name.setForeground(new java.awt.Color(0, 0, 0));
-        name.setText("jLabel1");
-        name.setMinimumSize(new java.awt.Dimension(80, 80));
-        name.setPreferredSize(new java.awt.Dimension(100, 100));
-        jPanel1.add(name);
-        name.setBounds(490, 170, 100, 30);
-        name.setSize(100,100);
-
-        cel.setForeground(new java.awt.Color(0, 0, 0));
-        cel.setText("jLabel1");
-        jPanel1.add(cel);
-        cel.setBounds(490, 310, 120, 40);
-
-        id.setForeground(new java.awt.Color(0, 0, 0));
-        id.setText("jLabel1");
-        jPanel1.add(id);
-        id.setBounds(490, 390, 120, 40);
-
-        lastName.setForeground(new java.awt.Color(0, 0, 0));
-        lastName.setText("jLabel1");
-        jPanel1.add(lastName);
-        lastName.setBounds(490, 230, 120, 40);
-
         principalMenuButton.setBackground(new java.awt.Color(131, 131, 131));
         principalMenuButton.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         principalMenuButton.setText("Menu Principal");
@@ -113,11 +90,58 @@ public class showClientsView extends javax.swing.JFrame {
         jPanel1.add(principalMenuButton);
         principalMenuButton.setBounds(510, 510, 210, 60);
 
+        name.setBackground(new java.awt.Color(196, 196, 196));
+        name.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        name.setForeground(new java.awt.Color(0, 0, 0));
+        name.setText("<html>Nombre:</html>");
+        name.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        name.setMaximumSize(new java.awt.Dimension(0, 0));
+        name.setMinimumSize(new java.awt.Dimension(0, 0));
+        name.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(name);
+        name.setBounds(370, 180, 500, 60);
+
+        lastName.setBackground(new java.awt.Color(196, 196, 196));
+        lastName.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lastName.setForeground(new java.awt.Color(0, 0, 0));
+        lastName.setText("<html>Apellido:</html>");
+        lastName.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        lastName.setMaximumSize(new java.awt.Dimension(0, 0));
+        lastName.setMinimumSize(new java.awt.Dimension(0, 0));
+        lastName.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(lastName);
+        lastName.setBounds(370, 230, 440, 70);
+
+        cel.setBackground(new java.awt.Color(196, 196, 196));
+        cel.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        cel.setForeground(new java.awt.Color(0, 0, 0));
+        cel.setText("<html>Celular:</html>");
+        cel.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        cel.setMaximumSize(new java.awt.Dimension(0, 0));
+        cel.setMinimumSize(new java.awt.Dimension(0, 0));
+        cel.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(cel);
+        cel.setBounds(370, 290, 440, 60);
+
+        id.setBackground(new java.awt.Color(196, 196, 196));
+        id.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        id.setForeground(new java.awt.Color(0, 0, 0));
+        id.setText("<html>Cedula:</html>");
+        id.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        id.setMaximumSize(new java.awt.Dimension(0, 0));
+        id.setMinimumSize(new java.awt.Dimension(0, 0));
+        id.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(id);
+        id.setBounds(370, 350, 410, 70);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1055, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1043, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

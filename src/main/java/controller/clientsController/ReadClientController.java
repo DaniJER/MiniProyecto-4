@@ -1,4 +1,8 @@
 /*
+    UNIVERSIDAD DEL VALLE
+    AUTORES:
+    DANIEL JOSÉ ENRIQUEZ, COD: 2240920 - JUAN SEBASTIAN VIEDMAN, COD: 2242562
+    
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -35,6 +39,8 @@ public class ReadClientController implements ActionListener {
         searchItemView.selectClientButton.addActionListener(this);
         readClientView.searchClientButton.addActionListener(this);
         showClientsView.principalMenuButton.addActionListener(this);
+        readClientView.backButtonReadClients.addActionListener(this);
+        readClientView.menuPrincipalButtonClients.addActionListener(this);
         
     }
     @Override
@@ -55,16 +61,21 @@ public class ReadClientController implements ActionListener {
             }else{
                 
                 readClientModel.setIdClient(readClientView.idClientField.getText());
-                readClientModel.readClient(readClientView.idClientField.getText());
+                
+                if(readClientModel.readClient(readClientView.idClientField.getText()) == false){
+                
+                    readClientView.setVisible(true);
+                }else{
            
-                readClientView.dispose();
-                showClientsView.setVisible(true); 
-                showClientsView.setLocationRelativeTo(null);
+                    readClientView.dispose();
+                    showClientsView.setVisible(true); 
+                    showClientsView.setLocationRelativeTo(null);
 
-                showClientsView.name.setText(readClientModel.getName());
-                showClientsView.lastName.setText(readClientModel.getLastName());
-                showClientsView.cel.setText(readClientModel.getCel());
-                showClientsView.id.setText(readClientModel.getId());
+                    showClientsView.name.setText(readClientModel.getName());
+                    showClientsView.lastName.setText(readClientModel.getLastName());
+                    showClientsView.cel.setText(readClientModel.getCel());
+                    showClientsView.id.setText(readClientModel.getId());
+                }
             }
         }
         if(e.getSource() == showClientsView.backButtonClients){
@@ -79,6 +90,20 @@ public class ReadClientController implements ActionListener {
             readClientView.dispose();
             principalView.setVisible(true);
         }
+        if(e.getSource() == readClientView.backButtonReadClients){
+        
+            readClientView.dispose();
+            searchItemView.setVisible(true);
+           
+        }
+        if(e.getSource() == readClientView.menuPrincipalButtonClients){
+        
+            readClientView.dispose();
+            showClientsView.dispose();
+            principalView.setVisible(true);
+           
+        }
+        
         
         
     }

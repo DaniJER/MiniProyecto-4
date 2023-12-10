@@ -32,6 +32,8 @@ public class readDealerView extends javax.swing.JFrame {
         searchDealerButton = new javax.swing.JButton();
         idDealer = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
+        BackButtonDealers = new javax.swing.JButton();
+        menuPrincipalDealersButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -73,7 +75,7 @@ public class readDealerView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(searchDealerButton);
-        searchDealerButton.setBounds(350, 390, 220, 60);
+        searchDealerButton.setBounds(350, 410, 220, 60);
 
         idDealer.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         idDealer.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -94,6 +96,30 @@ public class readDealerView extends javax.swing.JFrame {
         jLabel5.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(jLabel5);
         jLabel5.setBounds(290, 220, 150, 50);
+
+        BackButtonDealers.setBackground(new java.awt.Color(131, 131, 131));
+        BackButtonDealers.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        BackButtonDealers.setText("Volver");
+        BackButtonDealers.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
+        BackButtonDealers.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackButtonDealersActionPerformed(evt);
+            }
+        });
+        jPanel1.add(BackButtonDealers);
+        BackButtonDealers.setBounds(220, 410, 120, 60);
+
+        menuPrincipalDealersButton.setBackground(new java.awt.Color(131, 131, 131));
+        menuPrincipalDealersButton.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        menuPrincipalDealersButton.setText("Menu principal");
+        menuPrincipalDealersButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
+        menuPrincipalDealersButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuPrincipalDealersButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(menuPrincipalDealersButton);
+        menuPrincipalDealersButton.setBounds(580, 410, 220, 60);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -137,6 +163,14 @@ public class readDealerView extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_idDealerKeyTyped
 
+    private void BackButtonDealersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonDealersActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BackButtonDealersActionPerformed
+
+    private void menuPrincipalDealersButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPrincipalDealersButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_menuPrincipalDealersButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -173,11 +207,13 @@ public class readDealerView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton BackButtonDealers;
     public javax.swing.JTextField idDealer;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField17;
+    public javax.swing.JButton menuPrincipalDealersButton;
     public javax.swing.JButton searchDealerButton;
     // End of variables declaration//GEN-END:variables
 }

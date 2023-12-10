@@ -34,6 +34,7 @@ public class searchItemView extends javax.swing.JFrame {
         searchProductButton = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         backButton = new javax.swing.JButton();
+        backButtonSearchItem = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -75,7 +76,7 @@ public class searchItemView extends javax.swing.JFrame {
             }
         });
         jPanel3.add(selectClientButton);
-        selectClientButton.setBounds(140, 330, 170, 50);
+        selectClientButton.setBounds(160, 330, 170, 50);
 
         selectDealerItem.setBackground(new java.awt.Color(131, 131, 131));
         selectDealerItem.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
@@ -129,6 +130,21 @@ public class searchItemView extends javax.swing.JFrame {
         jPanel3.add(backButton);
         backButton.setBounds(70, 60, 80, 87);
 
+        backButtonSearchItem.setBackground(new java.awt.Color(131, 131, 131));
+        backButtonSearchItem.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        backButtonSearchItem.setText("Volver");
+        backButtonSearchItem.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
+        backButtonSearchItem.setMaximumSize(new java.awt.Dimension(170, 75));
+        backButtonSearchItem.setMinimumSize(new java.awt.Dimension(170, 75));
+        backButtonSearchItem.setPreferredSize(new java.awt.Dimension(170, 75));
+        backButtonSearchItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonSearchItemActionPerformed(evt);
+            }
+        });
+        jPanel3.add(backButtonSearchItem);
+        backButtonSearchItem.setBounds(760, 530, 170, 50);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -158,6 +174,10 @@ public class searchItemView extends javax.swing.JFrame {
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_backButtonActionPerformed
+
+    private void backButtonSearchItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonSearchItemActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backButtonSearchItemActionPerformed
 
     /**
      * @param args the command line arguments
@@ -203,6 +223,7 @@ public class searchItemView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton backButton;
+    public javax.swing.JButton backButtonSearchItem;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel3;

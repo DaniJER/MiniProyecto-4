@@ -30,12 +30,12 @@ public class showDealersView extends javax.swing.JFrame {
         jTextField17 = new javax.swing.JTextField();
         dealersBackButton = new javax.swing.JButton();
         jTextField2 = new javax.swing.JTextField();
-        nameDealer = new javax.swing.JLabel();
-        idDealer = new javax.swing.JLabel();
-        celDealer = new javax.swing.JLabel();
-        lastNameDealer = new javax.swing.JLabel();
         principalMenuDealersButton = new javax.swing.JButton();
+        nameDealer = new javax.swing.JLabel();
+        celDealer = new javax.swing.JLabel();
         productDealer = new javax.swing.JLabel();
+        lastNameDealer = new javax.swing.JLabel();
+        idDealer = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -79,29 +79,6 @@ public class showDealersView extends javax.swing.JFrame {
         jPanel1.add(jTextField2);
         jTextField2.setBounds(310, 30, 370, 100);
 
-        nameDealer.setForeground(new java.awt.Color(0, 0, 0));
-        nameDealer.setText("jLabel1");
-        nameDealer.setMinimumSize(new java.awt.Dimension(80, 80));
-        nameDealer.setPreferredSize(new java.awt.Dimension(100, 100));
-        jPanel1.add(nameDealer);
-        nameDealer.setBounds(470, 180, 100, 30);
-        nameDealer.setSize(100,100);
-
-        idDealer.setForeground(new java.awt.Color(0, 0, 0));
-        idDealer.setText("jLabel1");
-        jPanel1.add(idDealer);
-        idDealer.setBounds(470, 280, 120, 40);
-
-        celDealer.setForeground(new java.awt.Color(0, 0, 0));
-        celDealer.setText("jLabel1");
-        jPanel1.add(celDealer);
-        celDealer.setBounds(470, 380, 120, 40);
-
-        lastNameDealer.setForeground(new java.awt.Color(0, 0, 0));
-        lastNameDealer.setText("jLabel1");
-        jPanel1.add(lastNameDealer);
-        lastNameDealer.setBounds(470, 230, 120, 40);
-
         principalMenuDealersButton.setBackground(new java.awt.Color(131, 131, 131));
         principalMenuDealersButton.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         principalMenuDealersButton.setText("Menu Principal");
@@ -114,10 +91,60 @@ public class showDealersView extends javax.swing.JFrame {
         jPanel1.add(principalMenuDealersButton);
         principalMenuDealersButton.setBounds(510, 510, 210, 60);
 
+        nameDealer.setBackground(new java.awt.Color(196, 196, 196));
+        nameDealer.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        nameDealer.setForeground(new java.awt.Color(0, 0, 0));
+        nameDealer.setText("<html>Nombre:</html>");
+        nameDealer.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        nameDealer.setMaximumSize(new java.awt.Dimension(0, 0));
+        nameDealer.setMinimumSize(new java.awt.Dimension(0, 0));
+        nameDealer.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(nameDealer);
+        nameDealer.setBounds(330, 150, 500, 60);
+
+        celDealer.setBackground(new java.awt.Color(196, 196, 196));
+        celDealer.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        celDealer.setForeground(new java.awt.Color(0, 0, 0));
+        celDealer.setText("<html>Celular:</html>");
+        celDealer.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        celDealer.setMaximumSize(new java.awt.Dimension(0, 0));
+        celDealer.setMinimumSize(new java.awt.Dimension(0, 0));
+        celDealer.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(celDealer);
+        celDealer.setBounds(330, 380, 440, 70);
+
+        productDealer.setBackground(new java.awt.Color(196, 196, 196));
+        productDealer.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         productDealer.setForeground(new java.awt.Color(0, 0, 0));
-        productDealer.setText("jLabel1");
+        productDealer.setText("<html>Producto:</html>");
+        productDealer.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        productDealer.setMaximumSize(new java.awt.Dimension(0, 0));
+        productDealer.setMinimumSize(new java.awt.Dimension(0, 0));
+        productDealer.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(productDealer);
-        productDealer.setBounds(470, 330, 120, 40);
+        productDealer.setBounds(330, 210, 440, 60);
+
+        lastNameDealer.setBackground(new java.awt.Color(196, 196, 196));
+        lastNameDealer.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lastNameDealer.setForeground(new java.awt.Color(0, 0, 0));
+        lastNameDealer.setText("<html>Apellido:</html>");
+        lastNameDealer.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        lastNameDealer.setMaximumSize(new java.awt.Dimension(0, 0));
+        lastNameDealer.setMinimumSize(new java.awt.Dimension(0, 0));
+        lastNameDealer.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(lastNameDealer);
+        lastNameDealer.setBounds(330, 270, 410, 70);
+
+        idDealer.setBackground(new java.awt.Color(196, 196, 196));
+        idDealer.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        idDealer.setForeground(new java.awt.Color(0, 0, 0));
+        idDealer.setText("<html>ID:</html>");
+        idDealer.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        idDealer.setMaximumSize(new java.awt.Dimension(0, 0));
+        idDealer.setMinimumSize(new java.awt.Dimension(0, 0));
+        idDealer.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(idDealer);
+        idDealer.setBounds(330, 340, 330, 40);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
