@@ -34,7 +34,7 @@ public class SellController implements ActionListener {
         searchProductView.searchProductButton.addActionListener(this);
         searchProductView.BackButtonProducts.addActionListener(this);
         searchAndBuyClient.searchClientToBuy.addActionListener(this);
-        searchAndBuyClient.BackButtonClients.addActionListener(this);
+        searchAndBuyClient.BackButtonClient.addActionListener(this);
         
     }
 
@@ -49,9 +49,23 @@ public class SellController implements ActionListener {
         }
         if(e.getSource() == searchProductView.searchProductButton){
         
-            sellModel.setproductName(searchProductView.nameProductToSellField.getText());
-            sellModel.validateProduct(searchProductView.nameProductToSellField.getText());
+            sellModel.setProductName(searchProductView.nameProductToSellField.getText());
+            
+            if(sellModel.validateProduct(searchProductView.nameProductToSellField.getText()) == true){
+            
+                searchProductView.dispose();
+                searchAndBuyClient.setVisible(true);
+                searchAndBuyClient.setLocationRelativeTo(null);
+            
+            }
         }
+        if(e.getSource() == searchAndBuyClient.searchClientToBuy){
+        
+            sellModel.setIdClient(searchAndBuyClient.idClienteField.getText());
+            sellModel.validateClient(searchAndBuyClient.idClienteField.getText());
+        }
+        
+        
         if(e.getSource() == searchProductView.BackButtonProducts){
         
             searchProductView.dispose();
