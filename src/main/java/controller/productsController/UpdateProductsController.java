@@ -4,14 +4,13 @@
     AUTORES:
     DANIEL JOSÉ ENRIQUEZ, COD: 2240920 - JUAN SEBASTIAN VIEDMAN, COD: 2242562
 
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package controller.productsController;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import view. *;
 import view.products. *;
+import model.productsModel. *;
 /**
  *
  * @author El Rey
@@ -19,13 +18,16 @@ import view.products. *;
 public class UpdateProductsController implements ActionListener {
     private updateItemView updateItemView;
     private updateProductView updateProductView;
+    private UpdateProductsModel updateProductsModel;
     
-    public UpdateProductsController(updateItemView updateItemView, updateProductView updateProductView){
+    public UpdateProductsController(updateItemView updateItemView, updateProductView updateProductView, UpdateProductsModel updateProductsModel){
         this.updateItemView = updateItemView;
         this.updateProductView = updateProductView;
+        this.updateProductsModel = updateProductsModel;
         
         updateItemView.updateProductButton.addActionListener(this);
-        //updateProductView.backButton.addActionListener(this);
+        updateProductView.backButtonProduct.addActionListener(this);
+        updateProductView.updateProductButton.addActionListener(this);
     }
     
     public void actionPerformed(ActionEvent e) {
@@ -34,10 +36,17 @@ public class UpdateProductsController implements ActionListener {
             updateProductView.setVisible(true);
             updateProductView.setLocationRelativeTo(null);
         }
-        /*if(e.getSource() == updateProductView.backButton){
+        if(e.getSource() == updateProductView.backButtonProduct){
             updateProductView.dispose();
             updateItemView.setVisible(true);
             updateItemView.setLocationRelativeTo(null);
-        }*/
+        }
+        if(e.getSource() == updateProductView.updateProductButton){
+            updateProductsModel.updateProducts(updateProductView.idProductField.getText());
+            
+            updateProductsModel.setProductName(updateProductView.productNameField.getText());
+            updateProductsModel.setProductBrand(updateProductView.productBrandField.getText());
+            updateProductsModel.setProductPrice(updateProductView.productPriceField.getText());
+        }
     }
 }

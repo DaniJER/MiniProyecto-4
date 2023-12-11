@@ -39,11 +39,11 @@ public class UpdateClientController implements ActionListener{
             updateItemView.setLocationRelativeTo(null);
         }
         if(e.getSource() == updateClientView.updateClientButton1){
+           updateClientModel.updateClient(updateClientView.idClientField.getText());
+            
            updateClientModel.setNameUpdate(updateClientView.clientNameField.getText());
            updateClientModel.setLastNameUpdate(updateClientView.lastNameClientField.getText());
            updateClientModel.setCelUpdate(updateClientView.celClientField.getText());
-           updateClientModel.updateClient(updateClientView.idClientField.getText());
-           
         }
     }
 }

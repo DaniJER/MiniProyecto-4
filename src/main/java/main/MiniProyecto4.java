@@ -77,6 +77,7 @@ public class MiniProyecto4 {
         searchAndBuyProductView searchProductView = new searchAndBuyProductView();
         SellModel sellModel = new SellModel();
         searchClientToBuy searchAndBuyClient = new searchClientToBuy();
+        UpdateProductsModel updateProductsmodel = new UpdateProductsModel();
         
         
         PrincipalController principalController = new PrincipalController(principalView,addItemView, searchItemView, updateItemView, deleteItemView){};
@@ -87,7 +88,7 @@ public class MiniProyecto4 {
         
         UpdateDealersController updateDealersController = new UpdateDealersController(updateItemView, updateDealerView);
         
-        UpdateProductsController updateProductsController = new UpdateProductsController(updateItemView, updateProductView);
+        UpdateProductsController updateProductsController = new UpdateProductsController(updateItemView, updateProductView,updateProductsmodel);
         
         DeleteClientController deleteClientController = new DeleteClientController(deleteItemView, deleteClientView, deleteClientModel, showClientsRemoved, principalView );
         
