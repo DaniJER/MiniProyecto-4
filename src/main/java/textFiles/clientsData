@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Nombre: daniel, Apellido: enriquez, Identificación: 10010, Celular: 4333
 Nombre: Tigre, Apellido: Falcao, Identificación: 1007, Celular: 311
 [Nombre: daniel, Apellido: enriquez, Identificación: 10010, Celular: 4333]
@@ -8,3 +9,6 @@ Nombre: Tigre, Apellido: Falcao, Identificación: 1007, Celular: 311
 [Nombre: daniel, Apellido: enrtiquez, Identificación: 8877653, Celular: 322, []]
 [Nombre: jose, Apellido: enriquez, Identificación: 9900, Celular: 322, Productos: []]
 
+=======
+[Nombre: dada, Apellido: eeebeb, Identificación: 123, Celular: 444, Productos: []]
+>>>>>>> d0e90a7547a8efda2e1918765451b7cb2c8e97d6

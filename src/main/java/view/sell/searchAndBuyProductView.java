@@ -83,18 +83,18 @@ public class searchAndBuyProductView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(nameProductToSellField);
-        nameProductToSellField.setBounds(430, 250, 180, 40);
+        nameProductToSellField.setBounds(490, 250, 180, 40);
 
         jLabel5.setBackground(new java.awt.Color(196, 196, 196));
         jLabel5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("<html>Ingrese nombre del producto</html>");
+        jLabel5.setText("<html>Ingrese nombre del producto a vender</html>");
         jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jLabel5.setMaximumSize(new java.awt.Dimension(0, 0));
         jLabel5.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel5.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(280, 210, 180, 100);
+        jLabel5.setBounds(250, 220, 250, 100);
 
         BackButtonProducts.setBackground(new java.awt.Color(131, 131, 131));
         BackButtonProducts.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N

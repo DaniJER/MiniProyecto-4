@@ -63,16 +63,15 @@ public class SellController implements ActionListener {
         
             sellModel.setIdClient(searchAndBuyClient.idClienteField.getText());
             sellModel.validateClient(searchAndBuyClient.idClienteField.getText());
+                
+            
         }
-        
-        
+            
         if(e.getSource() == searchProductView.BackButtonProducts){
         
             searchProductView.dispose();
             principalView.setVisible(true);
         }
-        
+         
     }
-    
-    
 }

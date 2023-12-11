@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import java.io.*;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -138,16 +139,24 @@ public class CreateClientModel {
 
     // Método para verificar si la cédula ya existe en el archivo
     private boolean isCedulaUnique(String cedula) {
-        
         try (Scanner scanner = new Scanner(new File(fileRuteClients))) {
-            
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
-                
-                String[] userData = line.substring(1, line.length() - 1).split(",");
-                String existingCedula = userData[2].trim(); // Obtener la cédula
-                if (existingCedula.equals(cedula)) {
-                    return false; // Cédula duplicada
+
+                // Verificar si la línea está vacía antes de intentar procesarla
+                if (line.trim().isEmpty()) {
+                    continue;
+                }
+
+                // Convertir la línea a una lista de Strings
+                List<String> userData = Arrays.asList(line.substring(1, line.length() - 1).split(","));
+
+                // Verificar si hay al menos 4 elementos en la lista antes de acceder a userData.get(3)
+                if (userData.size() >= 4) {
+                    String existingCedula = userData.get(2).trim(); // Obtener la cédula
+                    if (existingCedula.equals(cedula)) {
+                        return false; // Cédula duplicada
+                    }
                 }
             }
         } catch (FileNotFoundException e) {
@@ -156,5 +165,6 @@ public class CreateClientModel {
         }
         return true; // Cédula única
     }
+    
 }
 
