@@ -6,6 +6,9 @@ package controller.sellController;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import model.sellModel.SellModel;
 import view.principalView;
 import view.sell.searchAndBuyProductView;
@@ -62,9 +65,16 @@ public class SellController implements ActionListener {
         if(e.getSource() == searchAndBuyClient.searchClientToBuy){
         
             sellModel.setIdClient(searchAndBuyClient.idClienteField.getText());
-            sellModel.validateClient(searchAndBuyClient.idClienteField.getText());
-                
-            
+            try {
+                sellModel.validateClient(searchAndBuyClient.idClienteField.getText(), searchProductView.nameProductToSellField.getText());
+            } catch (IOException ex) {
+                Logger.getLogger(SellController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        if(e.getSource() == searchAndBuyClient.BackButtonClient){
+        
+            searchAndBuyClient.dispose();
+            searchProductView.setVisible(true);
         }
             
         if(e.getSource() == searchProductView.BackButtonProducts){
