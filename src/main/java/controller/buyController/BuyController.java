@@ -15,6 +15,7 @@ public class BuyController implements ActionListener{
     private BuyModel buyModel;
 
     public BuyController(principalView principalView, buyView buyView, BuyModel buyModel) {
+        
         this.principalView = principalView;
         this.buyView = buyView;
         this.buyModel = buyModel;
