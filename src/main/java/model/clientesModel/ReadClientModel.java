@@ -26,6 +26,7 @@ public class ReadClientModel{
     private String lastName;
     private String cel;
     private String id;
+    private String productName;
 
     public String getIdClient() {
         return idClient;
@@ -67,7 +68,15 @@ public class ReadClientModel{
         this.id = id;
     }
 
-    public boolean readClient(String id) {
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public boolean readClient(String id, String productsName) {
         
         try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/textFiles/clientsData"))) {
             String line;
@@ -98,11 +107,13 @@ public class ReadClientModel{
                             this.lastName = dataArray[1];
                             this.id = dataArray[2];
                             this.cel = dataArray[3];
+                            productsName = dataArray[4];
                             
                             System.out.println(name);
                             System.out.println(lastName);
                             System.out.println(id);
                             System.out.println(cel);
+                            System.out.println(productsName);
                             
                         return true; // Indica que se encontró la cédula
                     }

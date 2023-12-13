@@ -17,6 +17,7 @@ import view.clients.readClientView;
 import view.clients.showClientsView;
 import view.principalView;
 import view.searchItemView;
+import view.sell.searchAndBuyProductView;
 
 /**
  *
@@ -30,13 +31,15 @@ public class ReadClientController implements ActionListener {
     private showClientsView showClientsView;
     private principalView principalView;
     private CreateClientModel createClientModel;
-    public ReadClientController(searchItemView searchItemView, readClientView readClientView, ReadClientModel readClientModel, showClientsView showClientsView, principalView principalView, CreateClientModel createClientModel ) {
+    private searchAndBuyProductView searchAndBuyProductView;
+    public ReadClientController(searchItemView searchItemView, readClientView readClientView, ReadClientModel readClientModel, showClientsView showClientsView, principalView principalView, CreateClientModel createClientModel, searchAndBuyProductView searchAndBuyProductView ) {
         
         this.searchItemView = searchItemView;
         this.readClientView = readClientView;
         this.readClientModel = readClientModel;
         this.showClientsView = showClientsView;
         this.principalView = principalView;
+        this.searchAndBuyProductView = searchAndBuyProductView;
         this.createClientModel = createClientModel;
         
         searchItemView.selectClientButton.addActionListener(this);
@@ -64,8 +67,9 @@ public class ReadClientController implements ActionListener {
             }else{
                 
                 readClientModel.setIdClient(readClientView.idClientField.getText());
+                readClientModel.setProductName(searchAndBuyProductView.nameProductToSellField.getText());
                 
-                if(readClientModel.readClient(readClientView.idClientField.getText()) == false){
+                if(readClientModel.readClient(readClientView.idClientField.getText(),searchAndBuyProductView.nameProductToSellField.getText())  == false){
                 
                     readClientView.setVisible(true);
                 }else{
@@ -78,7 +82,7 @@ public class ReadClientController implements ActionListener {
                     showClientsView.lastName.setText(readClientModel.getLastName());
                     showClientsView.cel.setText(readClientModel.getCel());
                     showClientsView.id.setText(readClientModel.getId());
-                    showClientsView.clientProducts.setText("Productos " +String.valueOf(createClientModel.getProducts()));
+                    showClientsView.clientProducts.setText(readClientModel.getProductName());
                 }
             }
         }
