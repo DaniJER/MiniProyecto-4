@@ -59,21 +59,27 @@ public class ReadDealersController implements ActionListener {
             
             if(id.isEmpty()){
                 
-                JOptionPane.showMessageDialog(null,"Por favor ingrese una cedula");    
+                JOptionPane.showMessageDialog(null,"Por favor ingrese una cedula");   
+                
             }else{
                 
                 readDealerModel.setDealerId(readDealerView.idDealer.getText());
-                readDealerModel.readDealer(readDealerView.idDealer.getText());
+                if(readDealerModel.readDealer(readDealerView.idDealer.getText()) == false){
+                    
+                    readDealerView.setVisible(true);
+                }else{
            
-                readDealerView.dispose();
-                showDealersView.setVisible(true); 
-                showDealersView.setLocationRelativeTo(null);
+                    readDealerView.dispose();
+                    showDealersView.setVisible(true); 
+                    showDealersView.setLocationRelativeTo(null);
 
-                showDealersView.nameDealer.setText("Nombre: " + readDealerModel.getDealerName());
-                showDealersView.lastNameDealer.setText("Apellido: " +readDealerModel.getDealerLastName());
-                showDealersView.idDealer.setText("Identificacion: " +readDealerModel.getDealerId());
-                showDealersView.productDealer.setText("Producto: " +readDealerModel.getDealerProductName());
-                showDealersView.celDealer.setText("Celular: " +readDealerModel.getDealerCel());
+                    showDealersView.nameDealer.setText("Nombre: " + readDealerModel.getDealerName());
+                    showDealersView.lastNameDealer.setText("Apellido: " +readDealerModel.getDealerLastName());
+                    showDealersView.idDealer.setText("Identificacion: " +readDealerModel.getDealerId());
+                    showDealersView.productDealer.setText("Producto: " +readDealerModel.getDealerProductName());
+
+                    showDealersView.celDealer.setText("Celular: " +readDealerModel.getDealerCel());
+                }
             }
         }   if(e.getSource() == showDealersView.dealersBackButton){
             

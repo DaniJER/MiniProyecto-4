@@ -82,7 +82,6 @@ public class ReadDealerModel {
                             System.out.println("Datos del distribuidor:");
                             System.out.println(line); // Imprime la línea que contiene la cédula
 
-                            // Si necesitas asignar los valores a variables de instancia, hazlo aquí
                             this.dealerName = keyValuePairs[0].split(": ")[1].trim(); // Ejemplo, ajusta según tu estructura de datos
                             this.dealerLastName = keyValuePairs[1].split(": ")[1].trim();
                             this.dealerId = keyValuePairs[2].split(": ")[1].trim();

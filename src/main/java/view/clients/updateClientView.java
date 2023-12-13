@@ -200,7 +200,7 @@ public class updateClientView extends javax.swing.JFrame {
         backButtonUpdateClient.setBounds(40, 50, 160, 50);
 
         getContentPane().add(jPanel2);
-        jPanel2.setBounds(0, 0, 900, 600);
+        jPanel2.setBounds(0, 0, 970, 600);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

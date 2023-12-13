@@ -29,11 +29,15 @@ public class UpdateClientController implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         
         if(e.getSource() == updateItemView.updateClientButton){
+            
             updateItemView.dispose();
             updateClientView.setVisible(true);
+            updateClientView.setSize(updateItemView.getWidth(), updateItemView.getHeight());
             updateClientView.setLocationRelativeTo(null);
+            
         }
         if(e.getSource() == updateClientView.backButtonUpdateClient){
+            
             updateClientView.dispose();
             updateItemView.setVisible(true);
             updateItemView.setLocationRelativeTo(null);
