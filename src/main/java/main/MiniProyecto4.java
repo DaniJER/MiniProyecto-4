@@ -30,8 +30,9 @@ import view.dealers.*;
 import view.products.*;
 import view.sell.searchAndBuyProductView;
 import view.sell.searchClientToBuy;
-
-
+import model.buyModel. *;
+import view.buy. *;
+import controller.buyController. *;
 
 /**
  *
@@ -81,6 +82,9 @@ public class MiniProyecto4 {
         UpdateDealerModel updateDealerModel = new UpdateDealerModel();
         DeleteProductsModel deleteProductsModel = new DeleteProductsModel();
         
+        BuyModel buyModel = new BuyModel();
+        buyView buyView = new buyView();
+        
         PrincipalController principalController = new PrincipalController(principalView,addItemView, searchItemView, updateItemView, deleteItemView){};
         principalController.startPrincipalView();
         
@@ -110,7 +114,8 @@ public class MiniProyecto4 {
         ReadProductsController readProductController = new ReadProductsController(searchItemView, readProductView, readProductsModel, showProductsView, principalView);
     
         SellController sellController = new SellController(searchProductView, sellModel, principalView, searchAndBuyClient);
-  
+        
+        BuyController buyController = new BuyController(principalView, buyView, buyModel);
     }
         
 }
