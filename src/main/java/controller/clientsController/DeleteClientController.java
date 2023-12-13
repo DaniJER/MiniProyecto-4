@@ -42,13 +42,14 @@ public class DeleteClientController implements ActionListener {
         if(e.getSource() == deleteItemView.deleteClientButton){
             deleteItemView.dispose();
             deleteClientView.setVisible(true);
+            deleteClientView.setSize(deleteItemView.getWidth(), deleteItemView.getHeight());
             deleteClientView.setLocationRelativeTo(null);
         }
         if(e.getSource() == deleteClientView.deleteClientButton){
-            
-            deleteClientModel.deleteClient(deleteClientView.idClientField.getText());
             deleteClientView.dispose();
             showClientsRemoved.setVisible(true);
+            deleteClientModel.deleteClient(deleteClientView.idClientField.getText());
+            
             
             showClientsRemoved.nameClientRemoved.setText(deleteClientModel.getNameClientRemoved());
             showClientsRemoved.lastNameClientRemoved.setText(deleteClientModel.getLastNameClientRemoved());
