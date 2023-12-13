@@ -38,12 +38,13 @@ public class UpdateDealersController implements ActionListener{
             updateItemView.setLocationRelativeTo(null);
         }
         if(e.getSource() == updateDealerView.updateDealerButton){
-            
-            updateDealerModel.updateDealer(updateDealerView.idDealerField.getText());
-            
             updateDealerModel.setNameDealer(updateDealerView.dealerNameField.getText());
             updateDealerModel.setLastNameDealer(updateDealerView.dealerLastNameField.getText());
             updateDealerModel.setCelDealer(updateDealerView.dealerCelField.getText());
+            
+            updateDealerModel.updateDealer(updateDealerView.idDealerField.getText());
+            
+            
                
         }
     }

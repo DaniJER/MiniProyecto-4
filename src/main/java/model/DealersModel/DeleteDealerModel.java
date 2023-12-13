@@ -83,7 +83,7 @@ public class DeleteDealerModel {
 
                 for (String data : dataArray) {
                     String[] keyValue = data.split(": ");
-                    if (keyValue[0].trim().equals(id)) {
+                    if (keyValue[1].trim().equals(id)) {
                         // Elimina el proveedor usando el iterador
                         
                         int result = JOptionPane.showConfirmDialog(null, "Se eliminaran los datos del usuario, ¿Está de acuerdo?", "Confirmación", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);

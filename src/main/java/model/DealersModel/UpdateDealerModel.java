@@ -92,7 +92,7 @@ public class UpdateDealerModel {
                 for (String data : dataArray) {
                     String[] keyValue = data.split(": ");
 
-                    if (keyValue[0].trim().equals(id)) {
+                    if (keyValue[1].trim().equals(id)) {
                         dataArray[0] = "Nombre: " + nameDealer;
                         dataArray[1] = "Apellido: " + lastNameDealer;
                         dataArray[4] = "Celular: " + celDealer;
