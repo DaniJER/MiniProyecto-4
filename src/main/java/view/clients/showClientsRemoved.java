@@ -30,11 +30,11 @@ public class showClientsRemoved extends javax.swing.JFrame {
         jTextField17 = new javax.swing.JTextField();
         backButtonClients = new javax.swing.JButton();
         jTextField2 = new javax.swing.JTextField();
+        principalMenuButton = new javax.swing.JButton();
         nameClientRemoved = new javax.swing.JLabel();
+        lastNameClientRemoved = new javax.swing.JLabel();
         idClientRemoved = new javax.swing.JLabel();
         celClientRemoved = new javax.swing.JLabel();
-        lastNameClientRemoved = new javax.swing.JLabel();
-        principalMenuButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -78,29 +78,6 @@ public class showClientsRemoved extends javax.swing.JFrame {
         jPanel1.add(jTextField2);
         jTextField2.setBounds(280, 20, 470, 100);
 
-        nameClientRemoved.setForeground(new java.awt.Color(0, 0, 0));
-        nameClientRemoved.setText("jLabel1");
-        nameClientRemoved.setMinimumSize(new java.awt.Dimension(80, 80));
-        nameClientRemoved.setPreferredSize(new java.awt.Dimension(100, 100));
-        jPanel1.add(nameClientRemoved);
-        nameClientRemoved.setBounds(490, 170, 100, 30);
-        nameClientRemoved.setSize(100,100);
-
-        idClientRemoved.setForeground(new java.awt.Color(0, 0, 0));
-        idClientRemoved.setText("jLabel1");
-        jPanel1.add(idClientRemoved);
-        idClientRemoved.setBounds(490, 310, 120, 40);
-
-        celClientRemoved.setForeground(new java.awt.Color(0, 0, 0));
-        celClientRemoved.setText("jLabel1");
-        jPanel1.add(celClientRemoved);
-        celClientRemoved.setBounds(490, 390, 120, 40);
-
-        lastNameClientRemoved.setForeground(new java.awt.Color(0, 0, 0));
-        lastNameClientRemoved.setText("jLabel1");
-        jPanel1.add(lastNameClientRemoved);
-        lastNameClientRemoved.setBounds(490, 230, 120, 40);
-
         principalMenuButton.setBackground(new java.awt.Color(131, 131, 131));
         principalMenuButton.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         principalMenuButton.setText("Menu Principal");
@@ -112,6 +89,50 @@ public class showClientsRemoved extends javax.swing.JFrame {
         });
         jPanel1.add(principalMenuButton);
         principalMenuButton.setBounds(510, 510, 210, 60);
+
+        nameClientRemoved.setBackground(new java.awt.Color(196, 196, 196));
+        nameClientRemoved.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        nameClientRemoved.setForeground(new java.awt.Color(0, 0, 0));
+        nameClientRemoved.setText("<html>Nombre:</html>");
+        nameClientRemoved.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        nameClientRemoved.setMaximumSize(new java.awt.Dimension(0, 0));
+        nameClientRemoved.setMinimumSize(new java.awt.Dimension(0, 0));
+        nameClientRemoved.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(nameClientRemoved);
+        nameClientRemoved.setBounds(320, 160, 500, 60);
+
+        lastNameClientRemoved.setBackground(new java.awt.Color(196, 196, 196));
+        lastNameClientRemoved.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lastNameClientRemoved.setForeground(new java.awt.Color(0, 0, 0));
+        lastNameClientRemoved.setText("<html>Apellido:</html>");
+        lastNameClientRemoved.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        lastNameClientRemoved.setMaximumSize(new java.awt.Dimension(0, 0));
+        lastNameClientRemoved.setMinimumSize(new java.awt.Dimension(0, 0));
+        lastNameClientRemoved.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(lastNameClientRemoved);
+        lastNameClientRemoved.setBounds(320, 220, 440, 70);
+
+        idClientRemoved.setBackground(new java.awt.Color(196, 196, 196));
+        idClientRemoved.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        idClientRemoved.setForeground(new java.awt.Color(0, 0, 0));
+        idClientRemoved.setText("<html>Celular:</html>");
+        idClientRemoved.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        idClientRemoved.setMaximumSize(new java.awt.Dimension(0, 0));
+        idClientRemoved.setMinimumSize(new java.awt.Dimension(0, 0));
+        idClientRemoved.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(idClientRemoved);
+        idClientRemoved.setBounds(320, 290, 440, 60);
+
+        celClientRemoved.setBackground(new java.awt.Color(196, 196, 196));
+        celClientRemoved.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        celClientRemoved.setForeground(new java.awt.Color(0, 0, 0));
+        celClientRemoved.setText("<html>Cedula:</html>");
+        celClientRemoved.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        celClientRemoved.setMaximumSize(new java.awt.Dimension(0, 0));
+        celClientRemoved.setMinimumSize(new java.awt.Dimension(0, 0));
+        celClientRemoved.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(celClientRemoved);
+        celClientRemoved.setBounds(320, 350, 410, 70);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

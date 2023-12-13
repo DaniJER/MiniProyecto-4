@@ -89,8 +89,16 @@ public class DeleteClientModel {
                 for (String data : dataArray) {
                     String[] keyValue = data.split(": ");
                     if (keyValue[0].trim().equals("Identificación") && keyValue[1].trim().equals(id)) {
-                        // Elimina el cliente del ArrayList
-                        clientList.remove(i);
+                        
+                        int result = JOptionPane.showConfirmDialog(null, "Se eliminaran los datos del cliente, ¿Está de acuerdo?", "Confirmación", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+                        if(result == JOptionPane.YES_OPTION){
+                            
+                            // Elimina el cliente del ArrayList
+                            clientList.remove(i);
+                            
+                        
+                        }
+                        
 
                         // Escribe el ArrayList actualizado en el archivo de texto
                         try (BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/java/textFiles/clientsData"))) {
@@ -103,12 +111,13 @@ public class DeleteClientModel {
                             e.printStackTrace();
                         }
 
-                        System.out.println("Cliente eliminado:");
-                            for (String entry : dataArray) {
+                        //System.out.println("Cliente eliminado:");
+                            /*for (String entry : dataArray) {
                                 
                                 System.out.println("Datos del cliente: " + entry);
-                            }
+                            }*/
                             
+                            JOptionPane.showMessageDialog(null,"Cliente eliminado");
                             this.nameClientRemoved = dataArray[0];
                             this.lastNameClientRemoved = dataArray[1];
                             this.idClientRemoved = dataArray[2];

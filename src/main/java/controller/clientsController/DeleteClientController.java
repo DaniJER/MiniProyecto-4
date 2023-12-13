@@ -33,6 +33,7 @@ public class DeleteClientController implements ActionListener {
         deleteClientView.deleteClientButton.addActionListener(this);
         showClientsRemoved.backButtonClients.addActionListener(this);
         showClientsRemoved.principalMenuButton.addActionListener(this);
+        deleteClientView.backButtonDeleteClients.addActionListener(this);
         
         // deleteClientView.backButton.addActionListener(this);
     }
@@ -46,16 +47,16 @@ public class DeleteClientController implements ActionListener {
             deleteClientView.setLocationRelativeTo(null);
         }
         if(e.getSource() == deleteClientView.deleteClientButton){
-            deleteClientView.dispose();
-            showClientsRemoved.setVisible(true);
+            
             deleteClientModel.deleteClient(deleteClientView.idClientField.getText());
-            
-            
             showClientsRemoved.nameClientRemoved.setText(deleteClientModel.getNameClientRemoved());
             showClientsRemoved.lastNameClientRemoved.setText(deleteClientModel.getLastNameClientRemoved());
             showClientsRemoved.idClientRemoved.setText(deleteClientModel.getIdClientRemoved());
             showClientsRemoved.celClientRemoved.setText(deleteClientModel.getCelClientRemoved());
-                
+            
+            deleteClientView.dispose();
+            showClientsRemoved.setVisible(true);
+            showClientsRemoved.setLocationRelativeTo(null);
         }
         if(e.getSource() == showClientsRemoved.backButtonClients){
         
@@ -68,6 +69,12 @@ public class DeleteClientController implements ActionListener {
             showClientsRemoved.dispose();
             deleteClientView.dispose();
             principalView.setVisible(true);
+        }
+        
+        if(e.getSource() == deleteClientView.backButtonDeleteClients){
+        
+            deleteClientView.dispose();
+            deleteItemView.setVisible(true);
         }
     }
 }

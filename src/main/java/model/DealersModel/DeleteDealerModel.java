@@ -79,15 +79,18 @@ public class DeleteDealerModel {
                 String dealerData = iterator.next();
                 String[] dataArray = dealerData
                         .replaceAll("[\\[\\]]", "") // Elimina corchetes "[" y "]"
-                        .split(", "); // Suponiendo que los datos están separados por ", "
+                        .split(","); // Suponiendo que los datos están separados por ", "
 
                 for (String data : dataArray) {
                     String[] keyValue = data.split(": ");
-                    if (keyValue[1].trim().equals(id)) {
+                    if (keyValue[0].trim().equals(id)) {
                         // Elimina el proveedor usando el iterador
+                        
                         int result = JOptionPane.showConfirmDialog(null, "Se eliminaran los datos del usuario, ¿Está de acuerdo?", "Confirmación", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
                         if(result == JOptionPane.YES_OPTION){
+                            
                            iterator.remove(); 
+                           JOptionPane.showMessageDialog(null,"Proveedor Eliminado" );
                         }else {
                             break;
                         }

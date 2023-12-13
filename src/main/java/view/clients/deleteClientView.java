@@ -32,6 +32,7 @@ public class deleteClientView extends javax.swing.JFrame {
         deleteClientButton = new javax.swing.JButton();
         idClientField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
+        backButtonDeleteClients = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -77,7 +78,7 @@ public class deleteClientView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(deleteClientButton);
-        deleteClientButton.setBounds(420, 460, 210, 60);
+        deleteClientButton.setBounds(320, 460, 210, 60);
 
         idClientField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         idClientField.addActionListener(new java.awt.event.ActionListener() {
@@ -99,8 +100,20 @@ public class deleteClientView extends javax.swing.JFrame {
         jPanel1.add(jLabel4);
         jLabel4.setBounds(390, 290, 90, 60);
 
+        backButtonDeleteClients.setBackground(new java.awt.Color(131, 131, 131));
+        backButtonDeleteClients.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        backButtonDeleteClients.setText("Volver");
+        backButtonDeleteClients.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
+        backButtonDeleteClients.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonDeleteClientsActionPerformed(evt);
+            }
+        });
+        jPanel1.add(backButtonDeleteClients);
+        backButtonDeleteClients.setBounds(550, 460, 120, 60);
+
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 950, 600);
+        jPanel1.setBounds(0, 0, 960, 600);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -116,6 +129,10 @@ public class deleteClientView extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void backButtonDeleteClientsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonDeleteClientsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backButtonDeleteClientsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -153,6 +170,7 @@ public class deleteClientView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton backButtonDeleteClients;
     public javax.swing.JButton deleteClientButton;
     public javax.swing.JTextField idClientField;
     private javax.swing.JLabel jLabel4;
