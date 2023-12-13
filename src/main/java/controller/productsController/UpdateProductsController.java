@@ -42,11 +42,11 @@ public class UpdateProductsController implements ActionListener {
             updateItemView.setLocationRelativeTo(null);
         }
         if(e.getSource() == updateProductView.updateProductButton){
-            updateProductsModel.updateProducts(updateProductView.idProductField.getText());
-            
             updateProductsModel.setProductName(updateProductView.productNameField.getText());
             updateProductsModel.setProductBrand(updateProductView.productBrandField.getText());
             updateProductsModel.setProductPrice(updateProductView.productPriceField.getText());
+            
+            updateProductsModel.updateProducts(updateProductView.idProductField.getText());
         }
     }
 }

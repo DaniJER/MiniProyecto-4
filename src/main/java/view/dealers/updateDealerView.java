@@ -30,10 +30,21 @@ public class updateDealerView extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jTextField17 = new javax.swing.JTextField();
         updateDealerButton = new javax.swing.JButton();
-        idClientField = new javax.swing.JTextField();
+        idDealerField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        dealerNameField = new javax.swing.JTextField();
+        dealerLastNameField = new javax.swing.JTextField();
+        dealerCelField = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        backButtonUpdateDealer = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(950, 600));
+        setResizable(false);
+        getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(196, 196, 196));
         jPanel1.setLayout(null);
@@ -52,7 +63,7 @@ public class updateDealerView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jTextField1);
-        jTextField1.setBounds(300, 100, 490, 100);
+        jTextField1.setBounds(250, 50, 550, 60);
 
         jTextField17.setBackground(new java.awt.Color(196, 196, 196));
         jTextField17.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
@@ -61,7 +72,7 @@ public class updateDealerView extends javax.swing.JFrame {
         jTextField17.setText("Developed by jviedman dev - enriquez dev");
         jTextField17.setBorder(null);
         jPanel1.add(jTextField17);
-        jTextField17.setBounds(250, 560, 520, 19);
+        jTextField17.setBounds(220, 550, 520, 19);
 
         updateDealerButton.setBackground(new java.awt.Color(131, 131, 131));
         updateDealerButton.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
@@ -73,16 +84,16 @@ public class updateDealerView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(updateDealerButton);
-        updateDealerButton.setBounds(420, 460, 230, 60);
+        updateDealerButton.setBounds(390, 470, 230, 60);
 
-        idClientField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        idClientField.addActionListener(new java.awt.event.ActionListener() {
+        idDealerField.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
+        idDealerField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                idClientFieldActionPerformed(evt);
+                idDealerFieldActionPerformed(evt);
             }
         });
-        jPanel1.add(idClientField);
-        idClientField.setBounds(440, 300, 180, 40);
+        jPanel1.add(idDealerField);
+        idDealerField.setBounds(450, 130, 180, 40);
 
         jLabel4.setBackground(new java.awt.Color(196, 196, 196));
         jLabel4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -93,23 +104,102 @@ public class updateDealerView extends javax.swing.JFrame {
         jLabel4.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel4.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(390, 290, 90, 60);
+        jLabel4.setBounds(300, 120, 90, 60);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1043, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 660, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        jLabel8.setBackground(new java.awt.Color(196, 196, 196));
+        jLabel8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel8.setText("<html>Nombre</html>");
+        jLabel8.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jLabel8.setMaximumSize(new java.awt.Dimension(0, 0));
+        jLabel8.setMinimumSize(new java.awt.Dimension(0, 0));
+        jLabel8.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(300, 260, 110, 70);
+
+        jLabel7.setBackground(new java.awt.Color(196, 196, 196));
+        jLabel7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setText("<html>Apellido</html>");
+        jLabel7.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jLabel7.setMaximumSize(new java.awt.Dimension(0, 0));
+        jLabel7.setMinimumSize(new java.awt.Dimension(0, 0));
+        jLabel7.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(300, 320, 100, 70);
+
+        jLabel5.setBackground(new java.awt.Color(196, 196, 196));
+        jLabel5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setText("<html>Celular</html>");
+        jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jLabel5.setMaximumSize(new java.awt.Dimension(0, 0));
+        jLabel5.setMinimumSize(new java.awt.Dimension(0, 0));
+        jLabel5.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(300, 380, 90, 60);
+
+        dealerNameField.setForeground(new java.awt.Color(204, 204, 204));
+        dealerNameField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        dealerNameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dealerNameFieldActionPerformed(evt);
+            }
+        });
+        jPanel1.add(dealerNameField);
+        dealerNameField.setBounds(450, 270, 180, 40);
+
+        dealerLastNameField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        dealerLastNameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dealerLastNameFieldActionPerformed(evt);
+            }
+        });
+        jPanel1.add(dealerLastNameField);
+        dealerLastNameField.setBounds(450, 330, 180, 40);
+
+        dealerCelField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        dealerCelField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dealerCelFieldActionPerformed(evt);
+            }
+        });
+        jPanel1.add(dealerCelField);
+        dealerCelField.setBounds(450, 390, 180, 40);
+
+        jTextField5.setBackground(new java.awt.Color(196, 196, 196));
+        jTextField5.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jTextField5.setForeground(new java.awt.Color(0, 0, 0));
+        jTextField5.setText("Ingrese los datos a ser actualizados");
+        jTextField5.setBorder(null);
+        jTextField5.setMaximumSize(new java.awt.Dimension(0, 0));
+        jTextField5.setMinimumSize(new java.awt.Dimension(0, 0));
+        jTextField5.setPreferredSize(new java.awt.Dimension(0, 0));
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField5);
+        jTextField5.setBounds(210, 200, 660, 50);
+
+        backButtonUpdateDealer.setBackground(new java.awt.Color(131, 131, 131));
+        backButtonUpdateDealer.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        backButtonUpdateDealer.setText("Volver");
+        backButtonUpdateDealer.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
+        backButtonUpdateDealer.setMaximumSize(new java.awt.Dimension(170, 75));
+        backButtonUpdateDealer.setMinimumSize(new java.awt.Dimension(170, 75));
+        backButtonUpdateDealer.setPreferredSize(new java.awt.Dimension(170, 75));
+        backButtonUpdateDealer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonUpdateDealerActionPerformed(evt);
+            }
+        });
+        jPanel1.add(backButtonUpdateDealer);
+        backButtonUpdateDealer.setBounds(740, 480, 160, 50);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 950, 600);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -122,9 +212,29 @@ public class updateDealerView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_updateDealerButtonActionPerformed
 
-    private void idClientFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idClientFieldActionPerformed
+    private void idDealerFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idDealerFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_idClientFieldActionPerformed
+    }//GEN-LAST:event_idDealerFieldActionPerformed
+
+    private void dealerNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dealerNameFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dealerNameFieldActionPerformed
+
+    private void dealerLastNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dealerLastNameFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dealerLastNameFieldActionPerformed
+
+    private void dealerCelFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dealerCelFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dealerCelFieldActionPerformed
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void backButtonUpdateDealerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonUpdateDealerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backButtonUpdateDealerActionPerformed
 
     /**
      * @param args the command line arguments
@@ -163,11 +273,19 @@ public class updateDealerView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JTextField idClientField;
+    public javax.swing.JButton backButtonUpdateDealer;
+    public javax.swing.JTextField dealerCelField;
+    public javax.swing.JTextField dealerLastNameField;
+    public javax.swing.JTextField dealerNameField;
+    public javax.swing.JTextField idDealerField;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField17;
+    private javax.swing.JTextField jTextField5;
     public javax.swing.JButton updateDealerButton;
     // End of variables declaration//GEN-END:variables
 }

@@ -30,8 +30,9 @@ public class deleteProductView extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jTextField17 = new javax.swing.JTextField();
         deleteProductButton = new javax.swing.JButton();
-        idClientField = new javax.swing.JTextField();
+        idProductField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
+        backButtonDeleteProduct = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -75,14 +76,14 @@ public class deleteProductView extends javax.swing.JFrame {
         jPanel1.add(deleteProductButton);
         deleteProductButton.setBounds(410, 450, 230, 60);
 
-        idClientField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        idClientField.addActionListener(new java.awt.event.ActionListener() {
+        idProductField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        idProductField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                idClientFieldActionPerformed(evt);
+                idProductFieldActionPerformed(evt);
             }
         });
-        jPanel1.add(idClientField);
-        idClientField.setBounds(440, 300, 180, 40);
+        jPanel1.add(idProductField);
+        idProductField.setBounds(440, 300, 180, 40);
 
         jLabel4.setBackground(new java.awt.Color(196, 196, 196));
         jLabel4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -94,6 +95,21 @@ public class deleteProductView extends javax.swing.JFrame {
         jLabel4.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(jLabel4);
         jLabel4.setBounds(390, 290, 90, 60);
+
+        backButtonDeleteProduct.setBackground(new java.awt.Color(131, 131, 131));
+        backButtonDeleteProduct.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        backButtonDeleteProduct.setText("Volver");
+        backButtonDeleteProduct.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
+        backButtonDeleteProduct.setMaximumSize(new java.awt.Dimension(170, 75));
+        backButtonDeleteProduct.setMinimumSize(new java.awt.Dimension(170, 75));
+        backButtonDeleteProduct.setPreferredSize(new java.awt.Dimension(170, 75));
+        backButtonDeleteProduct.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonDeleteProductActionPerformed(evt);
+            }
+        });
+        jPanel1.add(backButtonDeleteProduct);
+        backButtonDeleteProduct.setBounds(810, 510, 160, 50);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -122,9 +138,13 @@ public class deleteProductView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_deleteProductButtonActionPerformed
 
-    private void idClientFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idClientFieldActionPerformed
+    private void idProductFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idProductFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_idClientFieldActionPerformed
+    }//GEN-LAST:event_idProductFieldActionPerformed
+
+    private void backButtonDeleteProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonDeleteProductActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backButtonDeleteProductActionPerformed
 
     /**
      * @param args the command line arguments
@@ -162,8 +182,9 @@ public class deleteProductView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton backButtonDeleteProduct;
     public javax.swing.JButton deleteProductButton;
-    public javax.swing.JTextField idClientField;
+    public javax.swing.JTextField idProductField;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;

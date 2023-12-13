@@ -12,6 +12,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import view. *;
 import view.products. *;
+import model.productsModel. *;
 /**
  *
  * @author El Rey
@@ -20,13 +21,16 @@ public class DeleteProductsController implements ActionListener {
     
     private deleteItemView deleteItemView;
     private deleteProductView deleteProductView;
+    private DeleteProductsModel deleteProductsModel;
     
-    public DeleteProductsController(deleteItemView deleteItemView, deleteProductView deleteProductView){
+    public DeleteProductsController(deleteItemView deleteItemView, deleteProductView deleteProductView, DeleteProductsModel deleteProductsModel){
         this.deleteItemView = deleteItemView;
         this.deleteProductView = deleteProductView;
+        this.deleteProductsModel = deleteProductsModel;
         
         deleteItemView.deleteProductButton.addActionListener(this);
-        //deleteProductView.backButton.addActionListener(this);
+        deleteProductView.backButtonDeleteProduct.addActionListener(this);
+        deleteProductView.deleteProductButton.addActionListener(this);
     }
     
     public void actionPerformed(ActionEvent e) {
@@ -35,10 +39,13 @@ public class DeleteProductsController implements ActionListener {
             deleteProductView.setVisible(true);
             deleteProductView.setLocationRelativeTo(null);
         }
-        /*if(e.getSource() == deleteProductView.backButton){
+        if(e.getSource() == deleteProductView.backButtonDeleteProduct){
             deleteProductView.dispose();
             deleteItemView.setVisible(true);
             deleteItemView.setLocationRelativeTo(null);
-        }*/
+        }
+        if(e.getSource() == deleteProductView.deleteProductButton){
+            deleteProductsModel.deleteProduct(deleteProductView.idProductField.getText());
+        }
     }
 }

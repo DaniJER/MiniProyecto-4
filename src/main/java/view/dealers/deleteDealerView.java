@@ -6,7 +6,7 @@ package view.dealers;
 
 /**
  *
- * @author El Rey
+ * @author Juan
  */
 public class deleteDealerView extends javax.swing.JFrame {
 
@@ -27,39 +27,36 @@ public class deleteDealerView extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
+        DealerField = new javax.swing.JTextField();
         jTextField17 = new javax.swing.JTextField();
-        deleteClientButton = new javax.swing.JButton();
-        idClientField = new javax.swing.JTextField();
+        deleteDealerButton = new javax.swing.JButton();
+        idDealerField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
+        backButtonDeleteDealer = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(950, 600));
-        setMinimumSize(new java.awt.Dimension(950, 600));
-        setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(950, 600));
-        getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(196, 196, 196));
         jPanel1.setMaximumSize(new java.awt.Dimension(950, 600));
         jPanel1.setMinimumSize(new java.awt.Dimension(950, 600));
+        jPanel1.setVerifyInputWhenFocusTarget(false);
         jPanel1.setLayout(null);
 
-        jTextField1.setBackground(new java.awt.Color(196, 196, 196));
-        jTextField1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(0, 0, 0));
-        jTextField1.setText("Eliminar distribuidor por ID");
-        jTextField1.setBorder(null);
-        jTextField1.setMaximumSize(new java.awt.Dimension(0, 0));
-        jTextField1.setMinimumSize(new java.awt.Dimension(0, 0));
-        jTextField1.setPreferredSize(new java.awt.Dimension(0, 0));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        DealerField.setBackground(new java.awt.Color(196, 196, 196));
+        DealerField.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        DealerField.setForeground(new java.awt.Color(0, 0, 0));
+        DealerField.setText("Eliminar proovedor por ID");
+        DealerField.setBorder(null);
+        DealerField.setMaximumSize(new java.awt.Dimension(0, 0));
+        DealerField.setMinimumSize(new java.awt.Dimension(0, 0));
+        DealerField.setPreferredSize(new java.awt.Dimension(0, 0));
+        DealerField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                DealerFieldActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(300, 100, 470, 100);
+        jPanel1.add(DealerField);
+        DealerField.setBounds(280, 110, 560, 100);
 
         jTextField17.setBackground(new java.awt.Color(196, 196, 196));
         jTextField17.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
@@ -70,26 +67,26 @@ public class deleteDealerView extends javax.swing.JFrame {
         jPanel1.add(jTextField17);
         jTextField17.setBounds(250, 560, 520, 19);
 
-        deleteClientButton.setBackground(new java.awt.Color(131, 131, 131));
-        deleteClientButton.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        deleteClientButton.setText("Eliminar distribuidor");
-        deleteClientButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
-        deleteClientButton.addActionListener(new java.awt.event.ActionListener() {
+        deleteDealerButton.setBackground(new java.awt.Color(131, 131, 131));
+        deleteDealerButton.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        deleteDealerButton.setText("Eliminar ");
+        deleteDealerButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
+        deleteDealerButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteClientButtonActionPerformed(evt);
+                deleteDealerButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(deleteClientButton);
-        deleteClientButton.setBounds(410, 450, 230, 60);
+        jPanel1.add(deleteDealerButton);
+        deleteDealerButton.setBounds(400, 400, 210, 60);
 
-        idClientField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        idClientField.addActionListener(new java.awt.event.ActionListener() {
+        idDealerField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        idDealerField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                idClientFieldActionPerformed(evt);
+                idDealerFieldActionPerformed(evt);
             }
         });
-        jPanel1.add(idClientField);
-        idClientField.setBounds(440, 300, 180, 40);
+        jPanel1.add(idDealerField);
+        idDealerField.setBounds(420, 270, 180, 40);
 
         jLabel4.setBackground(new java.awt.Color(196, 196, 196));
         jLabel4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -100,25 +97,56 @@ public class deleteDealerView extends javax.swing.JFrame {
         jLabel4.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel4.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(390, 290, 90, 60);
+        jLabel4.setBounds(360, 260, 90, 60);
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 1043, 660);
+        backButtonDeleteDealer.setBackground(new java.awt.Color(131, 131, 131));
+        backButtonDeleteDealer.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        backButtonDeleteDealer.setText("Volver");
+        backButtonDeleteDealer.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
+        backButtonDeleteDealer.setMaximumSize(new java.awt.Dimension(170, 75));
+        backButtonDeleteDealer.setMinimumSize(new java.awt.Dimension(170, 75));
+        backButtonDeleteDealer.setPreferredSize(new java.awt.Dimension(170, 75));
+        backButtonDeleteDealer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonDeleteDealerActionPerformed(evt);
+            }
+        });
+        jPanel1.add(backButtonDeleteDealer);
+        backButtonDeleteDealer.setBounds(730, 410, 160, 50);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 950, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 950, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 600, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void DealerFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DealerFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_DealerFieldActionPerformed
 
-    private void deleteClientButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteClientButtonActionPerformed
+    private void deleteDealerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteDealerButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_deleteClientButtonActionPerformed
+    }//GEN-LAST:event_deleteDealerButtonActionPerformed
 
-    private void idClientFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idClientFieldActionPerformed
+    private void idDealerFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idDealerFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_idClientFieldActionPerformed
+    }//GEN-LAST:event_idDealerFieldActionPerformed
+
+    private void backButtonDeleteDealerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonDeleteDealerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backButtonDeleteDealerActionPerformed
 
     /**
      * @param args the command line arguments
@@ -156,11 +184,12 @@ public class deleteDealerView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton deleteClientButton;
-    public javax.swing.JTextField idClientField;
+    private javax.swing.JTextField DealerField;
+    public javax.swing.JButton backButtonDeleteDealer;
+    public javax.swing.JButton deleteDealerButton;
+    public javax.swing.JTextField idDealerField;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField17;
     // End of variables declaration//GEN-END:variables
 }

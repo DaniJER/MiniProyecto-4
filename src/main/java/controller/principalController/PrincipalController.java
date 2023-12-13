@@ -38,10 +38,9 @@ public class PrincipalController implements ActionListener {
         principalView.updateItemProduct.addActionListener(this);
         principalView.deleteItemProduct.addActionListener(this);
 
-        //addItemView.backButton.addActionListener(this);
         updateItemView.backButtonUpdateItem.addActionListener(this);
         searchItemView.backButton.addActionListener(this);
-        deleteItemView.backButton.addActionListener(this);
+        deleteItemView.backButtonDeleteItemView.addActionListener(this);
 
         
     }
@@ -110,10 +109,11 @@ public class PrincipalController implements ActionListener {
             deleteItemView.setLocationRelativeTo(null);
         
         }
-        if(e.getSource() == deleteItemView.backButton){
+        if(e.getSource() == deleteItemView.backButtonDeleteItemView){
             
             deleteItemView.dispose();
-
+            principalView.setVisible(true);
+            principalView.setLocationRelativeTo(null);
         
     }
    }

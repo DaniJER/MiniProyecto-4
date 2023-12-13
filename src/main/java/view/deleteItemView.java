@@ -33,7 +33,7 @@ public class deleteItemView extends javax.swing.JFrame {
         deleteDealerButton = new javax.swing.JButton();
         deleteProductButton = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
-        backButton = new javax.swing.JButton();
+        backButtonDeleteItemView = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -118,17 +118,20 @@ public class deleteItemView extends javax.swing.JFrame {
         jPanel3.add(jLabel7);
         jLabel7.setBounds(270, 40, 435, 90);
 
-        backButton.setBackground(new java.awt.Color(195, 195, 195));
-        backButton.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\Resources\\close.png")); // NOI18N
-        backButton.setBorder(null);
-        backButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        backButton.addActionListener(new java.awt.event.ActionListener() {
+        backButtonDeleteItemView.setBackground(new java.awt.Color(131, 131, 131));
+        backButtonDeleteItemView.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        backButtonDeleteItemView.setText("Volver");
+        backButtonDeleteItemView.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
+        backButtonDeleteItemView.setMaximumSize(new java.awt.Dimension(170, 75));
+        backButtonDeleteItemView.setMinimumSize(new java.awt.Dimension(170, 75));
+        backButtonDeleteItemView.setPreferredSize(new java.awt.Dimension(170, 75));
+        backButtonDeleteItemView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backButtonActionPerformed(evt);
+                backButtonDeleteItemViewActionPerformed(evt);
             }
         });
-        jPanel3.add(backButton);
-        backButton.setBounds(70, 60, 80, 87);
+        jPanel3.add(backButtonDeleteItemView);
+        backButtonDeleteItemView.setBounds(670, 470, 160, 50);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -156,9 +159,9 @@ public class deleteItemView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_deleteProductButtonActionPerformed
 
-    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
+    private void backButtonDeleteItemViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonDeleteItemViewActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_backButtonActionPerformed
+    }//GEN-LAST:event_backButtonDeleteItemViewActionPerformed
 
     /**
      * @param args the command line arguments
@@ -203,7 +206,7 @@ public class deleteItemView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton backButton;
+    public javax.swing.JButton backButtonDeleteItemView;
     public javax.swing.JButton deleteClientButton;
     public javax.swing.JButton deleteDealerButton;
     public javax.swing.JButton deleteProductButton;

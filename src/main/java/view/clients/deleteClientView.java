@@ -37,6 +37,9 @@ public class deleteClientView extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(196, 196, 196));
+        jPanel1.setMaximumSize(new java.awt.Dimension(950, 600));
+        jPanel1.setMinimumSize(new java.awt.Dimension(950, 600));
+        jPanel1.setVerifyInputWhenFocusTarget(false);
         jPanel1.setLayout(null);
 
         jTextField1.setBackground(new java.awt.Color(196, 196, 196));
@@ -97,7 +100,7 @@ public class deleteClientView extends javax.swing.JFrame {
         jLabel4.setBounds(390, 290, 90, 60);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 1043, 660);
+        jPanel1.setBounds(0, 0, 950, 600);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

@@ -28,8 +28,8 @@ public class DeleteDealersController implements ActionListener{
         this.deleteDealerModel = deleteDealerModel;
         
         deleteItemView.deleteDealerButton.addActionListener(this);
-        deleteDealerView.deleteClientButton.addActionListener(this);
-        //deleteDealerView.backButton.addActionListener(this);
+        deleteDealerView.deleteDealerButton.addActionListener(this);
+        deleteDealerView.backButtonDeleteDealer.addActionListener(this);
     }
     
     public void actionPerformed(ActionEvent e) {
@@ -38,13 +38,13 @@ public class DeleteDealersController implements ActionListener{
             deleteDealerView.setVisible(true);
             deleteDealerView.setLocationRelativeTo(null);
         }
-        if(e.getSource() == deleteDealerView.deleteClientButton){
-            deleteDealerModel.deleteDealer(deleteDealerView.idClientField.getText());
+        if(e.getSource() == deleteDealerView.deleteDealerButton){
+            deleteDealerModel.deleteDealer(deleteDealerView.idDealerField.getText());
         }
-        /*if (e.getSource() == deleteDealerView.backButton){
+        if (e.getSource() == deleteDealerView.backButtonDeleteDealer){
             deleteDealerView.dispose();
             deleteItemView.setVisible(true);
             deleteItemView.setLocationRelativeTo(null);
-        }*/
+        }
     }
 }    

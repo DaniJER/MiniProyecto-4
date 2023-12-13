@@ -83,9 +83,14 @@ public class DeleteDealerModel {
 
                 for (String data : dataArray) {
                     String[] keyValue = data.split(": ");
-                    if (keyValue[0].trim().equals("Identificación") && keyValue[1].trim().equals(id)) {
+                    if (keyValue[1].trim().equals(id)) {
                         // Elimina el proveedor usando el iterador
-                        iterator.remove();
+                        int result = JOptionPane.showConfirmDialog(null, "Se eliminaran los datos del usuario, ¿Está de acuerdo?", "Confirmación", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+                        if(result == JOptionPane.YES_OPTION){
+                           iterator.remove(); 
+                        }else {
+                            break;
+                        }
 
                         // Escribe el ArrayList actualizado en el archivo de texto
                         try (BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/java/textFiles/dealersData"))) {
@@ -97,7 +102,7 @@ public class DeleteDealerModel {
                             e.printStackTrace();
                         }
 
-                        System.out.println("Proveedor eliminado:");
+                        /*System.out.println("Proveedor eliminado:");
                         for (String entry : dataArray) {
                             System.out.println("Datos del proveedor: " + entry);
                         }
@@ -106,7 +111,7 @@ public class DeleteDealerModel {
                         this.lastNameDealerRemoved = dataArray[1];
                         this.idDealerRemoved = dataArray[2];
                         this.celDealerRemoved = dataArray[3];
-
+                        */
                         return true; // Indica que se encontró la cédula y se eliminó el proveedor
                     }
                 }
@@ -119,66 +124,4 @@ public class DeleteDealerModel {
             return false; // Manejo de excepciones
         }
     }
-    
-    /*public boolean deleteDealer(String id){
-        
-        try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/textFiles/dealersData"))) {
-
-        String line;
-        ArrayList<String> dealerList = new ArrayList<>();
-
-        // Lee el archivo y almacena cada línea en el ArrayList
-        while ((line = br.readLine()) != null) {
-            dealerList.add(line);
-        }
-
-        // Busca la cédula en el ArrayList
-        for (int i = 0; i < dealerList.size(); i++) {
-            
-            String clientData = dealerList.get(i);
-            String[] dataArray = clientData
-                    .replaceAll("[\\[\\]]", "") // Elimina corchetes "[" y "]"
-                    .split(", "); // Suponiendo que los datos están separados por ", "
-
-                for (String data : dataArray) {
-                    String[] keyValue = data.split(": ");
-                    if (keyValue[0].trim().equals("Identificación") && keyValue[1].trim().equals(id)) {
-                        // Elimina el cliente del ArrayList
-                        dealerList.remove(i);
-
-                        // Escribe el ArrayList actualizado en el archivo de texto
-                        try (BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/java/textFiles/dealersData"))) {
-                            
-                            for (String updatedDealer : dealerList) {
-                                writer.write(updatedDealer);
-                                writer.newLine();
-                            }
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-
-                        System.out.println("Proveedor eliminado:");
-                            for (String entry : dataArray) {
-                                
-                                System.out.println("Datos del proveedor: " + entry);
-                                
-                                
-                            }
-                            
-                            this.nameDealerRemoved = dataArray[0];
-                            this.lastNameDealerRemoved = dataArray[1];
-                            this.idDealerRemoved = dataArray[2];
-                            this.celDealerRemoved = dataArray[3];
-
-                            return true; // Indica que se encontró la cédula y se eliminó el proveedor
-                        }
-                    }
-                }
-                    JOptionPane.showMessageDialog(null, "Proveedor no encontrado.");
-                    return false; // Indica que no se encontró la cédula
-        }catch (IOException e) {
-            e.printStackTrace();
-        return false; // Manejo de excepciones
-    }
-}*/
 }

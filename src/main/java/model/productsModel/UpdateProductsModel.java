@@ -86,7 +86,7 @@ public class UpdateProductsModel {
     
 
     public boolean updateProducts(String id) {
-        try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/textFiles/productsData"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(fileRuteProducts))) {
 
             String line;
             ArrayList<String> updatedProductsList = new ArrayList<>();
@@ -100,10 +100,10 @@ public class UpdateProductsModel {
                 for (String data : dataArray) {
                     String[] keyValue = data.split(": ");
 
-                    if (keyValue[0].trim().equals("Identificación") && keyValue[1].trim().equals(id)) {
+                    if (keyValue[1].trim().equals(id)) {
                         dataArray[0] = "Nombre: " + productName;
                         dataArray[1] = "Marca: " + productBrand;
-                        dataArray[2] = "Celular: " + productPrice;
+                        dataArray[2] = "Precio: " + productPrice;
                         clientFound = true;
                     }
                 }
@@ -113,7 +113,7 @@ public class UpdateProductsModel {
 
             if (clientFound) {
                 // Escribe la lista actualizada en el archivo de texto
-                try (BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/java/textFiles/productsData"))) {
+                try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileRuteProducts))) {
                     for (String updatedProduct : updatedProductsList) {
                         writer.write(updatedProduct);
                         writer.newLine();

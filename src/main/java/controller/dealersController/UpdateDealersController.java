@@ -2,29 +2,28 @@
     UNIVERSIDAD DEL VALLE
     AUTORES:
     DANIEL JOSÉ ENRIQUEZ, COD: 2240920 - JUAN SEBASTIAN VIEDMAN, COD: 2242562
+*/
 
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package controller.dealersController;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import view. *;
 import view.dealers. *;
-/**
- *
- * @author El Rey
- */
+import model.DealersModel. *;
+
 public class UpdateDealersController implements ActionListener{
     private updateItemView updateItemView;
     private updateDealerView updateDealerView;
+    private UpdateDealerModel updateDealerModel;
     
-    public UpdateDealersController(updateItemView updateItemView, updateDealerView updateDealerView){
+    public UpdateDealersController(updateItemView updateItemView, updateDealerView updateDealerView, UpdateDealerModel updateDealerModel){
         this.updateItemView = updateItemView;
         this.updateDealerView = updateDealerView;
+        this.updateDealerModel = updateDealerModel;
         
         updateItemView.updateDealerButton.addActionListener(this);
-        //updateDealerView.backButton.addActionListener(this);
+        updateDealerView.backButtonUpdateDealer.addActionListener(this);
+        updateDealerView.updateDealerButton.addActionListener(this);
     }
     
     public void actionPerformed(ActionEvent e) {
@@ -33,10 +32,17 @@ public class UpdateDealersController implements ActionListener{
             updateDealerView.setVisible(true);
             updateDealerView.setLocationRelativeTo(null);
         }
-        /*if(e.getSource() == updateDealerView.backButton){
+        if(e.getSource() == updateDealerView.backButtonUpdateDealer){
             updateDealerView.dispose();
             updateItemView.setVisible(true);
             updateItemView.setLocationRelativeTo(null);
-        }*/
+        }
+        if(e.getSource() == updateDealerView.updateDealerButton){
+            updateDealerModel.setNameDealer(updateDealerView.dealerNameField.getText());
+            updateDealerModel.setLastNameDealer(updateDealerView.dealerLastNameField.getText());
+            updateDealerModel.setCelDealer(updateDealerView.dealerCelField.getText());
+            
+            updateDealerModel.updateDealer(updateDealerView.idDealerField.getText());
+        }
     }
 }
