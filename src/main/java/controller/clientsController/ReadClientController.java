@@ -69,9 +69,10 @@ public class ReadClientController implements ActionListener {
                 readClientModel.setIdClient(readClientView.idClientField.getText());
                 readClientModel.setProductName(searchAndBuyProductView.nameProductToSellField.getText());
                 
-                if(readClientModel.readClient(readClientView.idClientField.getText(),searchAndBuyProductView.nameProductToSellField.getText())  == false){
+                if(readClientModel.readClient(readClientView.idClientField.getText()) == false){
                 
                     readClientView.setVisible(true);
+                    
                 }else{
            
                     readClientView.dispose();

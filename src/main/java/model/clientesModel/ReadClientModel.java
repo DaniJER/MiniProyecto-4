@@ -76,7 +76,7 @@ public class ReadClientModel{
         this.productName = productName;
     }
 
-    public boolean readClient(String id, String productsName) {
+    public boolean readClient(String id) {
         
         try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/textFiles/clientsData"))) {
             String line;
@@ -99,22 +99,22 @@ public class ReadClientModel{
                         // Si se encuentra la cédula, muestra los datos
                         //System.out.println("Datos del cliente:");
                         
-                        for (String entry : dataArray) {
+                        /*for (String entry : dataArray) {
                             
                             System.out.println("Datos del cliente: " + entry);
-                        }
+                        }*/
                             this.name = dataArray[0];
                             this.lastName = dataArray[1];
                             this.id = dataArray[2];
                             this.cel = dataArray[3];
-                            productsName = dataArray[4];
+                            this.productName = dataArray[4];
                             
-                            System.out.println(name);
+                            /*System.out.println(name);
                             System.out.println(lastName);
                             System.out.println(id);
                             System.out.println(cel);
-                            System.out.println(productsName);
-                            
+                            System.out.println(productName);
+                            */
                         return true; // Indica que se encontró la cédula
                     }
                 }

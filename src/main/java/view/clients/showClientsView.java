@@ -36,7 +36,6 @@ public class showClientsView extends javax.swing.JFrame {
         cel = new javax.swing.JLabel();
         id = new javax.swing.JLabel();
         clientProducts = new javax.swing.JLabel();
-        id1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -145,18 +144,7 @@ public class showClientsView extends javax.swing.JFrame {
         clientProducts.setMinimumSize(new java.awt.Dimension(0, 0));
         clientProducts.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(clientProducts);
-        clientProducts.setBounds(450, 360, 710, 70);
-
-        id1.setBackground(new java.awt.Color(196, 196, 196));
-        id1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        id1.setForeground(new java.awt.Color(0, 0, 0));
-        id1.setText("<html>Productos Comprados: </html>");
-        id1.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        id1.setMaximumSize(new java.awt.Dimension(0, 0));
-        id1.setMinimumSize(new java.awt.Dimension(0, 0));
-        id1.setPreferredSize(new java.awt.Dimension(0, 0));
-        jPanel1.add(id1);
-        id1.setBounds(290, 350, 140, 70);
+        clientProducts.setBounds(290, 350, 710, 70);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -230,7 +218,6 @@ public class showClientsView extends javax.swing.JFrame {
     public javax.swing.JLabel cel;
     public javax.swing.JLabel clientProducts;
     public javax.swing.JLabel id;
-    public javax.swing.JLabel id1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField17;
     private javax.swing.JTextField jTextField2;

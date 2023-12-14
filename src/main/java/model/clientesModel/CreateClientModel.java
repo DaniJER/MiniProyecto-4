@@ -76,8 +76,8 @@ public class CreateClientModel {
 
     public void setProducts(List<String> products) {
         this.products = products;
-    }
     
+    }
     
      //Metodo para crear un archivo y establecerlo en una ruta especificada
     //------------------------------------------------------------------------------------------------
