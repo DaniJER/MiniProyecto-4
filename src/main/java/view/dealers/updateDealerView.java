@@ -42,11 +42,13 @@ public class updateDealerView extends javax.swing.JFrame {
         backButtonUpdateDealer = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(950, 600));
         setMinimumSize(new java.awt.Dimension(950, 600));
         setResizable(false);
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(196, 196, 196));
+        jPanel1.setMaximumSize(new java.awt.Dimension(950, 600));
         jPanel1.setLayout(null);
 
         jTextField1.setBackground(new java.awt.Color(196, 196, 196));
