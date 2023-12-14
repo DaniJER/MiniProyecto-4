@@ -1,3 +1,9 @@
+/*
+    UNIVERSIDAD DEL VALLE
+    FUNDAMENTOS DE PROGRAMACIÓN ORIENTADA A EVENTOS
+    AUTORES: DANIEL JOSÉ ENRIQUEZ - COD: 2240920 Y JUAN SEBASTIAN VIEDMAN - COD: 2242562
+
+*/
 package model.DealersModel;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;

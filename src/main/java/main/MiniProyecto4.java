@@ -1,35 +1,26 @@
+/*
+    UNIVERSIDAD DEL VALLE
+    FUNDAMENTOS DE PROGRAMACIÓN ORIENTADA A EVENTOS
+    AUTORES: DANIEL JOSÉ ENRIQUEZ - COD: 2240920 Y JUAN SEBASTIAN VIEDMAN - COD: 2242562
+    
+*/
+
 package main;
-import controller.clientsController.CreateClientController;
-import controller.clientsController.DeleteClientController;
-import controller.clientsController.ReadClientController;
-import controller.clientsController.UpdateClientController;
-import controller.dealersController.CreateDealersController;
-import controller.dealersController.DeleteDealersController;
-import controller.dealersController.ReadDealersController;
-import controller.dealersController.UpdateDealersController;
+import controller.clientsController.*;
+import controller.dealersController.*;
 import controller.principalController.PrincipalController;
-import controller.productsController.CreateProductsController;
-import controller.productsController.DeleteProductsController;
-import controller.productsController.ReadProductsController;
-import controller.productsController.UpdateProductsController;
+import controller.productsController.*;
 import model.DealersModel.*;
 import model.clientesModel.*;
 import model.productsModel.*;
 import view.*;
-import view.clients.createClientView;
-import view.clients.readClientView;
-import view.dealers.createDealerView;
-import view.dealers.readDealerView;
-import view.products.addProductView;
-import view.products.readProductView;
-import controller.sellController.SellController;
-import model.sellModel.SellModel;
-
 import view.clients.*;
 import view.dealers.*;
 import view.products.*;
-import view.sell.searchAndBuyProductView;
-import view.sell.searchClientToBuy;
+import controller.sellController.SellController;
+import model.sellModel.SellModel;
+
+import view.sell.*;
 import model.buyModel. *;
 import view.buy. *;
 import controller.buyController. *;
