@@ -48,6 +48,7 @@ public class CreateProductsController implements ActionListener{
             
             addItemView.dispose();
             addProductView.setVisible(true);
+            addProductView.setSize(950,600);
             addProductView.setLocationRelativeTo(null);
             
         }
