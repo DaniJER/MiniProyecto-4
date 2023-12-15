@@ -3,6 +3,7 @@ package model.buyModel;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -11,60 +12,79 @@ import javax.swing.JOptionPane;
  */
 public class BuyModel {
     
-    String product = "Droga";
+    String productName;
+    String quantityStock;
     
-    public boolean buy(String id, String quantity){
-        
-        try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/textFiles/dealersData"))) {
-            
-            String line;
-            
-            while ((line = br.readLine()) != null) {
-                
-                // Verificar si la línea comienza y termina con corchetes
-                
-                if (line.startsWith("[") && line.endsWith("]")) {
-                
-                    // Eliminar corchetes y espacios, luego dividir por comas
-                    
-                    String[] keyValuePairs = line.substring(1, line.length() - 1).split(", ");
+    public String getProductName() {
+        return productName;
+    }
 
-                    // Buscar la cédula en los pares clave-valor
-                    
-                    for (String pair : keyValuePairs) {
-                       
-                        String[] keyValue = pair.split(": ");
-                        
-                        String[] keyValue1 = pair.split(", ");
-                        
-                        if (keyValue.length == 2 && keyValue[0].trim().equals("Identificacion") && keyValue[1].trim().equals(id)) {
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public String getQuantityStock() {
+        return quantityStock;
+    }
+
+    public void setQuantityStock(String quantityStock) {
+        this.quantityStock = quantityStock;
+    }
+    
+    
+    
+    public boolean buy(String id) {
+        
+       try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/textFiles/dealersData"))) {
+            String line;
+            ArrayList<String> dealerList = new ArrayList<>();
+
+            // Lee el archivo y almacena cada línea en el ArrayList
+            while ((line = br.readLine()) != null) {
+                dealerList.add(line);
+            }
+
+            // Busca la cédula en el ArrayList
+            for (String dealerData : dealerList) {
+                String[] dataArray = dealerData
+                        .replaceAll("[\\[\\]]", "") // Elimina corchetes "[" y "]"
+                        .split(", "); // Suponiendo que los datos están separados por ", "
+
+                for (String data : dataArray) {
+                    String[] keyValue = data.split(": ");
+                    if (keyValue[1].trim().equals(id)) {
+                        // Si se encuentra la cédula, muestra el producto
+                            this.productName = dataArray[3];
+                            this.quantityStock = dataArray[4];
                             
-                            System.out.println(keyValue[0]);
+                            JOptionPane.showMessageDialog(null, "Cantidad encontrada" + quantityStock);
+                            String stock = quantityStock.substring(10);
+                            int stockParse = Integer.parseInt(stock);
+                            String option = JOptionPane.showInputDialog("Ingrese la cantidad que desea comprar : ");
                             
-                            if (keyValue1.length == 4 && keyValue1[0].trim().equals("Droga")){
-                                
-                                System.out.println(":D");
-                                System.out.println(keyValue1); // Imprime la línea que contiene la cédula
-                                
+                            
+                            int optionInt = Integer.parseInt(option);
+                            
+                            if (stockParse <= optionInt){
+                                System.out.println("Felicidades, si es la misma cantidad");
                             }else {
-                                
-                                System.out.println("oniichan");
-                                
+                                System.out.println("Nada mi rey");
                             }
                             
-
-                            return true; // Indica que se encontró la cédula
-                        }
+                        return true; // Indica que se encontró la cédula
                     }
+                    
                 }
             }
 
-            JOptionPane.showMessageDialog(null,"Distribuidor no encontrado.");
+            JOptionPane.showMessageDialog(null,"Cliente no encontrado.");
             return false; // Indica que no se encontró la cédula
-            
-        }   catch (IOException e) {
+
+        } catch (IOException e) {
                 e.printStackTrace();
-            }
             return false; // Manejo de excepciones
+        }
     }
-    }
+}
+
+

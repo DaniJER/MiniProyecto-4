@@ -13,7 +13,10 @@ public class CreateDealerModel {
     private String lastNameDealer;
     private String idDealer;
     private String nameProductDealer;
-    private String celDealer;
+    private String quantifyProductDealer;
+    private String brandProductDealer;
+    private String priceProductDealer;
+    private String celDealer; 
     
     File dealersFile;
     
@@ -53,6 +56,30 @@ public class CreateDealerModel {
         this.nameProductDealer = nameProductDealer;
     }
 
+    public String getQuantifyProductDealer() {
+        return quantifyProductDealer;
+    }
+
+    public void setQuantifyProductDealer(String quantifyProductDealer) {
+        this.quantifyProductDealer = quantifyProductDealer;
+    }
+
+    public String getBrandProductDealer() {
+        return brandProductDealer;
+    }
+
+    public void setBrandProductDealer(String brandProductDealer) {
+        this.brandProductDealer = brandProductDealer;
+    }
+
+    public String getPriceProductDealer() {
+        return priceProductDealer;
+    }
+
+    public void setPriceProductDealer(String priceProductDealer) {
+        this.priceProductDealer = priceProductDealer;
+    }
+    
     public String getCelDealer() {
         return celDealer;
     }
@@ -111,6 +138,9 @@ public class CreateDealerModel {
         dataDealersArray.add(this.lastNameDealer);
         dataDealersArray.add(this.idDealer);
         dataDealersArray.add(this.nameProductDealer);
+        dataDealersArray.add(this.quantifyProductDealer);
+        dataDealersArray.add(this.brandProductDealer);
+        dataDealersArray.add(this.priceProductDealer);
         dataDealersArray.add(this.celDealer);
 
         // Verificar si la cédula ya existe en el archivo

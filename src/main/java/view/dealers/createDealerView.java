@@ -42,6 +42,14 @@ public class createDealerView extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         backButtonDealer = new javax.swing.JButton();
         principalMenuButtonDealer = new javax.swing.JButton();
+        priceProductDealer = new javax.swing.JTextField();
+        price = new javax.swing.JLabel();
+        brandProductDealer = new javax.swing.JTextField();
+        Brand = new javax.swing.JLabel();
+        Brand1 = new javax.swing.JLabel();
+        brandProductDealer1 = new javax.swing.JTextField();
+        Quantify1 = new javax.swing.JLabel();
+        quantifyProductDealer1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -56,8 +64,13 @@ public class createDealerView extends javax.swing.JFrame {
         jTextField1.setMaximumSize(new java.awt.Dimension(0, 0));
         jTextField1.setMinimumSize(new java.awt.Dimension(0, 0));
         jTextField1.setPreferredSize(new java.awt.Dimension(0, 0));
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jTextField1);
-        jTextField1.setBounds(230, 50, 560, 100);
+        jTextField1.setBounds(210, 10, 560, 100);
 
         jTextField17.setBackground(new java.awt.Color(196, 196, 196));
         jTextField17.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
@@ -87,7 +100,7 @@ public class createDealerView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(lastNameDealerField);
-        lastNameDealerField.setBounds(460, 250, 180, 40);
+        lastNameDealerField.setBounds(290, 320, 180, 40);
 
         dealerNamerField.setForeground(new java.awt.Color(204, 204, 204));
         dealerNamerField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -97,7 +110,7 @@ public class createDealerView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(dealerNamerField);
-        dealerNamerField.setBounds(460, 190, 180, 40);
+        dealerNamerField.setBounds(290, 170, 180, 40);
 
         idDealerField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         idDealerField.addActionListener(new java.awt.event.ActionListener() {
@@ -106,7 +119,7 @@ public class createDealerView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(idDealerField);
-        idDealerField.setBounds(460, 310, 180, 40);
+        idDealerField.setBounds(290, 250, 180, 40);
 
         jLabel4.setBackground(new java.awt.Color(196, 196, 196));
         jLabel4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -117,7 +130,7 @@ public class createDealerView extends javax.swing.JFrame {
         jLabel4.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel4.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(340, 300, 90, 60);
+        jLabel4.setBounds(150, 240, 90, 60);
 
         jLabel7.setBackground(new java.awt.Color(196, 196, 196));
         jLabel7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -128,7 +141,7 @@ public class createDealerView extends javax.swing.JFrame {
         jLabel7.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel7.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(340, 230, 100, 70);
+        jLabel7.setBounds(150, 300, 100, 70);
 
         jLabel8.setBackground(new java.awt.Color(196, 196, 196));
         jLabel8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -139,7 +152,7 @@ public class createDealerView extends javax.swing.JFrame {
         jLabel8.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel8.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(jLabel8);
-        jLabel8.setBounds(340, 170, 110, 70);
+        jLabel8.setBounds(150, 150, 110, 70);
 
         jLabel5.setBackground(new java.awt.Color(196, 196, 196));
         jLabel5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -150,7 +163,7 @@ public class createDealerView extends javax.swing.JFrame {
         jLabel5.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel5.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(340, 360, 110, 60);
+        jLabel5.setBounds(560, 120, 110, 60);
 
         dealerProductField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         dealerProductField.addActionListener(new java.awt.event.ActionListener() {
@@ -159,7 +172,7 @@ public class createDealerView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(dealerProductField);
-        dealerProductField.setBounds(460, 370, 180, 40);
+        dealerProductField.setBounds(700, 130, 180, 40);
 
         celDealerField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         celDealerField.addActionListener(new java.awt.event.ActionListener() {
@@ -168,7 +181,7 @@ public class createDealerView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(celDealerField);
-        celDealerField.setBounds(460, 420, 180, 40);
+        celDealerField.setBounds(290, 390, 180, 40);
 
         jLabel6.setBackground(new java.awt.Color(196, 196, 196));
         jLabel6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -179,7 +192,7 @@ public class createDealerView extends javax.swing.JFrame {
         jLabel6.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel6.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(340, 410, 90, 60);
+        jLabel6.setBounds(150, 380, 90, 60);
 
         backButtonDealer.setBackground(new java.awt.Color(131, 131, 131));
         backButtonDealer.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
@@ -204,6 +217,86 @@ public class createDealerView extends javax.swing.JFrame {
         });
         jPanel1.add(principalMenuButtonDealer);
         principalMenuButtonDealer.setBounds(640, 510, 230, 60);
+
+        priceProductDealer.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        priceProductDealer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                priceProductDealerActionPerformed(evt);
+            }
+        });
+        jPanel1.add(priceProductDealer);
+        priceProductDealer.setBounds(700, 330, 180, 40);
+
+        price.setBackground(new java.awt.Color(196, 196, 196));
+        price.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        price.setForeground(new java.awt.Color(0, 0, 0));
+        price.setText("<html>Precio</html>");
+        price.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        price.setMaximumSize(new java.awt.Dimension(0, 0));
+        price.setMinimumSize(new java.awt.Dimension(0, 0));
+        price.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(price);
+        price.setBounds(560, 320, 110, 60);
+
+        brandProductDealer.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        brandProductDealer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                brandProductDealerActionPerformed(evt);
+            }
+        });
+        jPanel1.add(brandProductDealer);
+        brandProductDealer.setBounds(700, 190, 180, 40);
+
+        Brand.setBackground(new java.awt.Color(196, 196, 196));
+        Brand.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        Brand.setForeground(new java.awt.Color(0, 0, 0));
+        Brand.setText("<html>Marca</html>");
+        Brand.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        Brand.setMaximumSize(new java.awt.Dimension(0, 0));
+        Brand.setMinimumSize(new java.awt.Dimension(0, 0));
+        Brand.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(Brand);
+        Brand.setBounds(560, 180, 110, 60);
+
+        Brand1.setBackground(new java.awt.Color(196, 196, 196));
+        Brand1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        Brand1.setForeground(new java.awt.Color(0, 0, 0));
+        Brand1.setText("<html>ID del producto</html>");
+        Brand1.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        Brand1.setMaximumSize(new java.awt.Dimension(0, 0));
+        Brand1.setMinimumSize(new java.awt.Dimension(0, 0));
+        Brand1.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(Brand1);
+        Brand1.setBounds(560, 250, 110, 60);
+
+        brandProductDealer1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        brandProductDealer1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                brandProductDealer1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(brandProductDealer1);
+        brandProductDealer1.setBounds(700, 260, 180, 40);
+
+        Quantify1.setBackground(new java.awt.Color(196, 196, 196));
+        Quantify1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        Quantify1.setForeground(new java.awt.Color(0, 0, 0));
+        Quantify1.setText("<html>Cantidad</html>");
+        Quantify1.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        Quantify1.setMaximumSize(new java.awt.Dimension(0, 0));
+        Quantify1.setMinimumSize(new java.awt.Dimension(0, 0));
+        Quantify1.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(Quantify1);
+        Quantify1.setBounds(560, 390, 110, 60);
+
+        quantifyProductDealer1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        quantifyProductDealer1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                quantifyProductDealer1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(quantifyProductDealer1);
+        quantifyProductDealer1.setBounds(700, 390, 180, 40);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -254,6 +347,26 @@ public class createDealerView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_principalMenuButtonDealerActionPerformed
 
+    private void priceProductDealerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_priceProductDealerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_priceProductDealerActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void brandProductDealerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brandProductDealerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_brandProductDealerActionPerformed
+
+    private void brandProductDealer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brandProductDealer1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_brandProductDealer1ActionPerformed
+
+    private void quantifyProductDealer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quantifyProductDealer1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_quantifyProductDealer1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -291,8 +404,13 @@ public class createDealerView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Brand;
+    private javax.swing.JLabel Brand1;
+    private javax.swing.JLabel Quantify1;
     public javax.swing.JButton addDealerButton;
     public javax.swing.JButton backButtonDealer;
+    public javax.swing.JTextField brandProductDealer;
+    public javax.swing.JTextField brandProductDealer1;
     public javax.swing.JTextField celDealerField;
     public javax.swing.JTextField dealerNamerField;
     public javax.swing.JTextField dealerProductField;
@@ -306,6 +424,9 @@ public class createDealerView extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField17;
     public javax.swing.JTextField lastNameDealerField;
+    private javax.swing.JLabel price;
+    public javax.swing.JTextField priceProductDealer;
     public javax.swing.JButton principalMenuButtonDealer;
+    public javax.swing.JTextField quantifyProductDealer1;
     // End of variables declaration//GEN-END:variables
 }

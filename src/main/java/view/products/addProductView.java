@@ -58,7 +58,7 @@ public class addProductView extends javax.swing.JFrame {
         jTextField1.setMinimumSize(new java.awt.Dimension(0, 0));
         jTextField1.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(jTextField1);
-        jTextField1.setBounds(220, 50, 560, 100);
+        jTextField1.setBounds(200, 20, 560, 100);
 
         jTextField17.setBackground(new java.awt.Color(196, 196, 196));
         jTextField17.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
@@ -88,7 +88,7 @@ public class addProductView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(productBrandField);
-        productBrandField.setBounds(450, 230, 180, 40);
+        productBrandField.setBounds(450, 200, 180, 40);
 
         productNameField.setForeground(new java.awt.Color(204, 204, 204));
         productNameField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -98,7 +98,7 @@ public class addProductView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(productNameField);
-        productNameField.setBounds(450, 170, 180, 40);
+        productNameField.setBounds(450, 130, 180, 40);
 
         productPriceField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         productPriceField.addActionListener(new java.awt.event.ActionListener() {
@@ -107,7 +107,7 @@ public class addProductView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(productPriceField);
-        productPriceField.setBounds(450, 290, 180, 40);
+        productPriceField.setBounds(450, 270, 180, 40);
 
         jLabel4.setBackground(new java.awt.Color(196, 196, 196));
         jLabel4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -118,7 +118,7 @@ public class addProductView extends javax.swing.JFrame {
         jLabel4.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel4.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(320, 280, 90, 60);
+        jLabel4.setBounds(320, 260, 90, 60);
 
         jLabel7.setBackground(new java.awt.Color(196, 196, 196));
         jLabel7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -129,7 +129,7 @@ public class addProductView extends javax.swing.JFrame {
         jLabel7.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel7.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(320, 210, 90, 70);
+        jLabel7.setBounds(320, 180, 90, 70);
 
         jLabel8.setBackground(new java.awt.Color(196, 196, 196));
         jLabel8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -140,7 +140,7 @@ public class addProductView extends javax.swing.JFrame {
         jLabel8.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel8.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(jLabel8);
-        jLabel8.setBounds(320, 150, 110, 70);
+        jLabel8.setBounds(320, 110, 110, 70);
 
         jLabel9.setBackground(new java.awt.Color(196, 196, 196));
         jLabel9.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -160,7 +160,7 @@ public class addProductView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(productQuantityField);
-        productQuantityField.setBounds(450, 350, 180, 40);
+        productQuantityField.setBounds(450, 330, 180, 40);
 
         productIdDField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         productIdDField.addActionListener(new java.awt.event.ActionListener() {
@@ -180,7 +180,7 @@ public class addProductView extends javax.swing.JFrame {
         jLabel10.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel10.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(jLabel10);
-        jLabel10.setBounds(320, 330, 110, 70);
+        jLabel10.setBounds(320, 310, 110, 70);
 
         principalMenuButtonProducts.setBackground(new java.awt.Color(131, 131, 131));
         principalMenuButtonProducts.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
