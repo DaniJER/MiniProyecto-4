@@ -1,7 +1,7 @@
 /*
     UNIVERSIDAD DEL VALLE
-    AUTORES:
-    DANIEL JOSÉ ENRIQUEZ, COD: 2240920 - JUAN SEBASTIAN VIEDMAN, COD: 2242562
+    FUNDAMENTOS DE PROGRAMACIÓN ORIENTADA A EVENTOS
+    AUTORES: DANIEL JOSÉ ENRIQUEZ - COD: 2240920 Y JUAN SEBASTIAN VIEDMAN - COD: 2242562
     
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -69,9 +69,10 @@ public class ReadClientController implements ActionListener {
                 readClientModel.setIdClient(readClientView.idClientField.getText());
                 readClientModel.setProductName(searchAndBuyProductView.nameProductToSellField.getText());
                 
-                if(readClientModel.readClient(readClientView.idClientField.getText(),searchAndBuyProductView.nameProductToSellField.getText())  == false){
+                if(readClientModel.readClient(readClientView.idClientField.getText()) == false){
                 
                     readClientView.setVisible(true);
+                    
                 }else{
            
                     readClientView.dispose();

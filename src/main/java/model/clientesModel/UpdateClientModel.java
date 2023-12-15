@@ -1,3 +1,10 @@
+/*
+    UNIVERSIDAD DEL VALLE
+    FUNDAMENTOS DE PROGRAMACIÓN ORIENTADA A EVENTOS
+    AUTORES: DANIEL JOSÉ ENRIQUEZ - COD: 2240920 Y JUAN SEBASTIAN VIEDMAN - COD: 2242562
+
+*/
+
 package model.clientesModel;
 
 import java.io.BufferedReader;
@@ -110,14 +117,14 @@ public class UpdateClientModel {
                     return false; // Manejo de excepciones al escribir en el archivo
                 }
 
-                System.out.println("Cliente actualizado:");
+                JOptionPane.showMessageDialog(null,"Cliente actualizado:");
                 for (String entry : updatedClientList) {
                     System.out.println("Datos del cliente: " + entry);
                 }
 
                 return true; // Indica que se encontró la cédula y se actualizó el cliente
             } else {
-                System.out.println("Cliente no encontrado.");
+                JOptionPane.showMessageDialog(null,"Cliente no encontrado.");
                 return false; // Indica que no se encontró la cédula
             }
 

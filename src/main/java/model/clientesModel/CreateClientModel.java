@@ -1,4 +1,8 @@
 /*
+    UNIVERSIDAD DEL VALLE
+    FUNDAMENTOS DE PROGRAMACIÓN ORIENTADA A EVENTOS
+    AUTORES: DANIEL JOSÉ ENRIQUEZ - COD: 2240920 Y JUAN SEBASTIAN VIEDMAN - COD: 2242562
+
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -76,8 +80,8 @@ public class CreateClientModel {
 
     public void setProducts(List<String> products) {
         this.products = products;
-    }
     
+    }
     
      //Metodo para crear un archivo y establecerlo en una ruta especificada
     //------------------------------------------------------------------------------------------------
