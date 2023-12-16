@@ -23,6 +23,7 @@ import view.*;
  * @author El Rey
  */
 public class PrincipalController implements ActionListener {
+    
     private principalView principalView;
     private addItemView addItemView;
     private searchItemView searchItemView;
