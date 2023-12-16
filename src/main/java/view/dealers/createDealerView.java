@@ -50,6 +50,7 @@ public class createDealerView extends javax.swing.JFrame {
         idProductDealer = new javax.swing.JTextField();
         Quantify1 = new javax.swing.JLabel();
         quantifyProductDealer = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -100,7 +101,7 @@ public class createDealerView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(lastNameDealerField);
-        lastNameDealerField.setBounds(290, 320, 180, 40);
+        lastNameDealerField.setBounds(350, 250, 180, 40);
 
         dealerNamerField.setForeground(new java.awt.Color(204, 204, 204));
         dealerNamerField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -110,7 +111,7 @@ public class createDealerView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(dealerNamerField);
-        dealerNamerField.setBounds(290, 170, 180, 40);
+        dealerNamerField.setBounds(350, 110, 180, 40);
 
         idDealerField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         idDealerField.addActionListener(new java.awt.event.ActionListener() {
@@ -119,7 +120,7 @@ public class createDealerView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(idDealerField);
-        idDealerField.setBounds(290, 250, 180, 40);
+        idDealerField.setBounds(350, 180, 180, 40);
 
         jLabel4.setBackground(new java.awt.Color(196, 196, 196));
         jLabel4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -130,7 +131,7 @@ public class createDealerView extends javax.swing.JFrame {
         jLabel4.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel4.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(150, 240, 90, 60);
+        jLabel4.setBounds(230, 170, 90, 60);
 
         jLabel7.setBackground(new java.awt.Color(196, 196, 196));
         jLabel7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -141,7 +142,7 @@ public class createDealerView extends javax.swing.JFrame {
         jLabel7.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel7.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(150, 300, 100, 70);
+        jLabel7.setBounds(230, 230, 100, 70);
 
         jLabel8.setBackground(new java.awt.Color(196, 196, 196));
         jLabel8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -152,7 +153,7 @@ public class createDealerView extends javax.swing.JFrame {
         jLabel8.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel8.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(jLabel8);
-        jLabel8.setBounds(150, 150, 110, 70);
+        jLabel8.setBounds(230, 90, 110, 70);
 
         jLabel5.setBackground(new java.awt.Color(196, 196, 196));
         jLabel5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -163,7 +164,7 @@ public class createDealerView extends javax.swing.JFrame {
         jLabel5.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel5.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(560, 120, 110, 60);
+        jLabel5.setBounds(560, 100, 110, 60);
 
         dealerProductField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         dealerProductField.addActionListener(new java.awt.event.ActionListener() {
@@ -172,7 +173,7 @@ public class createDealerView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(dealerProductField);
-        dealerProductField.setBounds(700, 130, 180, 40);
+        dealerProductField.setBounds(700, 110, 180, 40);
 
         celDealerField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         celDealerField.addActionListener(new java.awt.event.ActionListener() {
@@ -181,7 +182,7 @@ public class createDealerView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(celDealerField);
-        celDealerField.setBounds(290, 390, 180, 40);
+        celDealerField.setBounds(350, 320, 180, 40);
 
         jLabel6.setBackground(new java.awt.Color(196, 196, 196));
         jLabel6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -192,7 +193,7 @@ public class createDealerView extends javax.swing.JFrame {
         jLabel6.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel6.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(150, 380, 90, 60);
+        jLabel6.setBounds(230, 310, 90, 60);
 
         backButtonDealer.setBackground(new java.awt.Color(131, 131, 131));
         backButtonDealer.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
@@ -225,7 +226,7 @@ public class createDealerView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(priceProductDealer);
-        priceProductDealer.setBounds(700, 330, 180, 40);
+        priceProductDealer.setBounds(700, 310, 180, 40);
 
         price.setBackground(new java.awt.Color(196, 196, 196));
         price.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -236,7 +237,7 @@ public class createDealerView extends javax.swing.JFrame {
         price.setMinimumSize(new java.awt.Dimension(0, 0));
         price.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(price);
-        price.setBounds(560, 320, 110, 60);
+        price.setBounds(560, 300, 110, 60);
 
         brandProductDealer.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         brandProductDealer.addActionListener(new java.awt.event.ActionListener() {
@@ -245,7 +246,7 @@ public class createDealerView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(brandProductDealer);
-        brandProductDealer.setBounds(700, 190, 180, 40);
+        brandProductDealer.setBounds(700, 170, 180, 40);
 
         Brand.setBackground(new java.awt.Color(196, 196, 196));
         Brand.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -256,7 +257,7 @@ public class createDealerView extends javax.swing.JFrame {
         Brand.setMinimumSize(new java.awt.Dimension(0, 0));
         Brand.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(Brand);
-        Brand.setBounds(560, 180, 110, 60);
+        Brand.setBounds(560, 160, 110, 60);
 
         Brand1.setBackground(new java.awt.Color(196, 196, 196));
         Brand1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -267,7 +268,7 @@ public class createDealerView extends javax.swing.JFrame {
         Brand1.setMinimumSize(new java.awt.Dimension(0, 0));
         Brand1.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(Brand1);
-        Brand1.setBounds(560, 250, 110, 60);
+        Brand1.setBounds(560, 230, 110, 60);
 
         idProductDealer.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         idProductDealer.addActionListener(new java.awt.event.ActionListener() {
@@ -276,7 +277,7 @@ public class createDealerView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(idProductDealer);
-        idProductDealer.setBounds(700, 260, 180, 40);
+        idProductDealer.setBounds(700, 240, 180, 40);
 
         Quantify1.setBackground(new java.awt.Color(196, 196, 196));
         Quantify1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -287,7 +288,7 @@ public class createDealerView extends javax.swing.JFrame {
         Quantify1.setMinimumSize(new java.awt.Dimension(0, 0));
         Quantify1.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(Quantify1);
-        Quantify1.setBounds(560, 390, 110, 60);
+        Quantify1.setBounds(560, 370, 110, 60);
 
         quantifyProductDealer.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         quantifyProductDealer.addActionListener(new java.awt.event.ActionListener() {
@@ -296,7 +297,13 @@ public class createDealerView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(quantifyProductDealer);
-        quantifyProductDealer.setBounds(700, 390, 180, 40);
+        quantifyProductDealer.setBounds(700, 370, 180, 40);
+
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\resources\\LogoUnivalle.jpeg")); // NOI18N
+        jLabel3.setText("jLabel1");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(10, 160, 200, 280);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -415,6 +422,7 @@ public class createDealerView extends javax.swing.JFrame {
     public javax.swing.JTextField dealerProductField;
     public javax.swing.JTextField idDealerField;
     public javax.swing.JTextField idProductDealer;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;

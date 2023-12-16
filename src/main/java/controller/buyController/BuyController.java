@@ -26,7 +26,7 @@ public class BuyController implements ActionListener{
         this.buyModel = buyModel;
         
         principalView.buyProducts.addActionListener(this);
-        buyView.buyProduct.addActionListener(this);
+        buyView.principalMenu.addActionListener(this);
         buyView.backButtonBuy.addActionListener(this);
         buyView.principalMenuButtonVerify.addActionListener(this);
     }
@@ -48,12 +48,14 @@ public class BuyController implements ActionListener{
             principalView.setVisible(true);
             principalView.setLocationRelativeTo(null);
         }
+        
+        if(e.getSource() == buyView.principalMenu){
+            buyView.dispose();
+            principalView.setVisible(true);
+            principalView.setLocationRelativeTo(null);
+        }
         if(e.getSource() == buyView.principalMenuButtonVerify){
-            
-            
             buyModel.buy(buyView.idDealer.getText());
-            buyView.productAvaliableLabel.setText(buyModel.getProductName());
-            buyView.quantityLabel.setText(buyModel.getQuantityStock());
         }
     }
 }

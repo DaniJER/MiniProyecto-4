@@ -33,9 +33,12 @@ public class readProductView extends javax.swing.JFrame {
         idProduct = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         principalMenuButtonProducts = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
         backButtonReadProducts = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(196, 196, 196));
         jPanel1.setLayout(null);
@@ -54,7 +57,7 @@ public class readProductView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jTextField1);
-        jTextField1.setBounds(260, 70, 470, 50);
+        jTextField1.setBounds(260, 70, 450, 50);
 
         jTextField17.setBackground(new java.awt.Color(196, 196, 196));
         jTextField17.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
@@ -104,6 +107,12 @@ public class readProductView extends javax.swing.JFrame {
         jPanel1.add(principalMenuButtonProducts);
         principalMenuButtonProducts.setBounds(570, 390, 170, 60);
 
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\resources\\LogoUnivalle.jpeg")); // NOI18N
+        jLabel3.setText("jLabel1");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(720, 50, 200, 260);
+
         backButtonReadProducts.setBackground(new java.awt.Color(131, 131, 131));
         backButtonReadProducts.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         backButtonReadProducts.setText("Volver");
@@ -116,26 +125,14 @@ public class readProductView extends javax.swing.JFrame {
         jPanel1.add(backButtonReadProducts);
         backButtonReadProducts.setBounds(220, 390, 110, 60);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 950, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\resources\\LogoUnivalle.jpeg")); // NOI18N
+        jLabel4.setText("jLabel1");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(20, 30, 200, 260);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 950, 600);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -195,6 +192,8 @@ public class readProductView extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton backButtonReadProducts;
     public javax.swing.JTextField idProduct;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;

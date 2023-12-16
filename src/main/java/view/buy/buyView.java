@@ -27,14 +27,14 @@ public class buyView extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        productAvaliableLabel = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        buyProduct = new javax.swing.JButton();
+        principalMenu = new javax.swing.JButton();
         backButtonBuy = new javax.swing.JButton();
         principalMenuButtonVerify = new javax.swing.JButton();
         idDealer = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        quantityLabel = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -44,31 +44,24 @@ public class buyView extends javax.swing.JFrame {
         jPanel1.setMinimumSize(new java.awt.Dimension(950, 600));
         jPanel1.setLayout(null);
 
-        productAvaliableLabel.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        productAvaliableLabel.setForeground(new java.awt.Color(0, 0, 0));
-        productAvaliableLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        productAvaliableLabel.setText("Producto disponible:");
-        jPanel1.add(productAvaliableLabel);
-        productAvaliableLabel.setBounds(200, 280, 220, 80);
-
-        jLabel4.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Comprar productos");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(190, 70, 570, 50);
+        jLabel4.setBounds(210, 80, 570, 50);
 
-        buyProduct.setBackground(new java.awt.Color(131, 131, 131));
-        buyProduct.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        buyProduct.setText("Menu principal");
-        buyProduct.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
-        buyProduct.addActionListener(new java.awt.event.ActionListener() {
+        principalMenu.setBackground(new java.awt.Color(131, 131, 131));
+        principalMenu.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        principalMenu.setText("Menu principal");
+        principalMenu.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
+        principalMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buyProductActionPerformed(evt);
+                principalMenuActionPerformed(evt);
             }
         });
-        jPanel1.add(buyProduct);
-        buyProduct.setBounds(640, 450, 210, 60);
+        jPanel1.add(principalMenu);
+        principalMenu.setBounds(640, 450, 210, 60);
 
         backButtonBuy.setBackground(new java.awt.Color(131, 131, 131));
         backButtonBuy.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
@@ -80,7 +73,7 @@ public class buyView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(backButtonBuy);
-        backButtonBuy.setBounds(250, 450, 120, 60);
+        backButtonBuy.setBounds(230, 450, 120, 60);
 
         principalMenuButtonVerify.setBackground(new java.awt.Color(131, 131, 131));
         principalMenuButtonVerify.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
@@ -92,7 +85,7 @@ public class buyView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(principalMenuButtonVerify);
-        principalMenuButtonVerify.setBounds(400, 450, 210, 60);
+        principalMenuButtonVerify.setBounds(390, 450, 210, 60);
 
         idDealer.setForeground(new java.awt.Color(0, 0, 0));
         idDealer.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -103,20 +96,26 @@ public class buyView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(idDealer);
-        idDealer.setBounds(510, 180, 80, 40);
+        idDealer.setBounds(570, 210, 150, 50);
 
-        jLabel5.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Ingrese el ID del proveedor");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(220, 160, 220, 80);
+        jLabel5.setBounds(210, 200, 330, 80);
 
-        quantityLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        quantityLabel.setForeground(new java.awt.Color(0, 0, 0));
-        quantityLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(quantityLabel);
-        quantityLabel.setBounds(610, 240, 270, 50);
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\resources\\LogoUnivalle.jpeg")); // NOI18N
+        jLabel2.setText("jLabel1");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(740, 30, 200, 260);
+
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\resources\\LogoUnivalle.jpeg")); // NOI18N
+        jLabel3.setText("jLabel1");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(20, 30, 200, 260);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, -10, 950, 600);
@@ -136,9 +135,9 @@ public class buyView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_idDealerActionPerformed
 
-    private void buyProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buyProductActionPerformed
+    private void principalMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_principalMenuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_buyProductActionPerformed
+    }//GEN-LAST:event_principalMenuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -177,13 +176,13 @@ public class buyView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton backButtonBuy;
-    public javax.swing.JButton buyProduct;
     public javax.swing.JTextField idDealer;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
+    public javax.swing.JButton principalMenu;
     public javax.swing.JButton principalMenuButtonVerify;
-    public javax.swing.JLabel productAvaliableLabel;
-    public javax.swing.JLabel quantityLabel;
     // End of variables declaration//GEN-END:variables
 }

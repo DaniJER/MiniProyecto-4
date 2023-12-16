@@ -35,6 +35,8 @@ public class showClientsRemoved extends javax.swing.JFrame {
         lastNameClientRemoved = new javax.swing.JLabel();
         idClientRemoved = new javax.swing.JLabel();
         celClientRemoved = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -134,6 +136,18 @@ public class showClientsRemoved extends javax.swing.JFrame {
         jPanel1.add(celClientRemoved);
         celClientRemoved.setBounds(320, 350, 410, 70);
 
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\resources\\LogoUnivalle.jpeg")); // NOI18N
+        jLabel3.setText("jLabel1");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(790, 40, 200, 260);
+
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\resources\\LogoUnivalle.jpeg")); // NOI18N
+        jLabel4.setText("jLabel1");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(20, 30, 200, 260);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -203,6 +217,8 @@ public class showClientsRemoved extends javax.swing.JFrame {
     public javax.swing.JButton backButtonClients;
     public javax.swing.JLabel celClientRemoved;
     public javax.swing.JLabel idClientRemoved;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField17;
     private javax.swing.JTextField jTextField2;

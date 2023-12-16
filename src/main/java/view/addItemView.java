@@ -33,8 +33,9 @@ public class addItemView extends javax.swing.JFrame {
         addDealerButton = new javax.swing.JButton();
         selectProductButton = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
-        backButton = new javax.swing.JButton();
         backButtonaddItem = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -119,17 +120,6 @@ public class addItemView extends javax.swing.JFrame {
         jPanel3.add(jLabel7);
         jLabel7.setBounds(270, 40, 435, 90);
 
-        backButton.setBackground(new java.awt.Color(195, 195, 195));
-        backButton.setBorder(null);
-        backButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        backButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backButtonActionPerformed(evt);
-            }
-        });
-        jPanel3.add(backButton);
-        backButton.setBounds(70, 60, 80, 87);
-
         backButtonaddItem.setBackground(new java.awt.Color(131, 131, 131));
         backButtonaddItem.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
         backButtonaddItem.setText("Volver");
@@ -144,6 +134,18 @@ public class addItemView extends javax.swing.JFrame {
         });
         jPanel3.add(backButtonaddItem);
         backButtonaddItem.setBounds(760, 520, 160, 50);
+
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\resources\\LogoUnivalle.jpeg")); // NOI18N
+        jLabel1.setText("jLabel1");
+        jPanel3.add(jLabel1);
+        jLabel1.setBounds(740, 40, 200, 260);
+
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\resources\\LogoUnivalle.jpeg")); // NOI18N
+        jLabel2.setText("jLabel1");
+        jPanel3.add(jLabel2);
+        jLabel2.setBounds(20, 30, 200, 260);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -170,10 +172,6 @@ public class addItemView extends javax.swing.JFrame {
     private void selectProductButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectProductButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_selectProductButtonActionPerformed
-
-    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_backButtonActionPerformed
 
     private void backButtonaddItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonaddItemActionPerformed
         // TODO add your handling code here:
@@ -216,8 +214,9 @@ public class addItemView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton addDealerButton;
-    public javax.swing.JButton backButton;
     public javax.swing.JButton backButtonaddItem;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel3;

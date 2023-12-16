@@ -33,8 +33,11 @@ public class deleteProductView extends javax.swing.JFrame {
         idProductField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         backButtonDeleteProduct = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(196, 196, 196));
         jPanel1.setLayout(null);
@@ -111,21 +114,20 @@ public class deleteProductView extends javax.swing.JFrame {
         jPanel1.add(backButtonDeleteProduct);
         backButtonDeleteProduct.setBounds(810, 510, 160, 50);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1043, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 660, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\resources\\LogoUnivalle.jpeg")); // NOI18N
+        jLabel5.setText("jLabel1");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(800, 40, 200, 260);
+
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\resources\\LogoUnivalle.jpeg")); // NOI18N
+        jLabel6.setText("jLabel1");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(20, 30, 200, 260);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 1043, 660);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -186,6 +188,8 @@ public class deleteProductView extends javax.swing.JFrame {
     public javax.swing.JButton deleteProductButton;
     public javax.swing.JTextField idProductField;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField17;

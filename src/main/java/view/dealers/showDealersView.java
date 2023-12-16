@@ -36,6 +36,8 @@ public class showDealersView extends javax.swing.JFrame {
         productDealer = new javax.swing.JLabel();
         lastNameDealer = new javax.swing.JLabel();
         idDealer = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -146,6 +148,18 @@ public class showDealersView extends javax.swing.JFrame {
         jPanel1.add(idDealer);
         idDealer.setBounds(330, 340, 330, 40);
 
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\resources\\LogoUnivalle.jpeg")); // NOI18N
+        jLabel3.setText("jLabel1");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(760, 40, 200, 260);
+
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\resources\\LogoUnivalle.jpeg")); // NOI18N
+        jLabel4.setText("jLabel1");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(20, 30, 200, 260);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -217,6 +231,8 @@ public class showDealersView extends javax.swing.JFrame {
     public javax.swing.JLabel celDealer;
     public javax.swing.JButton dealersBackButton;
     public javax.swing.JLabel idDealer;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField17;
     private javax.swing.JTextField jTextField2;

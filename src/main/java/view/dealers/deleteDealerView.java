@@ -33,8 +33,11 @@ public class deleteDealerView extends javax.swing.JFrame {
         idDealerField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         backButtonDeleteDealer = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(196, 196, 196));
         jPanel1.setMaximumSize(new java.awt.Dimension(950, 600));
@@ -56,7 +59,7 @@ public class deleteDealerView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(DealerField);
-        DealerField.setBounds(280, 110, 560, 100);
+        DealerField.setBounds(250, 80, 450, 100);
 
         jTextField17.setBackground(new java.awt.Color(196, 196, 196));
         jTextField17.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
@@ -77,7 +80,7 @@ public class deleteDealerView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(deleteDealerButton);
-        deleteDealerButton.setBounds(400, 400, 210, 60);
+        deleteDealerButton.setBounds(380, 390, 210, 60);
 
         idDealerField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         idDealerField.addActionListener(new java.awt.event.ActionListener() {
@@ -86,7 +89,7 @@ public class deleteDealerView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(idDealerField);
-        idDealerField.setBounds(420, 270, 180, 40);
+        idDealerField.setBounds(400, 260, 180, 40);
 
         jLabel4.setBackground(new java.awt.Color(196, 196, 196));
         jLabel4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -97,7 +100,7 @@ public class deleteDealerView extends javax.swing.JFrame {
         jLabel4.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel4.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(360, 260, 90, 60);
+        jLabel4.setBounds(340, 250, 90, 60);
 
         backButtonDeleteDealer.setBackground(new java.awt.Color(131, 131, 131));
         backButtonDeleteDealer.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
@@ -112,22 +115,22 @@ public class deleteDealerView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(backButtonDeleteDealer);
-        backButtonDeleteDealer.setBounds(730, 410, 160, 50);
+        backButtonDeleteDealer.setBounds(730, 480, 160, 50);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 950, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 950, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE))
-        );
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\resources\\LogoUnivalle.jpeg")); // NOI18N
+        jLabel3.setText("jLabel1");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(720, 40, 200, 260);
+
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\resources\\LogoUnivalle.jpeg")); // NOI18N
+        jLabel5.setText("jLabel1");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(20, 30, 200, 260);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 950, 600);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -188,7 +191,9 @@ public class deleteDealerView extends javax.swing.JFrame {
     public javax.swing.JButton backButtonDeleteDealer;
     public javax.swing.JButton deleteDealerButton;
     public javax.swing.JTextField idDealerField;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField17;
     // End of variables declaration//GEN-END:variables

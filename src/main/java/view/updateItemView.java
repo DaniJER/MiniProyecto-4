@@ -34,6 +34,8 @@ public class updateItemView extends javax.swing.JFrame {
         updateProductButton = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         backButtonUpdateItem = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -60,7 +62,7 @@ public class updateItemView extends javax.swing.JFrame {
         jLabel6.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel6.setPreferredSize(new java.awt.Dimension(435, 90));
         jPanel3.add(jLabel6);
-        jLabel6.setBounds(170, 120, 610, 50);
+        jLabel6.setBounds(180, 120, 610, 50);
 
         updateClientButton.setBackground(new java.awt.Color(131, 131, 131));
         updateClientButton.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
@@ -132,6 +134,18 @@ public class updateItemView extends javax.swing.JFrame {
         });
         jPanel3.add(backButtonUpdateItem);
         backButtonUpdateItem.setBounds(760, 520, 160, 50);
+
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\resources\\LogoUnivalle.jpeg")); // NOI18N
+        jLabel2.setText("jLabel1");
+        jPanel3.add(jLabel2);
+        jLabel2.setBounds(750, 40, 200, 260);
+
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\resources\\LogoUnivalle.jpeg")); // NOI18N
+        jLabel3.setText("jLabel1");
+        jPanel3.add(jLabel3);
+        jLabel3.setBounds(30, 30, 200, 260);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -207,6 +221,8 @@ public class updateItemView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton backButtonUpdateItem;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel3;

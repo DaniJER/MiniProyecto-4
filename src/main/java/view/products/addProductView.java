@@ -41,7 +41,9 @@ public class addProductView extends javax.swing.JFrame {
         productIdDField = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         principalMenuButtonProducts = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
         addProductButton1 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -58,7 +60,7 @@ public class addProductView extends javax.swing.JFrame {
         jTextField1.setMinimumSize(new java.awt.Dimension(0, 0));
         jTextField1.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(jTextField1);
-        jTextField1.setBounds(200, 20, 560, 100);
+        jTextField1.setBounds(230, 20, 500, 100);
 
         jTextField17.setBackground(new java.awt.Color(196, 196, 196));
         jTextField17.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
@@ -194,6 +196,12 @@ public class addProductView extends javax.swing.JFrame {
         jPanel1.add(principalMenuButtonProducts);
         principalMenuButtonProducts.setBounds(600, 470, 210, 60);
 
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\resources\\LogoUnivalle.jpeg")); // NOI18N
+        jLabel3.setText("jLabel1");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(750, 50, 200, 260);
+
         addProductButton1.setBackground(new java.awt.Color(131, 131, 131));
         addProductButton1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         addProductButton1.setText("Guardar producto");
@@ -205,6 +213,12 @@ public class addProductView extends javax.swing.JFrame {
         });
         jPanel1.add(addProductButton1);
         addProductButton1.setBounds(380, 470, 210, 60);
+
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\resources\\LogoUnivalle.jpeg")); // NOI18N
+        jLabel5.setText("jLabel1");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(20, 30, 200, 260);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 962, 600);
@@ -284,7 +298,9 @@ public class addProductView extends javax.swing.JFrame {
     public javax.swing.JButton addProductButton1;
     public javax.swing.JButton backButtonProducts;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;

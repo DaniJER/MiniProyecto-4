@@ -37,6 +37,7 @@ public class principalView extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         buyProducts = new javax.swing.JButton();
         backUpButton = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -78,7 +79,7 @@ public class principalView extends javax.swing.JFrame {
         jLabel6.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel6.setPreferredSize(new java.awt.Dimension(435, 90));
         jPanel3.add(jLabel6);
-        jLabel6.setBounds(170, 90, 610, 50);
+        jLabel6.setBounds(140, 100, 610, 50);
 
         addItemButton.setBackground(new java.awt.Color(131, 131, 131));
         addItemButton.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
@@ -149,7 +150,7 @@ public class principalView extends javax.swing.JFrame {
         jLabel7.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel7.setPreferredSize(new java.awt.Dimension(435, 90));
         jPanel3.add(jLabel7);
-        jLabel7.setBounds(270, 0, 435, 90);
+        jLabel7.setBounds(240, 10, 435, 90);
 
         buyProducts.setBackground(new java.awt.Color(131, 131, 131));
         buyProducts.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
@@ -180,6 +181,12 @@ public class principalView extends javax.swing.JFrame {
         });
         jPanel3.add(backUpButton);
         backUpButton.setBounds(50, 490, 250, 50);
+
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\resources\\LogoUnivalle.jpeg")); // NOI18N
+        jLabel1.setText("jLabel1");
+        jPanel3.add(jLabel1);
+        jLabel1.setBounds(750, 30, 200, 260);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -266,6 +273,7 @@ public class principalView extends javax.swing.JFrame {
     public javax.swing.JButton backUpButton;
     public javax.swing.JButton buyProducts;
     public javax.swing.JButton deleteItemProduct;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel3;

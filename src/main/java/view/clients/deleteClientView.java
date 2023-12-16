@@ -33,6 +33,9 @@ public class deleteClientView extends javax.swing.JFrame {
         idClientField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         backButtonDeleteClients = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -57,7 +60,7 @@ public class deleteClientView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jTextField1);
-        jTextField1.setBounds(320, 100, 560, 100);
+        jTextField1.setBounds(320, 100, 390, 100);
 
         jTextField17.setBackground(new java.awt.Color(196, 196, 196));
         jTextField17.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
@@ -112,8 +115,26 @@ public class deleteClientView extends javax.swing.JFrame {
         jPanel1.add(backButtonDeleteClients);
         backButtonDeleteClients.setBounds(550, 460, 120, 60);
 
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\resources\\LogoUnivalle.jpeg")); // NOI18N
+        jLabel5.setText("jLabel1");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(730, 30, 200, 260);
+
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\resources\\LogoUnivalle.jpeg")); // NOI18N
+        jLabel6.setText("jLabel1");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(20, 30, 200, 260);
+
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 960, 600);
+
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\resources\\LogoUnivalle.jpeg")); // NOI18N
+        jLabel3.setText("jLabel1");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(20, 30, 200, 260);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -173,7 +194,10 @@ public class deleteClientView extends javax.swing.JFrame {
     public javax.swing.JButton backButtonDeleteClients;
     public javax.swing.JButton deleteClientButton;
     public javax.swing.JTextField idClientField;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField17;

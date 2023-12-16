@@ -34,6 +34,8 @@ public class deleteItemView extends javax.swing.JFrame {
         deleteProductButton = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         backButtonDeleteItemView = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -133,6 +135,18 @@ public class deleteItemView extends javax.swing.JFrame {
         jPanel3.add(backButtonDeleteItemView);
         backButtonDeleteItemView.setBounds(670, 470, 160, 50);
 
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\resources\\LogoUnivalle.jpeg")); // NOI18N
+        jLabel2.setText("jLabel1");
+        jPanel3.add(jLabel2);
+        jLabel2.setBounds(740, 40, 200, 260);
+
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\resources\\LogoUnivalle.jpeg")); // NOI18N
+        jLabel3.setText("jLabel1");
+        jPanel3.add(jLabel3);
+        jLabel3.setBounds(20, 30, 200, 260);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -210,6 +224,8 @@ public class deleteItemView extends javax.swing.JFrame {
     public javax.swing.JButton deleteClientButton;
     public javax.swing.JButton deleteDealerButton;
     public javax.swing.JButton deleteProductButton;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel3;

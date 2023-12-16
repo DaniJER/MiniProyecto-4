@@ -40,6 +40,7 @@ public class updateDealerView extends javax.swing.JFrame {
         dealerCelField = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
         backButtonUpdateDealer = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(950, 600));
@@ -200,6 +201,12 @@ public class updateDealerView extends javax.swing.JFrame {
         jPanel1.add(backButtonUpdateDealer);
         backButtonUpdateDealer.setBounds(740, 480, 160, 50);
 
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon("D:\\Mega\\Univalle\\III semestre\\POE\\Projects\\MiniProyecto-4\\src\\main\\java\\resources\\LogoUnivalle.jpeg")); // NOI18N
+        jLabel3.setText("jLabel1");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(20, 30, 200, 260);
+
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 950, 600);
 
@@ -280,6 +287,7 @@ public class updateDealerView extends javax.swing.JFrame {
     public javax.swing.JTextField dealerLastNameField;
     public javax.swing.JTextField dealerNameField;
     public javax.swing.JTextField idDealerField;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
