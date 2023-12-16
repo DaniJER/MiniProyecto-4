@@ -8,7 +8,9 @@
 package model.buyModel;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -19,8 +21,14 @@ import javax.swing.JOptionPane;
  */
 public class BuyModel {
     
-    String productName;
-    String quantityStock;
+    private String productName;
+    private String quantityStock;
+    private String productBrand;
+    private String productPrice;
+    private String productQuantity;
+    private String productId;
+    
+    String fileRuteProducts = "src/main/java/textFiles/productsData";
     
     public String getProductName() {
         return productName;
@@ -63,7 +71,10 @@ public class BuyModel {
                         // Si se encuentra la cédula, muestra el producto
                             this.productName = dataArray[3];
                             this.quantityStock = dataArray[4];
-                            
+                            this.productBrand = dataArray[5];
+                            this.productPrice = dataArray[6];
+                            this.productId = dataArray[7];
+                                                        
                             JOptionPane.showMessageDialog(null, "Cantidad encontrada" + quantityStock);
                             String stock = quantityStock.substring(10);
                             int stockParse = Integer.parseInt(stock);
@@ -72,8 +83,10 @@ public class BuyModel {
                             
                             int optionInt = Integer.parseInt(option);
                             
-                            if (stockParse <= optionInt){
-                                System.out.println("Felicidades, si es la misma cantidad");
+                            String productIdParse = productId.substring(16);
+                            
+                            if (stockParse >= optionInt){
+                                productStockValidation(productIdParse, productBrand, productName,  optionInt, productPrice, quantityStock );
                             }else {
                                 System.out.println("Nada mi rey");
                             }
@@ -91,6 +104,86 @@ public class BuyModel {
                 e.printStackTrace();
             return false; // Manejo de excepciones
         }
+    }
+    
+    
+    
+    
+    public boolean productStockValidation(String id, String brand, String nameProduct, int quantityToAdd, String price, String quantity) {
+        
+    try (BufferedReader br = new BufferedReader(new FileReader(fileRuteProducts))) {
+        String line;
+        ArrayList<String> updatedProductsList = new ArrayList<>();
+        boolean productFound = false;
+
+        while ((line = br.readLine()) != null) {
+            String[] dataArray = line
+                    .replaceAll("[\\[\\]]", "")
+                    .split(", ");
+
+            String productId = dataArray[0].trim();
+
+            if (productId.equals(id)) {
+                int currentQuantity = Integer.parseInt(dataArray[3].trim());
+                int newQuantity = currentQuantity + quantityToAdd;
+                dataArray[3] = "Cantidad: " + newQuantity;
+                System.out.println("Se actualizó la cantidad");
+                productFound = true;
+            }
+
+            updatedProductsList.add(String.join(", ", dataArray));
+        }
+
+        if (!productFound) {
+            // Agregar un nuevo producto solo si el ID es único
+            ArrayList<String> newProductData = new ArrayList<>();
+            newProductData.add(nameProduct);
+            newProductData.add(brand);
+            newProductData.add(price);
+            newProductData.add(quantity);
+            newProductData.add(id);
+
+            // Agregar datos a la colección principal
+            updatedProductsList.add(String.join(", ", newProductData));
+
+            // Escribir en el archivo
+            try (FileWriter fileWriter = new FileWriter(fileRuteProducts, true);
+                BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
+
+                bufferedWriter.write(String.join(", ", newProductData));
+                bufferedWriter.newLine();  // Agregar una nueva línea para cada producto
+                JOptionPane.showMessageDialog(null, "Datos del producto almacenados");
+            } catch (IOException e) {
+                throw new RuntimeException("Error al añadir texto al archivo: " + e.getMessage(), e);
+            }
+        }
+
+        // Escribe la lista actualizada en el archivo de texto
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileRuteProducts))) {
+            for (String updatedProduct : updatedProductsList) {
+                writer.write(updatedProduct);
+                writer.newLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false; // Manejo de excepciones al escribir en el archivo
+        }
+
+        if (productFound) {
+            System.out.println("Producto actualizado:");
+            for (String entry : updatedProductsList) {
+                System.out.println("Datos del producto: " + entry);
+            }
+        } else {
+            System.out.println("Producto no encontrado. Se añadió uno nuevo si el ID era único.");
+        }
+
+        return true; // Indica que se encontró el producto y se actualizó la cantidad o se añadió uno nuevo
+    } catch (IOException e) {
+        e.printStackTrace();
+        // Manejo de excepciones al leer el archivo
+        return false;
+    }
     }
 }
 
