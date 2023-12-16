@@ -10,7 +10,11 @@ package controller.principalController;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import model.backUp.BackUpModel;
 import view.*;
 
 
@@ -24,19 +28,22 @@ public class PrincipalController implements ActionListener {
     private searchItemView searchItemView;
     private updateItemView updateItemView;
     private deleteItemView deleteItemView;
+    private BackUpModel backUpModel;
 
-    public PrincipalController(principalView principalView, addItemView addItemView, searchItemView searchItemView, updateItemView updateItemView, deleteItemView deleteItemView) {        
+    public PrincipalController(principalView principalView, addItemView addItemView, searchItemView searchItemView, updateItemView updateItemView, deleteItemView deleteItemView, BackUpModel backUpModel) {        
         this.principalView = principalView;
         this.addItemView = addItemView;
         this.searchItemView = searchItemView;
         this.updateItemView = updateItemView;
         this.deleteItemView = deleteItemView;
+        this.backUpModel = backUpModel;
         
         principalView.addItemButton.addActionListener(this);
         principalView.searchItemButton.addActionListener(this);
 
         principalView.updateItemProduct.addActionListener(this);
         principalView.deleteItemProduct.addActionListener(this);
+        principalView.backUpButton.addActionListener(this);
 
         updateItemView.backButtonUpdateItem.addActionListener(this);
         searchItemView.backButton.addActionListener(this);
@@ -116,5 +123,22 @@ public class PrincipalController implements ActionListener {
             principalView.setLocationRelativeTo(null);
         
     }
+        if(e.getSource() == principalView.backUpButton){
+            
+            String rutaOriginalClientes = "src/main/java/textFiles/clientsData";
+            String rutaRespaldoClientes = "src/main/java/textFileBackUp/dataClientsBackUp";
+            
+            String rutaOriginalProductos = "src/main/java/textFiles/productsData";
+            String rutaRespaldoProductos = "src/main/java/textFileBackUp/dataProductsBackUp";
+            
+            String rutaOriginalDistribuidores = "src/main/java/textFiles/dealersData";
+            String rutaRespaldoDistribuidores = "src/main/java/textFileBackUp/dataDealersBackUp";
+            
+            try {
+                backUpModel.respaldo(rutaOriginalClientes, rutaRespaldoClientes, rutaOriginalProductos, rutaRespaldoProductos, rutaOriginalDistribuidores, rutaRespaldoDistribuidores);
+            } catch (IOException ex) {
+                Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
    }
 }

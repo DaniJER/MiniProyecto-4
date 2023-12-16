@@ -24,6 +24,7 @@ import view.sell.*;
 import model.buyModel. *;
 import view.buy. *;
 import controller.buyController. *;
+import model.backUp.BackUpModel;
 
 /**
  *
@@ -72,11 +73,12 @@ public class MiniProyecto4 {
         UpdateProductsModel updateProductsmodel = new UpdateProductsModel();
         UpdateDealerModel updateDealerModel = new UpdateDealerModel();
         DeleteProductsModel deleteProductsModel = new DeleteProductsModel();
+        BackUpModel backUpModel = new BackUpModel();
         
         BuyModel buyModel = new BuyModel();
         buyView buyView = new buyView();
         
-        PrincipalController principalController = new PrincipalController(principalView,addItemView, searchItemView, updateItemView, deleteItemView){};
+        PrincipalController principalController = new PrincipalController(principalView,addItemView, searchItemView, updateItemView, deleteItemView, backUpModel){};
         principalController.startPrincipalView();
         
 
