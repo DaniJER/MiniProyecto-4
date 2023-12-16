@@ -36,6 +36,7 @@ public class DeleteDealersController implements ActionListener{
         if(e.getSource() == deleteItemView.deleteDealerButton){
             deleteItemView.dispose();
             deleteDealerView.setVisible(true);
+            deleteDealerView.setSize(950,650);
             deleteDealerView.setLocationRelativeTo(null);
         }
         if(e.getSource() == deleteDealerView.deleteDealerButton){

@@ -42,7 +42,6 @@ public class MiniProyecto4 {
 
         createClientView createClientView = new createClientView();
         createDealerView createDealerView = new createDealerView();
-        addProductView addProductView = new addProductView();
         readClientView readClientView = new readClientView();
         readDealerView readDealerView = new readDealerView();
         readProductView readProductView = new readProductView();
@@ -50,7 +49,6 @@ public class MiniProyecto4 {
         showClientsView showClientsView = new showClientsView();
         showDealersView showDealerView = new showDealersView();
         showClientsRemoved showClientsRemoved = new showClientsRemoved();
-        CreateProductsModel createProductsModel = new CreateProductsModel();
         
         updateClientView updateClientView = new updateClientView();
         updateDealerView updateDealerView = new updateDealerView();
@@ -97,8 +95,6 @@ public class MiniProyecto4 {
         CreateClientController createClientController = new CreateClientController(addItemView, createClientView, createClientModel, principalView){};
     
         CreateDealersController createDealersController = new CreateDealersController(addItemView,createDealerView, createDealerModel, principalView){};
-    
-        CreateProductsController createProductsController = new CreateProductsController(addItemView,addProductView, createProductsModel, principalView){};
     
         ReadClientController readClientController = new ReadClientController(searchItemView, readClientView, readClientModel, showClientsView, principalView, createClientModel, searchProductView){};
     

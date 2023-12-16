@@ -51,6 +51,7 @@ public class ReadDealersController implements ActionListener {
 
         searchItemView.dispose();
         readDealerView.setVisible(true);
+        readDealerView.setSize(950, 600);
         readDealerView.setLocationRelativeTo(null);
         
          if(e.getSource() == readDealerView.searchDealerButton){

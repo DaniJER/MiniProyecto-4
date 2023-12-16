@@ -33,6 +33,7 @@ public class UpdateProductsController implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == updateItemView.updateProductButton){
             updateItemView.dispose();
+            updateProductView.setSize(950, 600);
             updateProductView.setVisible(true);
             updateProductView.setLocationRelativeTo(null);
         }

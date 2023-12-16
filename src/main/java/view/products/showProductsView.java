@@ -43,6 +43,8 @@ public class showProductsView extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(196, 196, 196));
+        jPanel1.setMaximumSize(new java.awt.Dimension(950, 600));
+        jPanel1.setMinimumSize(new java.awt.Dimension(950, 600));
         jPanel1.setLayout(null);
 
         jTextField1.setBackground(new java.awt.Color(196, 196, 196));
@@ -157,7 +159,7 @@ public class showProductsView extends javax.swing.JFrame {
         jLabel4.setBounds(20, 30, 200, 260);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 980, 600);
+        jPanel1.setBounds(0, 0, 950, 600);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

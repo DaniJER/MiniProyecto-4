@@ -53,6 +53,7 @@ public class ReadProductsController implements ActionListener{
         
         searchItemView.dispose();
         readProductView.setVisible(true);
+        readProductView.setSize(950,600);
         readProductView.setLocationRelativeTo(null);
         
         if(e.getSource() == readProductView.readProductButton){
@@ -73,7 +74,8 @@ public class ReadProductsController implements ActionListener{
                 }else{
            
                     readProductView.dispose();
-                    showProductsView.setVisible(true); 
+                    showProductsView.setVisible(true);
+                    showProductsView.setSize(950,600);
                     showProductsView.setLocationRelativeTo(null);
 
                     showProductsView.productName.setText(readProductsModel.getProductName());

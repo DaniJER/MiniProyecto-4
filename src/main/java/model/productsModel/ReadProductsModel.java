@@ -89,7 +89,7 @@ public class ReadProductsModel {
                 for (String data : dataProductsArray) {
                     String[] keyValue = data.split(": ");
                     
-                    if (keyValue[0].trim().equals("Id") && keyValue[1].trim().equals(id)) {
+                    if (keyValue[1].trim().equals(id)) {
                         // Si se encuentra la cédula, muestra los datos
                         
                         this.productName = dataProductsArray[0];
