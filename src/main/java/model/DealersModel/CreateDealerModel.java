@@ -22,6 +22,7 @@ public class CreateDealerModel {
     private String quantifyProductDealer;
     private String brandProductDealer;
     private String priceProductDealer;
+    private String idProduct;
     private String celDealer; 
     
     File dealersFile;
@@ -85,6 +86,15 @@ public class CreateDealerModel {
     public void setPriceProductDealer(String priceProductDealer) {
         this.priceProductDealer = priceProductDealer;
     }
+
+    public String getIdProduct() {
+        return idProduct;
+    }
+
+    public void setIdProduct(String idProduct) {
+        this.idProduct = idProduct;
+    }
+    
     
     public String getCelDealer() {
         return celDealer;
@@ -147,6 +157,7 @@ public class CreateDealerModel {
         dataDealersArray.add(this.quantifyProductDealer);
         dataDealersArray.add(this.brandProductDealer);
         dataDealersArray.add(this.priceProductDealer);
+        dataDealersArray.add(this.idProduct);
         dataDealersArray.add(this.celDealer);
 
         // Verificar si la cédula ya existe en el archivo

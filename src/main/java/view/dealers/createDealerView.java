@@ -47,9 +47,9 @@ public class createDealerView extends javax.swing.JFrame {
         brandProductDealer = new javax.swing.JTextField();
         Brand = new javax.swing.JLabel();
         Brand1 = new javax.swing.JLabel();
-        brandProductDealer1 = new javax.swing.JTextField();
+        idProductDealer = new javax.swing.JTextField();
         Quantify1 = new javax.swing.JLabel();
-        quantifyProductDealer1 = new javax.swing.JTextField();
+        quantifyProductDealer = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -269,14 +269,14 @@ public class createDealerView extends javax.swing.JFrame {
         jPanel1.add(Brand1);
         Brand1.setBounds(560, 250, 110, 60);
 
-        brandProductDealer1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        brandProductDealer1.addActionListener(new java.awt.event.ActionListener() {
+        idProductDealer.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        idProductDealer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                brandProductDealer1ActionPerformed(evt);
+                idProductDealerActionPerformed(evt);
             }
         });
-        jPanel1.add(brandProductDealer1);
-        brandProductDealer1.setBounds(700, 260, 180, 40);
+        jPanel1.add(idProductDealer);
+        idProductDealer.setBounds(700, 260, 180, 40);
 
         Quantify1.setBackground(new java.awt.Color(196, 196, 196));
         Quantify1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -289,14 +289,14 @@ public class createDealerView extends javax.swing.JFrame {
         jPanel1.add(Quantify1);
         Quantify1.setBounds(560, 390, 110, 60);
 
-        quantifyProductDealer1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        quantifyProductDealer1.addActionListener(new java.awt.event.ActionListener() {
+        quantifyProductDealer.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        quantifyProductDealer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                quantifyProductDealer1ActionPerformed(evt);
+                quantifyProductDealerActionPerformed(evt);
             }
         });
-        jPanel1.add(quantifyProductDealer1);
-        quantifyProductDealer1.setBounds(700, 390, 180, 40);
+        jPanel1.add(quantifyProductDealer);
+        quantifyProductDealer.setBounds(700, 390, 180, 40);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -359,13 +359,13 @@ public class createDealerView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_brandProductDealerActionPerformed
 
-    private void brandProductDealer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brandProductDealer1ActionPerformed
+    private void idProductDealerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idProductDealerActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_brandProductDealer1ActionPerformed
+    }//GEN-LAST:event_idProductDealerActionPerformed
 
-    private void quantifyProductDealer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quantifyProductDealer1ActionPerformed
+    private void quantifyProductDealerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quantifyProductDealerActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_quantifyProductDealer1ActionPerformed
+    }//GEN-LAST:event_quantifyProductDealerActionPerformed
 
     /**
      * @param args the command line arguments
@@ -410,11 +410,11 @@ public class createDealerView extends javax.swing.JFrame {
     public javax.swing.JButton addDealerButton;
     public javax.swing.JButton backButtonDealer;
     public javax.swing.JTextField brandProductDealer;
-    public javax.swing.JTextField brandProductDealer1;
     public javax.swing.JTextField celDealerField;
     public javax.swing.JTextField dealerNamerField;
     public javax.swing.JTextField dealerProductField;
     public javax.swing.JTextField idDealerField;
+    public javax.swing.JTextField idProductDealer;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -427,6 +427,6 @@ public class createDealerView extends javax.swing.JFrame {
     private javax.swing.JLabel price;
     public javax.swing.JTextField priceProductDealer;
     public javax.swing.JButton principalMenuButtonDealer;
-    public javax.swing.JTextField quantifyProductDealer1;
+    public javax.swing.JTextField quantifyProductDealer;
     // End of variables declaration//GEN-END:variables
 }
