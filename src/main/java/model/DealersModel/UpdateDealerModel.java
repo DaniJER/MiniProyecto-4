@@ -80,61 +80,63 @@ public class UpdateDealerModel {
         this.fileRuteDealers = fileRuteDealers;
     }
     
-    public boolean updateDealer(String id){
-        
-        try (BufferedReader br = new BufferedReader(new FileReader(fileRuteDealers))) {
+public boolean updateDealer(String id) {
+    try (BufferedReader br = new BufferedReader(new FileReader(fileRuteDealers))) {
 
-            String line;
-            
-            ArrayList<String> updatedDealerList = new ArrayList<>();
-            
-            boolean clientFound = false;
+        String line;
 
-            while ((line = br.readLine()) != null) {
-                String[] dataArray = line
-                        .replaceAll("[\\[\\]]", "")
-                        .split(", ");
+        ArrayList<String> updatedDealerList = new ArrayList<>();
+        boolean dealerFound = false;
 
-                for (String data : dataArray) {
-                    String[] keyValue = data.split(": ");
+        while ((line = br.readLine()) != null) {
+            String[] dataArray = line.replaceAll("[\\[\\]]", "").split(", ");
 
-                    if (keyValue[1].trim().equals(id)) {
-                        dataArray[0] = "Nombre: " + nameDealer;
-                        dataArray[1] = "Apellido: " + lastNameDealer;
-                        dataArray[4] = "Celular: " + celDealer;
-                        clientFound = true;
-                    }
+            for (int i = 0; i < dataArray.length; i++) {
+                String[] keyValue = dataArray[i].split(":");
+                String key = keyValue[0].trim();
+                String value = keyValue[1].trim();
+
+                if (key.equals("Identificacion") && value.equals(id)) {
+                    dataArray[0] = "Nombre: " + nameDealer;
+                    dataArray[1] = "Apellido: " + lastNameDealer;
+                    dataArray[8] = "Celular: " + celDealer; // Ajustar el índice para "Celular"
+                    dealerFound = true;
+                    break; // Salir del bucle una vez que se ha encontrado el proveedor
                 }
-
-                updatedDealerList.add(String.join(", ", dataArray));
             }
 
-            if (clientFound) {
-                // Escribe la lista actualizada en el archivo de texto
-                try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileRuteDealers))) {
-                    for (String updatedDealer : updatedDealerList) {
-                        writer.write(updatedDealer);
-                        writer.newLine();
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
-                    return false; // Manejo de excepciones al escribir en el archivo
-                }
-
-                System.out.println("Proovedor actualizado:");
-                for (String entry : updatedDealerList) {
-                    System.out.println("Datos del proveedor: " + entry);
-                }
-
-                return true; // Indica que se encontró la cédula y se actualizó el cliente
-            } else {
-                System.out.println("Proovedor no encontrado.");
-                return false; // Indica que no se encontró la cédula
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-            return false; // Manejo de excepciones al leer el archivo
+            updatedDealerList.add("[" + String.join(", ", dataArray) + "]");
         }
+
+        if (dealerFound) {
+            // Escribe la lista actualizada en el archivo de texto
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileRuteDealers))) {
+                for (String updatedDealer : updatedDealerList) {
+                    writer.write(updatedDealer);
+                    writer.newLine();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+                return false; // Manejo de excepciones al escribir en el archivo
+            }
+
+            System.out.println("Proveedor actualizado:");
+            for (String entry : updatedDealerList) {
+                System.out.println("Datos del proveedor: " + entry);
+            }
+
+            return true; // Indica que se encontró el proveedor y se actualizó
+        } else {
+            System.out.println("Proveedor no encontrado.");
+            return false; // Indica que no se encontró el proveedor
+        }
+
+    } catch (IOException e) {
+        e.printStackTrace();
+        return false; // Manejo de excepciones al leer el archivo
     }
+}
+
+
+
 }

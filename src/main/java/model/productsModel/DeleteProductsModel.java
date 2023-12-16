@@ -89,67 +89,85 @@ public class DeleteProductsModel {
         this.fileRuteProducts = fileRuteProducts;
     }
     
-    public boolean deleteProduct(String id) {
-        try (BufferedReader br = new BufferedReader(new FileReader(fileRuteProducts))) {
+public boolean deleteProduct(String id) {
+    try (BufferedReader br = new BufferedReader(new FileReader(fileRuteProducts))) {
+        String line;
+        ArrayList<String> productList = new ArrayList<>();
 
-            String line;
-            ArrayList<String> productList = new ArrayList<>();
+        // Lee el archivo y almacena cada línea en el ArrayList
+        while ((line = br.readLine()) != null) {
+            productList.add(line);
+        }
 
-            // Lee el archivo y almacena cada línea en el ArrayList
-            while ((line = br.readLine()) != null) {
-                productList.add(line);
-            }
+        // Usar un iterador para recorrer la lista y eliminar elementos de manera segura
+        Iterator<String> iterator = productList.iterator();
+        while (iterator.hasNext()) {
+            String productData = iterator.next();
+            String[] dataArray = productData.split(", ");
 
-            // Usar un iterador para recorrer la lista y eliminar elementos de manera segura
-            Iterator<String> iterator = productList.iterator();
-            while (iterator.hasNext()) {
-                String productData = iterator.next();
-                String[] dataArray = productData
-                        .replaceAll("[\\[\\]]", "") // Elimina corchetes "[" y "]"
-                        .split(", "); // Suponiendo que los datos están separados por ", "
+            for (String data : dataArray) {
+                String[] keyValue = data.split(": ");
+                if (keyValue.length == 2) {
+                    String key = keyValue[0].trim();
+                    String value = keyValue[1].trim();
 
-                for (String data : dataArray) {
-                    String[] keyValue = data.split(": ");
-                    if (keyValue[1].trim().equals(id)) {
-                        // Elimina el proveedor usando el iterador
-                        int result = JOptionPane.showConfirmDialog(null, "Se eliminara el producto, ¿Está de acuerdo?", "Confirmación", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
-                        if(result == JOptionPane.YES_OPTION){
-                           iterator.remove();
-                           JOptionPane.showMessageDialog(null, "El producto ha sido correctamente eliminado de la base de datos");
-                        }else {
+                    if (key.equals("Id de producto") && value.equals(id)) {
+                        // Elimina el producto usando el iterador
+                        int result = JOptionPane.showConfirmDialog(null, "Se eliminará el producto, ¿Está de acuerdo?", "Confirmación", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+                        if (result == JOptionPane.YES_OPTION) {
+                            iterator.remove();
+                            JOptionPane.showMessageDialog(null, "El producto ha sido correctamente eliminado de la base de datos");
+
+                            // Escribe el ArrayList actualizado en el archivo de texto
+                            try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileRuteProducts))) {
+                                for (String updatedProduct : productList) {
+                                    writer.write(updatedProduct);
+                                    writer.newLine();
+                                }
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+
+                            return true; // Indica que se encontró el ID y se eliminó el producto
+                        } else {
                             break;
                         }
+                    }
+                } else if (data.contains("Id de producto")) {
+                    // Manejo para el nuevo formato
+                    String productId = data.substring(data.lastIndexOf(":") + 1).trim();
+                    if (productId.equals(id)) {
+                        int result = JOptionPane.showConfirmDialog(null, "Se eliminará el producto, ¿Está de acuerdo?", "Confirmación", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+                        if (result == JOptionPane.YES_OPTION) {
+                            iterator.remove();
+                            JOptionPane.showMessageDialog(null, "El producto ha sido correctamente eliminado de la base de datos");
 
-                        // Escribe el ArrayList actualizado en el archivo de texto
-                        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileRuteProducts))) {
-                            for (String updatedProduct : productList) {
-                                writer.write(updatedProduct);
-                                writer.newLine();
+                            // Escribe el ArrayList actualizado en el archivo de texto
+                            try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileRuteProducts))) {
+                                for (String updatedProduct : productList) {
+                                    writer.write(updatedProduct);
+                                    writer.newLine();
+                                }
+                            } catch (IOException e) {
+                                e.printStackTrace();
                             }
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
 
-                        /*System.out.println("Proveedor eliminado:");
-                        for (String entry : dataArray) {
-                            System.out.println("Datos del proveedor: " + entry);
+                            return true; // Indica que se encontró el ID y se eliminó el producto
+                        } else {
+                            break;
                         }
-
-                        this.nameDealerRemoved = dataArray[0];
-                        this.lastNameDealerRemoved = dataArray[1];
-                        this.idDealerRemoved = dataArray[2];
-                        this.celDealerRemoved = dataArray[3];
-                        */
-                        return true; // Indica que se encontró la cédula y se eliminó el proveedor
                     }
                 }
             }
-
-            JOptionPane.showMessageDialog(null, "Producto no encontrado.");
-            return false; // Indica que no se encontró la cédula
-        } catch (IOException e) {
-            e.printStackTrace();
-            return false; // Manejo de excepciones
         }
+
+        JOptionPane.showMessageDialog(null, "Producto no encontrado.");
+        return false; // Indica que no se encontró el ID
+    } catch (IOException e) {
+        e.printStackTrace();
+        return false; // Manejo de excepciones
     }
+}
+
+
 }

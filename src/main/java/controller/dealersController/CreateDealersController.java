@@ -68,8 +68,8 @@ public class CreateDealersController implements ActionListener {
                 createDealerModel.setNameProductDealer("Producto: " +createDealerView.dealerProductField.getText());
                 createDealerModel.setQuantifyProductDealer("Cantidad: " + createDealerView.quantifyProductDealer.getText());
                 createDealerModel.setBrandProductDealer("Marca: " + createDealerView.brandProductDealer.getText());
-                createDealerModel.setPriceProductDealer("Precio : " + createDealerView.priceProductDealer.getText());
-                createDealerModel.setIdProduct("Id de producto :" + createDealerView.idProductDealer.getText());
+                createDealerModel.setPriceProductDealer("Precio: " + createDealerView.priceProductDealer.getText());
+                createDealerModel.setIdProduct("Id del producto: " + createDealerView.idProductDealer.getText());
                 createDealerModel.setCelDealer("Celular: " +createDealerView.celDealerField.getText());
 
                 createDealerModel.createTextFile();

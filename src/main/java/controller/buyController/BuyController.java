@@ -49,6 +49,8 @@ public class BuyController implements ActionListener{
             principalView.setLocationRelativeTo(null);
         }
         if(e.getSource() == buyView.principalMenuButtonVerify){
+            
+            
             buyModel.buy(buyView.idDealer.getText());
             buyView.productAvaliableLabel.setText(buyModel.getProductName());
             buyView.quantityLabel.setText(buyModel.getQuantityStock());

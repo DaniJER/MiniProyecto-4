@@ -115,7 +115,7 @@ public class UpdateProductsModel {
                 updatedProductsList.add(String.join(", ", dataArray));
             }
 
-            if (clientFound) {
+            if (clientFound) {  
                 // Escribe la lista actualizada en el archivo de texto
                 try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileRuteProducts))) {
                     for (String updatedProduct : updatedProductsList) {
